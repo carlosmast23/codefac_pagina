@@ -37,7 +37,7 @@
         <span class="icon-bar"></span>                        
       </button>
       
-      <a href="<?=base_url()?>"><img src="<?=base_url()?>img/logo.png" width="80" alt="Logo"></a>
+      <a href="<?=base_url()?>"><img src="<?=base_url()?>img/logo.png" height="50" alt="Logo"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
