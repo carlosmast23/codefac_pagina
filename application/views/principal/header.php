@@ -44,7 +44,6 @@
         <li class="active"><a href="<?=base_url()?>">Inicio</a> </li>
         <li><a href="<?=base_url()?>general/servicios">Servicios</a></li>
         <li><a href="<?=base_url()?>general/registro">Registro</a></li>
-        <li><a href="<?=base_url()?>catalogo">Catálogo Web</a></li>
 
       </ul>
       <!--
