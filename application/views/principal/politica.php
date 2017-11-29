@@ -3,7 +3,7 @@
 
 
 		<div class="col-md-12 text-justify">
-			<h2 class="text-center"><strong>POLITICA DE PRIVACIDAD</strong></h2>
+			<h2 class="text-center"><strong>POLITICA DE PRIVACIDAD 2017</strong></h2>
 			<h3 class="text-center">
 				La Política de privacidad de CODEFAC se actualizó el 01 de Julio de 2017.
 			</h3>
