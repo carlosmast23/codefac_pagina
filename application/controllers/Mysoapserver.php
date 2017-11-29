@@ -11,16 +11,22 @@ class Mysoapserver extends MY_Controller {
         $this->nusoap_server = new soap_server();
         $this->nusoap_server->configureWSDL("Mysoapserver", "urn:Mysoapserver");
         $this->nusoap_server->register(
-                "echoTest", array("tmp" => "xsd:string"), array("return" => "xsd:string"), "urn:Mysoapserver", "urn:Mysoapserver#echoTest", "rpc", "encoded", "Echo test"
-        );
+            "login", array("usuario" => "xsd:string","clave" => "xsd:string"), array("return" => "xsd:string"), "urn:Mysoapserver", "urn:Mysoapserver#login", "rpc", "encoded", "Login WS"
+            );
 
-     
-        function echoTest($tmp) {
-            if (!$tmp) {
+
+        function login($usuario,$clave) {
+          $ci =& get_instance();
+            /*if (!$tmp) {
                 return new soap_fault('-1', 'Server', 'Parameters missing for echoTest().', 'Please refer documentation.');
             } else {
                 return "from MySoapServer() : $tmp";
-            }
+            }*/
+
+            if($usuario=="admin" && $clave=="admin123")
+                return "success";
+            else
+                return "fail";
         }
     }
 
