@@ -10,7 +10,7 @@ class Mysoapserver extends MY_Controller {
         $this->load->library("Nusoap_lib"); //load the library here
         $this->nusoap_server = new soap_server();
         $this->nusoap_server->configureWSDL("SOAP Server", $ns,false,"document");
-        $this->nusoap_server->wsdl->schemaTargetNamespace = $ns;
+        //$this->nusoap_server->wsdl->schemaTargetNamespace = $ns;
 
         //registrando funciones
         $input_array = array ('a' => "xsd:string", 'b' => "xsd:string");
