@@ -9,7 +9,7 @@ class Mysoapserver extends MY_Controller {
         $ns=base_url()."mysoapserver";
         $this->load->library("Nusoap_lib"); //load the library here
         $this->nusoap_server = new soap_server();
-        $this->nusoap_server->configureWSDL("SOAPServer", $ns);
+        $this->nusoap_server->configureWSDL("SOAPServer", $ns,false,"document");
         //$this->nusoap_server->wsdl->schemaTargetNamespace = $ns;
 
         //registrando funciones
