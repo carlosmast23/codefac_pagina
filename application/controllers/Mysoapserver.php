@@ -15,6 +15,11 @@ class Mysoapserver extends MY_Controller {
             );
 
 
+    }
+
+    function index() {
+
+
         function login($usuario,$clave) {
           $ci =& get_instance();
             /*if (!$tmp) {
@@ -28,9 +33,7 @@ class Mysoapserver extends MY_Controller {
             else
                 return "fail";
         }
-    }
-
-    function index() {
+        
         $this->nusoap_server->service(file_get_contents("php://input")); //shows the standard info about service
     }
 }
