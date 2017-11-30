@@ -15,7 +15,7 @@ class Mysoapserver extends MY_Controller {
         //registrando funciones
         $input_array = array ('a' => "xsd:string", 'b' => "xsd:string");
         $return_array = array ("return" => "xsd:string");
-        $this->nusoap_server->register('addnumbers', $input_array, $return_array, "urn:SOAPServerWSDL", "urn:".$ns."/addnumbers", "rpc", "encoded", "Addition Of Two Numbers");
+        $this->nusoap_server->register('addnumbers', $input_array, $return_array, "urn:SOAPServerWSDL", "urn:".$ns."/addnumbers", "document", "literal", "Addition Of Two Numbers");
     }
 
     function index()
