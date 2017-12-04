@@ -37,50 +37,50 @@ class General_model extends CI_Model {
         "fecha"=>hoy('c'),
         "deque"=>"pr",
         );
-     $this->db->insert("envio_sms",$d1);*/
+        $this->db->insert("envio_sms",$d1);*/
 
- }
-
-
- public function actualizar_proveedor_mdl(){
-    $prv_id=$this->input->post("prv_id");
-    
-    $ncel=format_celular($this->input->post("prv_telefono"));
-    $email=$this->input->post("prv_email");
-
-    $arr=array(
-        "act_id"=>$this->input->post("act_id"),
-        'prv_usuario' => $this->input->post('prv_usuario'), 
-        'prv_telefono' => $ncel, 
-        "prv_email"=>$email,
-        "prv_convencional" => $this->input->post('prv_convencional'), 
-        "prv_ruc" => $this->input->post('prv_ruc'), 
-        "prv_razonsocial" => strtoupper($this->input->post('prv_razonsocial')), 
-        "prv_representante" => strtoupper($this->input->post('prv_representante')), 
-        "prv_direccion" => $this->input->post('prv_direccion'), 
-        "prv_latitud" => $this->input->post('loc_latitud'), 
-        "prv_longitud" => $this->input->post('loc_longitud'), 
-        "prv_estado" => "a", 
-        );
-    $this->db->where("prv_id",$prv_id);
-    $this->db->update("proveedores",$arr);
+    }
 
 
-}
+    public function actualizar_proveedor_mdl(){
+        $prv_id=$this->input->post("prv_id");
 
-public function existe_proveedor($telefono,$email){
-    $sql="SELECT count(`prv_id`) as total FROM `proveedores` WHERE `prv_telefono` LIKE '$telefono' OR `prv_email` LIKE '$email' ";
-    $query=$this->db->query($sql);
-    return $query->row()->total+0;
-}
+        $ncel=format_celular($this->input->post("prv_telefono"));
+        $email=$this->input->post("prv_email");
 
-public function nproveedores_mdl(){
-   $sql="SELECT COUNT(`prv_id`) as total FROM `proveedores`";
-   $query=$this->db->query($sql);
-   return $query->row()->total;   
-}
+        $arr=array(
+            "act_id"=>$this->input->post("act_id"),
+            'prv_usuario' => $this->input->post('prv_usuario'), 
+            'prv_telefono' => $ncel, 
+            "prv_email"=>$email,
+            "prv_convencional" => $this->input->post('prv_convencional'), 
+            "prv_ruc" => $this->input->post('prv_ruc'), 
+            "prv_razonsocial" => strtoupper($this->input->post('prv_razonsocial')), 
+            "prv_representante" => strtoupper($this->input->post('prv_representante')), 
+            "prv_direccion" => $this->input->post('prv_direccion'), 
+            "prv_latitud" => $this->input->post('loc_latitud'), 
+            "prv_longitud" => $this->input->post('loc_longitud'), 
+            "prv_estado" => "a", 
+            );
+        $this->db->where("prv_id",$prv_id);
+        $this->db->update("proveedores",$arr);
 
-public function contador_mdl(){
+
+    }
+
+    public function existe_proveedor($telefono,$email){
+        $sql="SELECT count(`prv_id`) as total FROM `proveedores` WHERE `prv_telefono` LIKE '$telefono' OR `prv_email` LIKE '$email' ";
+        $query=$this->db->query($sql);
+        return $query->row()->total+0;
+    }
+
+    public function nproveedores_mdl(){
+       $sql="SELECT COUNT(`prv_id`) as total FROM `proveedores`";
+       $query=$this->db->query($sql);
+       return $query->row()->total;   
+   }
+
+   public function contador_mdl(){
     $this->load->helper('cookie');
     $hoy=hoy();
     $ip=getRealIP();
@@ -158,6 +158,28 @@ return "true";
 }
 
 }
+
+public function comprobar_mdl($u,$c){
+    $query=$this->db->query("SELECT COUNT(`prv_id`) as num FROM `prv_email` LIKE '$u' AND `prv_clave` LIKE '$c' ");
+    if($query->row()->num >0 )
+        $res=1;
+    else
+        $res=0:
+    return $res;
+}
+
+
+public function actualizar_clave_mdl($id=0,$p=""){
+    $arr=array('prv_clave' => $p);
+    $this->db->where("prv_id",$id);
+    $this->db->update("proveedores",$arr);
+
+    return 1;
+
+}
+
+
+
 
 
 
