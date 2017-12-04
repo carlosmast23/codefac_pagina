@@ -1,5 +1,49 @@
 <link href="<?= base_url(); ?>assets/bootstrap-chosen-master/bootstrap-chosen.css" media="screen" rel="stylesheet" type="text/css">
 
+<style>
+  #pswd_info {
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    background: #fefefe;
+    font-size: .875em;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px #ccc;
+    border: 1px solid #ddd;
+  }
+  #pswd_info h4 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  #pswd_info::before {
+    position: relative;
+    top: -12px;
+    left: 45%;
+    font-size: 14px;
+    line-height: 14px;
+    color: #ddd;
+    text-shadow: none;
+    display: block;
+  }
+  .invalid {
+    background: url(.././img/icon_okn.png) no-repeat;
+    background-size: 10% 100%; 
+    padding-left: 20px;
+    line-height: 24px;
+    color: #ec3f41;
+  }
+  .valid {
+    background: url(.././img/icon_ok.png) no-repeat;
+    background-size: 10% 100%; 
+    padding-left: 22px;
+    line-height: 24px;
+    color: #3a7d34;
+  }
+  #pswd_info {
+    display: none;
+  }
+</style>
 
 <div class="container-fluid">
 
@@ -28,26 +72,54 @@
          </div>
        </div>
        <div class="form-group">
-         <label class="col-md-2 control-label" title="Celular" data-toggle="popover" data-trigger="hover" data-content="Ejemplo: 0983528439" data-placement="bottom">*Celular:</label>
+         <label class="col-md-2 control-label">*Contraseña:</label>
          <div class="col-md-8">
-           <input type="number" class="form-control" name="prv_celular" id="prv_celular" placeholder="0983528439"/><span id="alert"></span> <input type="hidden" value="false" name="bandera" id="bandera" />
-         </div> 
-       </div>
-       <div class="form-group">
-         <label class="col-md-2 control-label">*Teléfono:</label>
-         <div class="col-md-8">
-           <input type="number" class="form-control" name="prv_convencional" id="prv_convencional" />
-         </div>
-       </div> 
-       <div class="form-group">
-         <label class="col-md-2 control-label">*Dirección:</label>
-         <div class="col-md-8">
-           <input type="text" class="form-control" name="prv_direccion" id="prv_direccion" />
-         </div>
+           <input type="password" class="form-control" name="prv_clave" id="prv_clave" placeholder="Ingrese clave"/>
+
+           <div id="pswd_info">
+            <h4>La contraseña debe cumplir los siguientes requisitos:</h4>
+            <ul>
+              <li id="letter" class="invalid">&nbsp;&nbsp;&nbsp; Al menos <strong>una letra</strong>
+              </li>
+              <li id="capital" class="invalid">&nbsp;&nbsp;&nbsp; Al menos <strong>una letra mayúscula</strong>
+              </li>
+              <li id="number" class="invalid">&nbsp;&nbsp;&nbsp; Al menos <strong>un número</strong>
+              </li>
+              <li id="length" class="invalid">&nbsp;&nbsp;&nbsp; Al menos <strong>8 carácteres</strong>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+      <div class="form-group">
+       <label class="col-md-2 control-label">* Repetir Contraseña:</label>
+       <div class="col-md-8">
+         <input type="password" class="form-control" name="prv_clave2" id="prv_clave2" placeholder="Repetir clave"/>
        </div>
      </div>
-     <div class="col-md-6">
-      <div class="form-group">
+     <div class="form-group">
+       <label class="col-md-2 control-label" title="Celular" data-toggle="popover" data-trigger="hover" data-content="Ejemplo: 0983528439" data-placement="bottom">*Celular:</label>
+       <div class="col-md-8">
+         <input type="number" class="form-control" name="prv_celular" id="prv_celular" placeholder="0983528439"/><span id="alert"></span> <input type="hidden" value="false" name="bandera" id="bandera" />
+       </div> 
+     </div>
+     <div class="form-group">
+       <label class="col-md-2 control-label">*Teléfono:</label>
+       <div class="col-md-8">
+         <input type="number" class="form-control" name="prv_convencional" id="prv_convencional" />
+       </div>
+     </div> 
+
+   </div>
+   <div class="col-md-6">
+     <div class="form-group">
+       <label class="col-md-2 control-label">*Dirección:</label>
+       <div class="col-md-8">
+         <input type="text" class="form-control" name="prv_direccion" id="prv_direccion" />
+       </div>
+     </div>
+     <div class="form-group">
        <label class="col-md-2 control-label">RUC:</label>
        <div class="col-md-8">
          <input type="number" class="form-control" name="prv_ruc" id="prv_ruc" />
@@ -92,6 +164,7 @@
 
 
 </div>
+
 
 
 <div id="terminos" class="modal fade" role="dialog">
