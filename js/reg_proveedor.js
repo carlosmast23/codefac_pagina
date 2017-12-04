@@ -26,6 +26,10 @@ $(document).ready(function() {
 				email: true,
 				remote: $("#base_url").val() + "validaciones/prov/" + prv_id + "/e/"+deque
 			},
+			prv_clave: "required",
+			prv_clave2:{
+				equalTo: "#prv_clave"
+			}
 		},
 		messages: {
 			prv_nombres: "* Campo requerido. Ingrese nombres",
@@ -41,6 +45,9 @@ $(document).ready(function() {
 				email: "* Ingrese correo electrónico válido  ejm: name@domain.com",
 				remote: "* Este correo electrónico ya ha sido usado ",
 			},
+			prv_clave: "* Campo requerido. Ingrese clave",
+			prv_clave2: "* Las contraseña no coinciden, ingrese nuevamente",
+
 		}
 	});
 
@@ -54,5 +61,63 @@ $(document).ready(function() {
 
 	});
 
+
+	var longitud = false,
+	minuscula = false,
+	numero = false,
+	mayuscula = false;
+	$('input[type=password]').keyup(function() {
+		var pswd = $(this).val();
+		if (pswd.length < 8) {
+			$('#length').removeClass('valid').addClass('invalid');
+			longitud = false;
+		} else {
+			$('#length').removeClass('invalid').addClass('valid');
+			longitud = true;
+		}
+
+    //validate letter
+    if (pswd.match(/[A-z]/)) {
+    	$('#letter').removeClass('invalid').addClass('valid');
+    	minuscula = true;
+    } else {
+    	$('#letter').removeClass('valid').addClass('invalid');
+    	minuscula = false;
+    }
+
+    //validate capital letter
+    if (pswd.match(/[A-Z]/)) {
+    	$('#capital').removeClass('invalid').addClass('valid');
+    	mayuscula = true;
+    } else {
+    	$('#capital').removeClass('valid').addClass('invalid');
+    	mayuscula = false;
+    }
+
+    //validate number
+    if (pswd.match(/\d/)) {
+    	$('#number').removeClass('invalid').addClass('valid');
+    	numero = true;
+    } else {
+    	$('#number').removeClass('valid').addClass('invalid');
+    	numero = false;
+    }
+}).focus(function() {
+	$('#pswd_info').show();
+}).blur(function() {
+	$('#pswd_info').hide();
+});
+
+/*$("#form_almacenar").submit(function(event) {
+	if(longitud && minuscula && numero && mayuscula){
+		$("#form_almacenar").submit();
+
+	}else{
+		alert("Password invalido.");
+		event.preventDefault();
+	}
+
+});
+*/
 
 });

@@ -12,32 +12,31 @@ class General_model extends CI_Model {
 
 
     public function registrar_proveedor_mdl(){
+        $this->load->library('encrypt');
+        $password=$this->input->post("prv_clave");
 
-     $ncel=format_celular($this->input->post("prv_celular"));
-     $email=$this->input->post("prv_email");
+        $hash = $this->encrypt->encode($password);
 
-     $data=array(
-        "prv_nombres"=>$this->input->post("prv_nombres"),
-        "prv_apellidos"=>$this->input->post("prv_apellidos"),
-        "prv_convencional"=>$this->input->post("prv_convencional"),
-        "prv_direccion"=>$this->input->post("prv_direccion"),
-        "prv_celular"=>$ncel,
-        "prv_email"=>$email,
-        "act_id"=>$this->input->post("act_id"),
-        "prv_fecharegistro"=>hoy('c'),
-        );
-     $this->db->insert("proveedores",$data);
+        $ncel=format_celular($this->input->post("prv_celular"));
+        $email=$this->input->post("prv_email");
 
-     /*$d1=array(
-        "bus_id"=>0,
-        'ser_id' => 1, 
-        "usu_id"=>0,
-        "tel_destinatario"=>$ncel,
-        "mensaje"=>"Gracias por registrarte en Virtual Mall, visita nuestra pagina y mantente informado de nuestra ofertas. ".base_url(),
-        "fecha"=>hoy('c'),
-        "deque"=>"pr",
-        );
-        $this->db->insert("envio_sms",$d1);*/
+        $data=array(
+            "prv_nombres"=>$this->input->post("prv_nombres"),
+            "prv_apellidos"=>$this->input->post("prv_apellidos"),
+            "prv_celular"=>$ncel,
+            "prv_email"=>$email,
+            "prv_clave"=>$hash,
+            "prv_convencional"=>$this->input->post("prv_convencional"),
+            "prv_direccion"=>$this->input->post("prv_direccion"),
+            "prv_ruc"=>$this->input->post("prv_ruc"),
+            "prv_razonsocial"=>$this->input->post("prv_razonsocial"),
+            "prv_representante"=>$this->input->post("prv_representante"),
+            "act_id"=>$this->input->post("act_id"),
+            "prv_fecharegistro"=>hoy('c'),
+            );
+        $this->db->insert("proveedores",$data);
+
+
 
     }
 
@@ -75,12 +74,12 @@ class General_model extends CI_Model {
     }
 
     public function nproveedores_mdl(){
-       $sql="SELECT COUNT(`prv_id`) as total FROM `proveedores`";
-       $query=$this->db->query($sql);
-       return $query->row()->total;   
-   }
+     $sql="SELECT COUNT(`prv_id`) as total FROM `proveedores`";
+     $query=$this->db->query($sql);
+     return $query->row()->total;   
+ }
 
-   public function contador_mdl(){
+ public function contador_mdl(){
     $this->load->helper('cookie');
     $hoy=hoy();
     $ip=getRealIP();
@@ -124,16 +123,16 @@ public function buscar_dato($prv_id,$campo,$deque) {
     $valor = $this->input->get('$campo', TRUE);
 
     if($deque=="c"){
-     if ($valor != '') {
-      $sql = "SELECT * FROM `proveedores` WHERE `$campo` like '%$valor%'";
-      $query = $this->db->query($sql);
-      $cantidad = $query->num_rows();
-      if ($cantidad != 0) {
-        return "false";
+       if ($valor != '') {
+          $sql = "SELECT * FROM `proveedores` WHERE `$campo` like '%$valor%'";
+          $query = $this->db->query($sql);
+          $cantidad = $query->num_rows();
+          if ($cantidad != 0) {
+            return "false";
+        } else
+        return "true";
     } else
     return "true";
-} else
-return "true";
 }else if($deque=='m'){
     if ($valor != '') {
         $sql = "SELECT * FROM `proveedores` WHERE `$campo` like '%$valor%' AND `prv_id` = '$prv_id'";
@@ -164,7 +163,7 @@ public function comprobar_mdl($u,$c){
     if($query->row()->num >0 )
         $res=1;
     else
-        $res=0:
+        $res=0;
     return $res;
 }
 
