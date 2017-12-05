@@ -20,7 +20,7 @@ class Mysoapserver extends MY_Controller {
 
         $input_array2 = array ('id' => "xsd:string", 'c' => "xsd:string");
         $return_array2= array ("return" => "xsd:integer");
-        $this->nusoap_server->register('actualizar_clave', $input_array2, $return_array2, "urn:SOAPServerWSDL", "urn:".$ns."/actualizar_clave", "document", "literal", "Actualizar Clave");
+        $this->nusoap_server->register('actualizar_licencia', $input_array2, $return_array2, "urn:SOAPServerWSDL", "urn:".$ns."/actualizar_licencia", "document", "literal", "Actualizar Licencia Codefac");
 
         $input_array3 = array ('u' => "xsd:string", 'c' => "xsd:string");
         $return_array3= array ("return" => "xsd:integer");
@@ -34,10 +34,10 @@ class Mysoapserver extends MY_Controller {
             return $c;
         }
 
-        function actualizar_clave($id,$c){
+        function actualizar_licencia($id,$c){
             $ci = &get_instance();
             $ci->load->model('general_model');
-            return $ci->general_model->actualizar_clave_mdl($id,$c);
+            return $ci->general_model->actualizar_licencia_mdl($id,$c);
         }
 
         function comprobar($u,$c){
