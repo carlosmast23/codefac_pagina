@@ -7,20 +7,20 @@ class General_model extends CI_Model {
 
     public function __construct() {
         parent::__construct();
-        $this->load->library('encrypt');
     }
 
 
     public function registrar_proveedor_mdl(){
-        $this->load->library('encrypt');
-        $password=$this->input->post("prv_clave");
-
-        $hash = $this->encrypt->encode($password);
+        $this->load->library('bcrypt');
 
         $ncel=format_celular($this->input->post("prv_celular"));
         $email=$this->input->post("prv_email");
+        $password=$this->input->post("prv_clave");
 
-        $data=array(
+        $hash = $this->bcrypt->hash_password($password);
+
+        if ($this->bcrypt->check_password($password, $hash)) {
+           $data=array(
             "prv_nombres"=>$this->input->post("prv_nombres"),
             "prv_apellidos"=>$this->input->post("prv_apellidos"),
             "prv_celular"=>$ncel,
@@ -34,52 +34,50 @@ class General_model extends CI_Model {
             "act_id"=>$this->input->post("act_id"),
             "prv_fecharegistro"=>hoy('c'),
             );
-        $this->db->insert("proveedores",$data);
+           $this->db->insert("proveedores",$data);
+       }
+   }
 
 
+   public function actualizar_proveedor_mdl(){
+    $prv_id=$this->input->post("prv_id");
 
-    }
+    $ncel=format_celular($this->input->post("prv_telefono"));
+    $email=$this->input->post("prv_email");
 
-
-    public function actualizar_proveedor_mdl(){
-        $prv_id=$this->input->post("prv_id");
-
-        $ncel=format_celular($this->input->post("prv_telefono"));
-        $email=$this->input->post("prv_email");
-
-        $arr=array(
-            "act_id"=>$this->input->post("act_id"),
-            'prv_usuario' => $this->input->post('prv_usuario'), 
-            'prv_telefono' => $ncel, 
-            "prv_email"=>$email,
-            "prv_convencional" => $this->input->post('prv_convencional'), 
-            "prv_ruc" => $this->input->post('prv_ruc'), 
-            "prv_razonsocial" => strtoupper($this->input->post('prv_razonsocial')), 
-            "prv_representante" => strtoupper($this->input->post('prv_representante')), 
-            "prv_direccion" => $this->input->post('prv_direccion'), 
-            "prv_latitud" => $this->input->post('loc_latitud'), 
-            "prv_longitud" => $this->input->post('loc_longitud'), 
-            "prv_estado" => "a", 
-            );
-        $this->db->where("prv_id",$prv_id);
-        $this->db->update("proveedores",$arr);
+    $arr=array(
+        "act_id"=>$this->input->post("act_id"),
+        'prv_usuario' => $this->input->post('prv_usuario'), 
+        'prv_telefono' => $ncel, 
+        "prv_email"=>$email,
+        "prv_convencional" => $this->input->post('prv_convencional'), 
+        "prv_ruc" => $this->input->post('prv_ruc'), 
+        "prv_razonsocial" => strtoupper($this->input->post('prv_razonsocial')), 
+        "prv_representante" => strtoupper($this->input->post('prv_representante')), 
+        "prv_direccion" => $this->input->post('prv_direccion'), 
+        "prv_latitud" => $this->input->post('loc_latitud'), 
+        "prv_longitud" => $this->input->post('loc_longitud'), 
+        "prv_estado" => "a", 
+        );
+    $this->db->where("prv_id",$prv_id);
+    $this->db->update("proveedores",$arr);
 
 
-    }
+}
 
-    public function existe_proveedor($telefono,$email){
-        $sql="SELECT count(`prv_id`) as total FROM `proveedores` WHERE `prv_telefono` LIKE '$telefono' OR `prv_email` LIKE '$email' ";
-        $query=$this->db->query($sql);
-        return $query->row()->total+0;
-    }
+public function existe_proveedor($telefono,$email){
+    $sql="SELECT count(`prv_id`) as total FROM `proveedores` WHERE `prv_telefono` LIKE '$telefono' OR `prv_email` LIKE '$email' ";
+    $query=$this->db->query($sql);
+    return $query->row()->total+0;
+}
 
-    public function nproveedores_mdl(){
-     $sql="SELECT COUNT(`prv_id`) as total FROM `proveedores`";
-     $query=$this->db->query($sql);
-     return $query->row()->total;   
- }
+public function nproveedores_mdl(){
+ $sql="SELECT COUNT(`prv_id`) as total FROM `proveedores`";
+ $query=$this->db->query($sql);
+ return $query->row()->total;   
+}
 
- public function contador_mdl(){
+public function contador_mdl(){
     $this->load->helper('cookie');
     $hoy=hoy();
     $ip=getRealIP();
@@ -159,26 +157,56 @@ public function buscar_dato($prv_id,$campo,$deque) {
 }
 
 public function comprobar_mdl($u,$c){
-    $query=$this->db->query("SELECT COUNT(`prv_id`) as num FROM `prv_email` LIKE '$u' AND `prv_clave` LIKE '$c' ");
-    if($query->row()->num >0 )
-        $res=1;
-    else
-        $res=0;
-    return $res;
+ $this->load->library('bcrypt');
+
+ $this->db->where('prv_email',$u);
+ $query = $this->db->get('proveedores');
+ if($query->num_rows() == 1){
+   $user = $query->row();
+   $pass = $user->prv_clave;
+   if($this->bcrypt->check_password($c, $pass)){
+       return "success";
+   }else{
+    return "fail";
+}
+}
+
 }
 
 
-public function actualizar_clave_mdl($id=0,$p=""){
-    $arr=array('prv_clave' => $p);
+public function actualizar_licencia_mdl($id=0,$p=""){
+    $arr=array('prv_licencia' => $p);
     $this->db->where("prv_id",$id);
     $this->db->update("proveedores",$arr);
 
-    return 1;
+    return "success";
 
 }
 
 
 
+public function login($username,$hash){
+       //obtenemos los datos del usuario que quiere iniciar sesión
+   $this->db->where('username',$username);
+   $query = $this->db->get('users');
+       //si el nombre de usuario coincide y sólo existe uno procedemos
+   if($query->num_rows() == 1){
+       $user = $query->row();
+           //en pass guardamos el hash del usuario que tenemos en la base
+           //de datos para comprobarlo con el método check_password de Bcrypt
+       $pass = $user->password;
+
+          //esta es la forma de comprobar si el password del 
+          //formulario coincide con el codificado de la base de datos
+       if($this->bcrypt->check_password($hash, $pass))
+       {
+           return $query->row();
+       }else{
+           $this->session->set_flashdata('usuario_incorrecto','Los datos introducidos son incorrectos');
+           redirect(base_url().'secure_bcrypt/login','refresh');
+       }
+   }
+}
 
 
 
