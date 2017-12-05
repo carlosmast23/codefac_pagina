@@ -24,24 +24,25 @@
     */
 
 
-/* Google fonts & font family
-==================================================*/
-
-@import url(https://fonts.googleapis.com/css?family=Poppins:400,500,600,700);
-
 /* General
 ==================================================*/
 
 html,
 body {
     height: 100%;
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.8;
-background-color: #fff; 
-background-image: 
-linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
-linear-gradient(#eee .1em, transparent .1em);
-background-size: 100% 1.2em;*/
+    font-family: Verdana;
+    line-height: 1.5;
+    color: #555E7B;
+    font-size: 14px;
+
+    background: rgba(31,80,99,1);
+background: -moz-linear-gradient(left, rgba(31,80,99,1) 0%, rgba(41,221,227,1) 50%, rgba(99,71,99,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(31,80,99,1)), color-stop(50%, rgba(41,221,227,1)), color-stop(100%, rgba(99,71,99,1)));
+background: -webkit-linear-gradient(left, rgba(31,80,99,1) 0%, rgba(41,221,227,1) 50%, rgba(99,71,99,1) 100%);
+background: -o-linear-gradient(left, rgba(31,80,99,1) 0%, rgba(41,221,227,1) 50%, rgba(99,71,99,1) 100%);
+background: -ms-linear-gradient(left, rgba(31,80,99,1) 0%, rgba(41,221,227,1) 50%, rgba(99,71,99,1) 100%);
+background: linear-gradient(to right, rgba(31,80,99,1) 0%, rgba(41,221,227,1) 50%, rgba(99,71,99,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f5063', endColorstr='#634763', GradientType=1 );
 }
 
 .no-padding {
@@ -94,9 +95,6 @@ h1 {
     text-transform: uppercase;
 }
 
-h3 {
-    color: #393939;
-}
 
 h5 {
     color: #ffbf00;

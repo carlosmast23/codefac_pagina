@@ -24,6 +24,9 @@
 				<p class="text-center">
 					<span class="badge pull-center"><?=$this->session->visitas;?></span> <b>Visitas </b> 
 					<a title="Facebook" href="https://www.facebook.com/codesoft.ec/"><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x"></i></span></a> <a title="Twitter" href=""><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x"></i></span></a> <a title="Google+" href="https://plus.google.com/u/0/108614474425964538449"><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-google-plus fa-stack-1x"></i></span></a>      <a title="E-mail" href="mailto:info@codesoft-ec.com"><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-envelope fa-stack-1x"></i></span></a>  <a title="Catálogo" href="<?=base_url()?>general/catalogo"><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-print fa-stack-1x"></i></span></a>
+				
+
+
 				</p>
 				<p class="text-center">
 					© Elaborado por Codesoft | <a href="<?=base_url()?>general/politica">Política de Privacidad</a>

@@ -2,7 +2,7 @@
 	<div class="row">
 
 
-		<div class="col-md-12 text-justify">
+		<div class="col-md-12 text-justify blanco">
 			<h2 class="text-center"><strong>POLITICA DE PRIVACIDAD 2017</strong></h2>
 			<h3 class="text-center">
 				La Política de privacidad de CODEFAC se actualizó el 01 de Julio de 2017.
