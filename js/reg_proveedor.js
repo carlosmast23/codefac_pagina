@@ -108,6 +108,7 @@ $(document).ready(function() {
 	$('#pswd_info').hide();
 });
 
+
 /*$("#form_almacenar").submit(function(event) {
 	if(longitud && minuscula && numero && mayuscula){
 		$("#form_almacenar").submit();

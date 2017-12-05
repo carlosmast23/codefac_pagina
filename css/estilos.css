@@ -177,7 +177,8 @@
     }
 
     .tbl_fac{
-      font-size: 11px;
+      color: #555E7B;
+      font-size: 12px;
       background: white;
       border: 2px solid #CCC;
     }
@@ -233,10 +234,26 @@
       left: 90%;
     }
 
-    .carousel-control.right,.carousel-control.left{
-      background-image: none;
-    }
 
-    #titulo_principal{
+    .titulo_principal{
       font-family: Impact;
     }
+
+    .carousel-caption h3{
+      color: white;
+    }
+
+    .navbar-inverse{
+      background-color: #555E7B;
+    }
+    h2, h3{
+      color: #FFF; 
+    }
+
+    .navbar-inverse .navbar-nav > li > a{
+      color: #FFF;
+    }
+
+    .blanco{
+     color: #FFF;
+   }

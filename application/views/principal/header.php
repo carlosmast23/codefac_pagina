@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Codefac</title>
   <meta name="description" content="Facturacion electronica">
-  <meta name="keywords" content="sistema, facturacion, electronica, facturas,web, contador, contabilidad,aplicacion,auditor,quito">
+  <meta name="keywords" content="sistema, facturacion, electronica, facturas,web, contador, contabilidad,aplicacion,auditor,sri,online,offline,ecuador">
   <meta name="author" content="Codesfot">
   <meta name=”robots” content="Index, NoFollow">
   <link rel="icon" href="<?=base_url()?>img/fav.png" type="image/x-icon">
@@ -41,17 +41,22 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="<?=base_url()?>">Inicio</a> </li>
-        <li><a href="<?=base_url()?>general/servicios">Servicios</a></li>
+        <li><a href="<?=base_url()?>">Inicio</a> </li>
+        <li><a href="#caracteristicas">Características</a></li>
+        <li><a href="#precios">Precios</a></li>
         <li><a href="<?=base_url()?>general/registro">Registro</a></li>
 
       </ul>
-      <!--
+      
       <ul class="nav navbar-nav navbar-right">
+      <li><a target="_blank" href="https://api.whatsapp.com/send?phone=593994725020&text=Más información CODEFAC"><img src="<?=base_url()?>img/w.png" alt="Contactanos via whatsapp" height="25" title="Contactanos via whatsapp" /></a></li>
+      <li><a target="_blank" href="https://m.me/codesoft.ec"><img src="<?=base_url()?>img/m.png" alt="Contactanos via messenger"  title="Contactanos via messenger" height="25"/></a></li>
+        <!--
         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        -->
       </ul>
-      -->
+      
     </div>
   </div>
 </nav>
