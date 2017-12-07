@@ -58,7 +58,7 @@
         El 2018 es el plazo para emitir comprobantes electrónicos bajo el esquema ‘Off Line’ ...
        </h3>        <a target="_blank" href="http://www.elcomercio.com/actualidad/plazo-comprobanteselectronicos-offline-sri-facturas.html">Ver Noticia.</a>
 
-       <h3 class="titulo_principal">Características</h3>
+       <h3 class="titulo_principal" id="caracteristicas">Características</h3>
        <ul class="blanco">
         <li>Emisión de Facturas.</li>
         <li>Notas de crédito y débito.</li>
@@ -81,8 +81,8 @@
 
   </div>
 
-  <div class="col-md-12">
-    <h3 class="text-center titulo_principal">PLANES Y PRECIOS DE FACTURACIÓN ELECTRÓNICA</h3>
+  <div class="col-md-12" id="planes">
+    <h3 class="text-center titulo_principal" >PLANES Y PRECIOS DE FACTURACIÓN ELECTRÓNICA</h3>
     <table class="table table-striped tbl_fac">
       <tr>
         <th>FUNCIONALIDADES</th>

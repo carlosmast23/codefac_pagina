@@ -246,8 +246,9 @@
     .navbar-inverse{
       background-color: #555E7B;
     }
+    
     h2, h3{
-      color: #FFF; 
+      color: #FFDB8A; 
     }
 
     .navbar-inverse .navbar-nav > li > a{
