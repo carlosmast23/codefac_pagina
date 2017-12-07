@@ -43,7 +43,7 @@
       <ul class="nav navbar-nav">
         <li><a href="<?=base_url()?>">Inicio</a> </li>
         <li><a href="#caracteristicas">Características</a></li>
-        <li><a href="#precios">Precios</a></li>
+        <li><a href="#planes">Planes</a></li>
         <li><a href="<?=base_url()?>general/registro">Registro</a></li>
 
       </ul>
