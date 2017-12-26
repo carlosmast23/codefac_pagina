@@ -19,11 +19,11 @@ class Mysoapserver extends MY_Controller {
 
 
         $input_array2 = array ('id' => "xsd:string", 'c' => "xsd:string");
-        $return_array2= array ("return" => "xsd:integer");
+        $return_array2= array ("return" => "xsd:string");
         $this->nusoap_server->register('actualizar_licencia', $input_array2, $return_array2, "urn:SOAPServerWSDL", "urn:".$ns."/actualizar_licencia", "document", "literal", "Actualizar Licencia Codefac");
 
         $input_array3 = array ('u' => "xsd:string", 'c' => "xsd:string");
-        $return_array3= array ("return" => "xsd:integer");
+        $return_array3= array ("return" => "xsd:string");
         $this->nusoap_server->register('comprobar', $input_array3, $return_array3, "urn:SOAPServerWSDL", "urn:".$ns."/comprobar", "document", "literal", "Comprobar Usuario");
     }
 
