@@ -187,7 +187,7 @@ else
 
 public function actualizar_licencia_mdl($id=0,$p=""){
   $arr=array('prv_licencia' => $p);
-  $this->db->where("prv_id",$id);
+  $this->db->where("prv_email",$id);
   $this->db->update("proveedores",$arr);
 
   return "success";

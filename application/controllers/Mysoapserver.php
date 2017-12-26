@@ -18,7 +18,7 @@ class Mysoapserver extends MY_Controller {
         $this->nusoap_server->register('addnumbers', $input_array, $return_array, "urn:SOAPServerWSDL", "urn:".$ns."/addnumbers", "document", "literal", "Addition Of Two Numbers");
 
 
-        $input_array2 = array ('id' => "xsd:string", 'c' => "xsd:string");
+        $input_array2 = array ('email' => "xsd:string", 'licencia' => "xsd:string");
         $return_array2= array ("return" => "xsd:string");
         $this->nusoap_server->register('actualizar_licencia', $input_array2, $return_array2, "urn:SOAPServerWSDL", "urn:".$ns."/actualizar_licencia", "document", "literal", "Actualizar Licencia Codefac");
 
@@ -38,10 +38,10 @@ class Mysoapserver extends MY_Controller {
             return $c;
         }
 
-        function actualizar_licencia($id,$c){
+        function actualizar_licencia($email,$licencia){
             $ci = &get_instance();
             $ci->load->model('general_model');
-            return $ci->general_model->actualizar_licencia_mdl($id,$c);
+            return $ci->general_model->actualizar_licencia_mdl($email,$licencia);
         }
 
         function comprobar($u,$c){
