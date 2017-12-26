@@ -181,7 +181,7 @@ public function obtener_licencia_mdl($id){
  if($query->num_rows() == 1){
    $prv_licencia= $query->row()->prv_licencia;
    if($prv_licencia!="")
-    return "success";
+    return $prv_licencia;
   else
     return "fail";
 }
