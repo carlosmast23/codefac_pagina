@@ -129,7 +129,7 @@
 						<li><b>Teléfono convencional:</b> número telefónico del cliente.</li>
 						<li><b>Extensión:</b> (campo opcional)</li>
 						<li><b>Teléfono celular:</b> número celular del cliente</li>
-						<li><b>Correo electrónico:</b> correo electrónico del cliente al cual se le enviará las facturas.</li>
+						<li><b>Correo electrónico:</b> correo electrónico del cliente al cual se le enviará las facturas (obligatorio).</li>
 						<li><b>Estado:</b> opción que permite establecer el estado del cliente
 							<ul>
 								<li>ACTIVO: activo en el sistema.</li>
@@ -154,12 +154,17 @@
 					<ul id="gpro" class="collapse">
 						<li><b>Código principal:</b> código del producto</li>
 						<li><b>Código auxiliar:</b> código auxiliar del producto</li>
-						<li><b>Tipo de producto:</b></li>
-						<li><b>Nombre:</b></li>
-						<li><b>Valor unitario:</b></li>
-						<li><b>IVA:</b></li>
-						<li><b>ICE:</b></li>
-						<li><b>IRBPNR:</b></li>
+						<li><b>Tipo de producto:</b>
+							<ul>
+								<li>BIEN: producto</li>
+								<li>SERVICIO: servicios profesionales</li>
+							</ul>
+						</li>
+						<li><b>Nombre:</b> nombre del producto</li>
+						<li><b>Valor unitario:</b> valor unitario del producto</li>
+						<li><b>IVA:</b> Impuesto al Valor Agregado</li>
+						<li><b>ICE:</b> Impuesto a Consumos Especiales</li>
+						<li><b>IRBPNR:</b> Impuesto Redimible a las Botellas Plásticas no Retornables</li>
 					</ul>
 				</li>
 				<li class="panel"> 
@@ -251,11 +256,11 @@
 				<li class="panel">
 					<a data-toggle="collapse" data-parent="#accordion03" href="#ac033"><span class="glyphicon glyphicon-flag"></span> <b>Datos de cliente</b></a>
 					<ul id="ac033" class="collapse">
-						<li><b>Buscar:</b></li>		
-						<li><b>Factura:</b></li>		
-						<li><b>Nombres:</b></li>		
-						<li><b>Dirección:</b></li>		
-						<li><b>Teléfono:</b></li>		
+						<li><img src="<?=base_url()?>img/apoyo/btnbuscar.png" alt=""/> opción que permite buscar una factura registrada en el sistema</li>		
+						<li><b>Factura:</b> número de factura</li>		
+						<li><b>Nombres:</b> nombres y apellidos del cliente / razón social</li>		
+						<li><b>Dirección:</b> dirección del cliente</li>		
+						<li><b>Teléfono:</b> número telefonico del cliente</li>		
 					</ul>
 				</li>
 				<li class="panel">
@@ -275,10 +280,10 @@
 					<a data-toggle="collapse" data-parent="#accordion04" href="#ac041"><span class="glyphicon glyphicon-flag"></span> <b>Utilidad</b></a>
 					<ul id="ac041" class="collapse">
 						<li><b>Carpeta comprobantes:</b> directorio donde se guardará los comprobantes</li>
-						<li><b>Etapa final procesar:</b></li>
-						<li><b>Procesar:</b></li>
-						<li><b>Detalles:</b></li>
-						<li><b>Correo electrónico:</b></li>
+						<li><b>Etapa final procesar:</b> etapa del comprobante</li>
+						<li><img src="<?=base_url()?>img/ayuda/btnprocesar.png" alt=""/> <b>opción que permite procesar</b></li>
+						<li><b>Detalles:</b> listado de detalles</li>
+						<li><img src="<?=base_url()?>img/ayuda/btnemail.png" alt=""/> <b>Correo electrónico:</b> agregar/elimar correos de referencia para el comprobante</li>
 					</ul>
 				</li>
 
