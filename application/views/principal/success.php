@@ -1,6 +1,6 @@
  <div class="container main-container clearfix">
      
-        <div class="col-md-12">
+        <div class="col-md-12 blanco">
             <h3 class="uppercase">FELICITACIONES</h3>
             <h5>Con tu registro has obtenido los siguientes benficios.</h5>
             <div class="h-30"></div>
