@@ -71,7 +71,7 @@
 		</ul>
 
 		<h4><span class="glyphicon glyphicon-briefcase"></span> CRM</h4> 
-		<h4>EMISOR</h4>
+		<h4><span class="glyphicon glyphicon-share-alt"></span> EMISOR</h4>
 		<ul class="nav nav-stacked" id="accordion01">
 			<li class="panel"> 
 				<a data-toggle="collapse" data-parent="#accordion01" href="#cg"><b>Caracteristicas generales</b></a>
@@ -91,7 +91,7 @@
 			</li>
 		</ul>
 
-		<h4>CLIENTES</h4>
+		<h4><span class="glyphicon glyphicon-user"></span> CLIENTES</h4>
 		<ul class="nav nav-stacked" id="accordion02">
 			<li class="panel"> 
 				<a data-toggle="collapse" data-parent="#accordion02" href="#gcli"><b>Gestionar Clientes</b></a>
@@ -116,7 +116,7 @@
 				</ul>
 			</li>
 		</ul>
-		<h4>PRODUCTOS</h4>
+		<h4><span class="glyphicon glyphicon-shopping-cart"></span> PRODUCTOS</h4>
 		<ul class="nav nav-stacked" id="accordion22">
 			<li class="panel"> 
 				<a data-toggle="collapse" data-parent="#accordion22" href="#gpro"><b>Gestionar Productos</b></a>
