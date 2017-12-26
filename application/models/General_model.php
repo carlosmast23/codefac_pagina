@@ -175,6 +175,16 @@ else
 }
 
 
+public function comprobar_licencia_mdl($id){
+ $this->db->where('prv_id',$id);
+ $query = $this->db->get('proveedores');
+ $prv_licencia= $query->row()->prv_licencia;
+ if($prv_licencia!="")
+  return "success";
+else
+  return "fail";
+}
+
 public function actualizar_licencia_mdl($id=0,$p=""){
   $arr=array('prv_licencia' => $p);
   $this->db->where("prv_id",$id);
