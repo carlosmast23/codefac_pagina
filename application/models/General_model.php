@@ -5,70 +5,70 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class General_model extends CI_Model {
 
 
-    public function __construct() {
-        parent::__construct();
-    }
+  public function __construct() {
+    parent::__construct();
+  }
 
 
-    public function registrar_proveedor_mdl(){
-        $this->load->library('bcrypt');
+  public function registrar_proveedor_mdl(){
+    $this->load->library('bcrypt');
 
-        $ncel=format_celular($this->input->post("prv_celular"));
-        $email=$this->input->post("prv_email");
-        $password=$this->input->post("prv_clave");
-
-        $hash = $this->bcrypt->hash_password($password);
-
-        if ($this->bcrypt->check_password($password, $hash)) {
-           $data=array(
-            "prv_nombres"=>$this->input->post("prv_nombres"),
-            "prv_apellidos"=>$this->input->post("prv_apellidos"),
-            "prv_celular"=>$ncel,
-            "prv_email"=>$email,
-            "prv_clave"=>$hash,
-            "prv_convencional"=>$this->input->post("prv_convencional"),
-            "prv_direccion"=>$this->input->post("prv_direccion"),
-            "prv_ruc"=>$this->input->post("prv_ruc"),
-            "prv_razonsocial"=>$this->input->post("prv_razonsocial"),
-            "prv_representante"=>$this->input->post("prv_representante"),
-            "act_id"=>$this->input->post("act_id"),
-            "prv_fecharegistro"=>hoy('c'),
-            );
-           $this->db->insert("proveedores",$data);
-       }
-   }
-
-
-   public function actualizar_proveedor_mdl(){
-    $prv_id=$this->input->post("prv_id");
-
-    $ncel=format_celular($this->input->post("prv_telefono"));
+    $ncel=format_celular($this->input->post("prv_celular"));
     $email=$this->input->post("prv_email");
+    $password=$this->input->post("prv_clave");
 
-    $arr=array(
-        "act_id"=>$this->input->post("act_id"),
-        'prv_usuario' => $this->input->post('prv_usuario'), 
-        'prv_telefono' => $ncel, 
-        "prv_email"=>$email,
-        "prv_convencional" => $this->input->post('prv_convencional'), 
-        "prv_ruc" => $this->input->post('prv_ruc'), 
-        "prv_razonsocial" => strtoupper($this->input->post('prv_razonsocial')), 
-        "prv_representante" => strtoupper($this->input->post('prv_representante')), 
-        "prv_direccion" => $this->input->post('prv_direccion'), 
-        "prv_latitud" => $this->input->post('loc_latitud'), 
-        "prv_longitud" => $this->input->post('loc_longitud'), 
-        "prv_estado" => "a", 
-        );
-    $this->db->where("prv_id",$prv_id);
-    $this->db->update("proveedores",$arr);
+    $hash = $this->bcrypt->hash_password($password);
+
+    if ($this->bcrypt->check_password($password, $hash)) {
+     $data=array(
+      "prv_nombres"=>$this->input->post("prv_nombres"),
+      "prv_apellidos"=>$this->input->post("prv_apellidos"),
+      "prv_celular"=>$ncel,
+      "prv_email"=>$email,
+      "prv_clave"=>$hash,
+      "prv_convencional"=>$this->input->post("prv_convencional"),
+      "prv_direccion"=>$this->input->post("prv_direccion"),
+      "prv_ruc"=>$this->input->post("prv_ruc"),
+      "prv_razonsocial"=>$this->input->post("prv_razonsocial"),
+      "prv_representante"=>$this->input->post("prv_representante"),
+      "act_id"=>$this->input->post("act_id"),
+      "prv_fecharegistro"=>hoy('c'),
+      );
+     $this->db->insert("proveedores",$data);
+   }
+ }
+
+
+ public function actualizar_proveedor_mdl(){
+  $prv_id=$this->input->post("prv_id");
+
+  $ncel=format_celular($this->input->post("prv_telefono"));
+  $email=$this->input->post("prv_email");
+
+  $arr=array(
+    "act_id"=>$this->input->post("act_id"),
+    'prv_usuario' => $this->input->post('prv_usuario'), 
+    'prv_telefono' => $ncel, 
+    "prv_email"=>$email,
+    "prv_convencional" => $this->input->post('prv_convencional'), 
+    "prv_ruc" => $this->input->post('prv_ruc'), 
+    "prv_razonsocial" => strtoupper($this->input->post('prv_razonsocial')), 
+    "prv_representante" => strtoupper($this->input->post('prv_representante')), 
+    "prv_direccion" => $this->input->post('prv_direccion'), 
+    "prv_latitud" => $this->input->post('loc_latitud'), 
+    "prv_longitud" => $this->input->post('loc_longitud'), 
+    "prv_estado" => "a", 
+    );
+  $this->db->where("prv_id",$prv_id);
+  $this->db->update("proveedores",$arr);
 
 
 }
 
 public function existe_proveedor($telefono,$email){
-    $sql="SELECT count(`prv_id`) as total FROM `proveedores` WHERE `prv_telefono` LIKE '$telefono' OR `prv_email` LIKE '$email' ";
-    $query=$this->db->query($sql);
-    return $query->row()->total+0;
+  $sql="SELECT count(`prv_id`) as total FROM `proveedores` WHERE `prv_telefono` LIKE '$telefono' OR `prv_email` LIKE '$email' ";
+  $query=$this->db->query($sql);
+  return $query->row()->total+0;
 }
 
 public function nproveedores_mdl(){
@@ -78,80 +78,80 @@ public function nproveedores_mdl(){
 }
 
 public function contador_mdl(){
-    $this->load->helper('cookie');
-    $hoy=hoy();
-    $ip=getRealIP();
+  $this->load->helper('cookie');
+  $hoy=hoy();
+  $ip=getRealIP();
 
-    if (!isset($_COOKIE['contador'])) {
-        $query=$this->db->query("SELECT * FROM `visitas` WHERE `fecha`='$hoy' AND `ip`='$ip' ");
-        if($query->num_rows()==0){
-            $arr=array(
-                "ip"=>$ip,
-                "fecha"=>$hoy,
-                "num"=>1,
-                );
-            $this->db->insert("visitas",$arr);
-        }
+  if (!isset($_COOKIE['contador'])) {
+    $query=$this->db->query("SELECT * FROM `visitas` WHERE `fecha`='$hoy' AND `ip`='$ip' ");
+    if($query->num_rows()==0){
+      $arr=array(
+        "ip"=>$ip,
+        "fecha"=>$hoy,
+        "num"=>1,
+        );
+      $this->db->insert("visitas",$arr);
     }
+  }
 
-    set_cookie('contador', 1, time()+3700);
+  set_cookie('contador', 1, time()+3700);
 
-    $query=$this->db->query("SELECT count(`id`) as total FROM `visitas` ");
-    return $query->row()->total;
+  $query=$this->db->query("SELECT count(`id`) as total FROM `visitas` ");
+  return $query->row()->total;
 }
 
 
 public function datos_proveedor_mdl($id=0) {
-    $this->db->where("prv_id", $id);
-    $query = $this->db->get("proveedores");
-    if ($query->num_rows() > 0) {
-        return $query->row_array();
-    }
-    else
-        die("No existe informacion");
+  $this->db->where("prv_id", $id);
+  $query = $this->db->get("proveedores");
+  if ($query->num_rows() > 0) {
+    return $query->row_array();
+  }
+  else
+    die("No existe informacion");
 }
 
 
 //VALIDACIONES
 public function buscar_dato($prv_id,$campo,$deque) {
 
-    if($campo=="prv_celular"){
-        $valor=format_celular($this->input->get($campo, TRUE));
-    }else
-    $valor = $this->input->get('$campo', TRUE);
+  if($campo=="prv_celular"){
+    $valor=format_celular($this->input->get($campo, TRUE));
+  }else
+  $valor = $this->input->get('$campo', TRUE);
 
-    if($deque=="c"){
-       if ($valor != '') {
-          $sql = "SELECT * FROM `proveedores` WHERE `$campo` like '%$valor%'";
-          $query = $this->db->query($sql);
-          $cantidad = $query->num_rows();
-          if ($cantidad != 0) {
-            return "false";
-        } else
-        return "true";
+  if($deque=="c"){
+   if ($valor != '') {
+    $sql = "SELECT * FROM `proveedores` WHERE `$campo` like '%$valor%'";
+    $query = $this->db->query($sql);
+    $cantidad = $query->num_rows();
+    if ($cantidad != 0) {
+      return "false";
     } else
     return "true";
+  } else
+  return "true";
 }else if($deque=='m'){
-    if ($valor != '') {
-        $sql = "SELECT * FROM `proveedores` WHERE `$campo` like '%$valor%' AND `prv_id` = '$prv_id'";
-        $query = $this->db->query($sql);
-        $cantidad = $query->num_rows();
-        if ($cantidad != 0) {
-            $var = "true";
-        } else {
-            $sql2 = "SELECT * FROM `proveedores` WHERE `$campo` like '%$valor%' ";
-            log_message("error",$sql2);
+  if ($valor != '') {
+    $sql = "SELECT * FROM `proveedores` WHERE `$campo` like '%$valor%' AND `prv_id` = '$prv_id'";
+    $query = $this->db->query($sql);
+    $cantidad = $query->num_rows();
+    if ($cantidad != 0) {
+      $var = "true";
+    } else {
+      $sql2 = "SELECT * FROM `proveedores` WHERE `$campo` like '%$valor%' ";
+      log_message("error",$sql2);
 
-            $query2 = $this->db->query($sql2);
-            $cantidad2 = $query2->num_rows();
-            if ($cantidad2 != 0)
-                $var = "false";
-            else
-                $var = "true";
-        }
-    } else
-    $var = "true";
-    return $var;
+      $query2 = $this->db->query($sql2);
+      $cantidad2 = $query2->num_rows();
+      if ($cantidad2 != 0)
+        $var = "false";
+      else
+        $var = "true";
+    }
+  } else
+  $var = "true";
+  return $var;
 }
 
 }
@@ -165,21 +165,22 @@ public function comprobar_mdl($u,$c){
    $user = $query->row();
    $pass = $user->prv_clave;
    if($this->bcrypt->check_password($c, $pass)){
-       return "success";
+     return "success";
    }else{
     return "fail";
+  }
 }
-}
-
+else
+  return "fail";
 }
 
 
 public function actualizar_licencia_mdl($id=0,$p=""){
-    $arr=array('prv_licencia' => $p);
-    $this->db->where("prv_id",$id);
-    $this->db->update("proveedores",$arr);
+  $arr=array('prv_licencia' => $p);
+  $this->db->where("prv_id",$id);
+  $this->db->update("proveedores",$arr);
 
-    return "success";
+  return "success";
 
 }
 
@@ -187,25 +188,25 @@ public function actualizar_licencia_mdl($id=0,$p=""){
 
 public function login($username,$hash){
        //obtenemos los datos del usuario que quiere iniciar sesión
-   $this->db->where('username',$username);
-   $query = $this->db->get('users');
+ $this->db->where('username',$username);
+ $query = $this->db->get('users');
        //si el nombre de usuario coincide y sólo existe uno procedemos
-   if($query->num_rows() == 1){
-       $user = $query->row();
+ if($query->num_rows() == 1){
+   $user = $query->row();
            //en pass guardamos el hash del usuario que tenemos en la base
            //de datos para comprobarlo con el método check_password de Bcrypt
-       $pass = $user->password;
+   $pass = $user->password;
 
           //esta es la forma de comprobar si el password del 
           //formulario coincide con el codificado de la base de datos
-       if($this->bcrypt->check_password($hash, $pass))
-       {
-           return $query->row();
-       }else{
-           $this->session->set_flashdata('usuario_incorrecto','Los datos introducidos son incorrectos');
-           redirect(base_url().'secure_bcrypt/login','refresh');
-       }
+   if($this->bcrypt->check_password($hash, $pass))
+   {
+     return $query->row();
+   }else{
+     $this->session->set_flashdata('usuario_incorrecto','Los datos introducidos son incorrectos');
+     redirect(base_url().'secure_bcrypt/login','refresh');
    }
+ }
 }
 
 
