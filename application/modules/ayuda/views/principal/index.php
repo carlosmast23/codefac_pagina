@@ -36,7 +36,7 @@
 
 		<h4><span class="glyphicon glyphicon-tasks"></span> BARRA DE MENU</h4>
 
-		<h3>CONFIGURACIONES</h3> 
+		<h4><span class="glyphicon glyphicon-cog"></span> CONFIGURACIONES</h4> 
 		<ul class="nav nav-stacked" id="accordion0">
 			<li class="panel"> 
 				<a data-toggle="collapse" data-parent="#accordion0" href="#sc"><b>Secuenciales comprobantes</b></a>
