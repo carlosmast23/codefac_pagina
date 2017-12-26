@@ -20,15 +20,15 @@ class Mysoapserver extends MY_Controller {
 
         $input_array2 = array ('email' => "xsd:string", 'licencia' => "xsd:string");
         $return_array2= array ("return" => "xsd:string");
-        $this->nusoap_server->register('actualizar_licencia', $input_array2, $return_array2, "urn:SOAPServerWSDL", "urn:".$ns."/actualizar_licencia", "document", "literal", "Actualizar Licencia Codefac");
+        $this->nusoap_server->register('actualizarlicencia', $input_array2, $return_array2, "urn:SOAPServerWSDL", "urn:".$ns."/actualizarlicencia", "document", "literal", "Actualizar Licencia Codefac");
 
         $input_array3 = array ('u' => "xsd:string", 'c' => "xsd:string");
         $return_array3= array ("return" => "xsd:string");
         $this->nusoap_server->register('comprobar', $input_array3, $return_array3, "urn:SOAPServerWSDL", "urn:".$ns."/comprobar", "document", "literal", "Comprobar Usuario");
 
-          $input_array4 = array ('id' => "xsd:string");
+          $input_array4 = array ('email' => "xsd:string");
         $return_array4= array ("return" => "xsd:string");
-        $this->nusoap_server->register('obtener_licencia', $input_array4, $return_array4, "urn:SOAPServerWSDL", "urn:".$ns."/obtener_licencia", "document", "literal", "Obtener Licencia");
+        $this->nusoap_server->register('obtenerlicencia', $input_array4, $return_array4, "urn:SOAPServerWSDL", "urn:".$ns."/obtenerlicencia", "document", "literal", "Obtener Licencia");
     }
 
     function index(){
@@ -38,7 +38,7 @@ class Mysoapserver extends MY_Controller {
             return $c;
         }
 
-        function actualizar_licencia($email,$licencia){
+        function actualizarlicencia($email,$licencia){
             $ci = &get_instance();
             $ci->load->model('general_model');
             return $ci->general_model->actualizar_licencia_mdl($email,$licencia);
@@ -50,10 +50,10 @@ class Mysoapserver extends MY_Controller {
             return $ci->general_model->comprobar_mdl($u,$c);
         }
 
-         function obtener_licencia($id){
+         function obtenerlicencia($email){
             $ci = &get_instance();
             $ci->load->model('general_model');
-            return $ci->general_model->comprobar_licencia_mdl($id);
+            return $ci->general_model->obtener_licencia_mdl($email);
         }
 
 
