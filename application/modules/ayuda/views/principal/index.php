@@ -19,6 +19,11 @@
 		color: #000;
 	}
 
+	#ayuda h4{
+		font-size: 1em;
+		font-weight: bold;
+	}
+
 </style>
 <br><br>
 <br>

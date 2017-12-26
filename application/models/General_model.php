@@ -176,7 +176,7 @@ else
 
 
 public function comprobar_licencia_mdl($id){
- $this->db->where('prv_id',$id);
+ $this->db->where('prv_email',$id);
  $query = $this->db->get('proveedores');
  $prv_licencia= $query->row()->prv_licencia;
  if($prv_licencia!="")
