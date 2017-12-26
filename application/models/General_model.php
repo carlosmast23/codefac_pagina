@@ -178,11 +178,16 @@ else
 public function obtener_licencia_mdl($id){
  $this->db->where('prv_email',$id);
  $query = $this->db->get('proveedores');
- $prv_licencia= $query->row()->prv_licencia;
- if($prv_licencia!="")
-  return "success";
+ if($query->num_rows() == 1){
+   $prv_licencia= $query->row()->prv_licencia;
+   if($prv_licencia!="")
+    return "success";
+  else
+    return "fail";
+}
 else
   return "fail";
+
 }
 
 public function actualizar_licencia_mdl($id=0,$p=""){
