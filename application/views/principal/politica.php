@@ -1,7 +1,5 @@
 <div class="container">
 	<div class="row">
-
-
 		<div class="col-md-12 text-justify blanco">
 			<h2 class="text-center"><strong>POLITICA DE PRIVACIDAD 2017</strong></h2>
 			<h3 class="text-center">
