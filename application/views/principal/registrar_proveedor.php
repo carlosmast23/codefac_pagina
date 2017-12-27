@@ -45,7 +45,9 @@
   }
 </style>
 
+
 <div class="container-fluid">
+<br>
 
  <div class="panel panel-primary">
   <div class="panel-heading">Registro Proveedor</div>
@@ -114,32 +116,32 @@
    </div>
    <div class="col-md-6">
      <div class="form-group">
-       <label class="col-md-2 control-label">*Dirección:</label>
-       <div class="col-md-8">
+       <label class="col-md-3 control-label">*Dirección:</label>
+       <div class="col-md-7">
          <input type="text" class="form-control" name="prv_direccion" id="prv_direccion" />
        </div>
      </div>
      <div class="form-group">
-       <label class="col-md-2 control-label">RUC:</label>
-       <div class="col-md-8">
+       <label class="col-md-3 control-label">CI/RUC:</label>
+       <div class="col-md-7">
          <input type="number" class="form-control" name="prv_ruc" id="prv_ruc" />
        </div>
      </div>
      <div class="form-group">
-       <label class="col-md-2 control-label">Razon social:</label>
-       <div class="col-md-8">
+       <label class="col-md-3 control-label">Razon Social:</label>
+       <div class="col-md-7">
          <input type="text" class="form-control" name="prv_razonsocial" id="prv_razonsocial" />
        </div>   
      </div>   
      <div class="form-group">
-       <label class="col-md-2 control-label">Representante legal:</label>
-       <div class="col-md-8">
+       <label class="col-md-3 control-label">Representante Legal:</label>
+       <div class="col-md-7">
          <input type="text" class="form-control" name="prv_representante" id="prv_representante" />
        </div> 
      </div>      
      <div class="form-group">
-       <label class="col-md-2 control-label">Actividad:</label>
-       <div class="col-md-8">    
+       <label class="col-md-3 control-label">Actividad Comercial:</label>
+       <div class="col-md-7">    
          <?=$cmb_actividades?>
        </div>
      </div>
