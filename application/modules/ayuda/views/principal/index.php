@@ -25,11 +25,10 @@
 	}
 
 </style>
-<br><br>
-<br>
+
 
 <div id="ayuda">
-	<h4><span class="glyphicon glyphicon-th"></span>
+	<h4 id="eopciones"><span class="glyphicon glyphicon-th"></span>
 		CINTA DE OPCIONES <img src="<?=base_url()?>img/ayuda/barraopciones.png" /> </h4> 
 		<ul class="nav nav-stacked" id="accordion10">
 			<li class="panel"> 
@@ -51,7 +50,7 @@
 
 		<h4><span class="glyphicon glyphicon-tasks"></span> BARRA DE MENU</h4>
 
-		<h4><span class="glyphicon glyphicon-list-alt"></span> FACTURA</h4>
+		<h4 id="efactura"><span class="glyphicon glyphicon-list-alt"></span> FACTURA</h4>
 		<h5>Registrar nueva factura</h5>
 		<ul class="nav nav-stacked" id="accordion1">
 			<li class="panel"> 
@@ -112,7 +111,7 @@
 
 		</ul>
 
-		<h5>Nota de crédito</h5>
+		<h5 id="enotacredito">Nota de crédito</h5>
 		<ul class="nav nav-stacked" id="accordion03">
 			<li class="panel"> 
 				<a data-toggle="collapse" data-parent="#accordion03" href="#ac031"><span class="glyphicon glyphicon-flag"></span> <b>Datos de factura</b></a>
@@ -151,7 +150,7 @@
 		</ul>
 
 
-		<h4><span class="glyphicon glyphicon-user"></span> CLIENTES</h4>
+		<h4  id="eclientes"><span class="glyphicon glyphicon-user"></span> CLIENTES</h4>
 		<ul class="nav nav-stacked" id="accordion02">
 			<li class="panel"> 
 				<a data-toggle="collapse" data-parent="#accordion02" href="#gcli"><span class="glyphicon glyphicon-flag"></span> <b>Gestionar Clientes</b></a>
@@ -193,7 +192,7 @@
 					</ul>
 				</li>
 			</ul>
-			<h4><span class="glyphicon glyphicon-shopping-cart"></span> PRODUCTOS</h4>
+			<h4 id="eproductos"><span class="glyphicon glyphicon-shopping-cart"></span> PRODUCTOS</h4>
 			<ul class="nav nav-stacked" id="accordion22">
 				<li class="panel"> 
 					<a data-toggle="collapse" data-parent="#accordion22" href="#gpro"><span class="glyphicon glyphicon-flag"></span> <b>Gestionar Productos</b></a>
@@ -223,8 +222,7 @@
 
 
 			<h4><span class="glyphicon glyphicon-cog"></span> CONFIGURACIONES</h4> 
-			<h4><span class="glyphicon glyphicon-file"></span> COMPROBANTES</h4>
-
+			<h4 id="ecomprobantes"><span class="glyphicon glyphicon-file"></span> COMPROBANTES</h4>
 			<ul class="nav nav-stacked" id="accordion0">
 				<li class="panel"> 
 					<a data-toggle="collapse" data-parent="#accordion0" href="#sc"><span class="glyphicon glyphicon-flag"></span> <b>Secuenciales comprobantes</b></a>
@@ -258,7 +256,7 @@
 				</li>
 			</ul>
 
-			<h4><span class="glyphicon glyphicon-share-alt"></span> EMISOR</h4>
+			<h4 id="eemisor"><span class="glyphicon glyphicon-share-alt"></span> EMISOR</h4>
 			<ul class="nav nav-stacked" id="accordion01">
 				<li class="panel"> 
 					<a data-toggle="collapse" data-parent="#accordion01" href="#cg"><span class="glyphicon glyphicon-flag"></span> <b>Caracteristicas generales</b></a>
@@ -278,7 +276,7 @@
 				</li>
 			</ul>
 
-			<h4><span class="glyphicon glyphicon-envelope"></span> UTILIDAD</h4>
+			<h4 id="eutilidad"><span class="glyphicon glyphicon-envelope"></span> UTILIDAD</h4>
 			<ul class="nav nav-stacked" id="accordion04">
 				<li class="panel"> 
 					<a data-toggle="collapse" data-parent="#accordion04" href="#ac041"><span class="glyphicon glyphicon-flag"></span> <b>Correos</b></a>
