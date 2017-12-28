@@ -28,7 +28,7 @@
     </div>
   </div>
   <!-- end Preloader -->
-  <nav class="navbar navbar-inverse navbar-default">
+  <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -37,7 +37,7 @@
         <span class="icon-bar"></span>                        
       </button>
       
-      <a href="<?=base_url()?>"><img src="<?=base_url()?>img/logo.png" height="50" alt="Logo"></a>
+      <a href="<?=base_url()?>"><img src="<?=base_url()?>img/logo.gif" height="50" alt="Logo"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
