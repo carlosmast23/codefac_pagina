@@ -77,7 +77,7 @@
   </ul>
 
 
-  <a class="btn btn-primary" href="<?=base_url()?>instalador/setup.exe">Descargue aquí!</a>
+  <a class="btn btn-primary" href="<?=base_url()?>instalador/setup.exe">Descargue CODEFAC-LITE!</a>
 
 </div>
 
