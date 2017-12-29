@@ -291,6 +291,27 @@
 
 			</ul>
 
+			<h4 id="eemail"><span class="glyphicon glyphicon-envelope"></span> Configurar los correos de Gmail para Codefact</h4>
+			<ul class="nav nav-stacked" id="acemail">
+				<li class="panel"> 
+					<a data-toggle="collapse" data-parent="#acemail" href="#acemail1"><span class="glyphicon glyphicon-flag"></span> <b>Correos</b></a>
+					<ul id="acemail1" class="collapse">
+						<li>
+							Ingresar a la siguiente dirección y cambiar la opción a SI como se muestra en la imagen.
+							Link: https://myaccount.google.com/lesssecureapps
+							<img src="<?=base_url()?>img/ayuda/amenosseguras.png" alt="">
+						</li>
+						<li>
+							Ingresar a la siguiente dirección y presionar el botón Aceptar.
+							Link:  https://accounts.google.com/b/0/DisplayUnlockCaptcha
+							<img src="<?=base_url()?>img/ayuda/pacceso.png" alt="">
+
+						</li>
+
+					</ul>
+				</li>
+
+			</ul>
 
 
 
