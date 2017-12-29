@@ -24,7 +24,7 @@
         <img class="img-responsive" src="<?=base_url()?>img/banner1.png" />
         <div class="carousel-caption">
           <h3>FACTURACIÓN ELECTRÓNICA GRATUITA</h3>
-          <p><a href="<?=base_url()?>general/registro" class="btn btn-default">¡Compra ya!</a></p>
+          <p><a href="<?=base_url()?>instalador/setup.exe" class="btn btn-default">Descargue aquí!</a></p>
         </div>
       </div>
 
