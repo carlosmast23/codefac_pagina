@@ -3,7 +3,7 @@
 
 
   <div class="col-md-12">
-  <p>
+    <p>
      <h4 class="text-center">
        El 2018 es el plazo para emitir comprobantes electrónicos bajo el esquema ‘Off Line’ ...  <a target="_blank" href="http://www.elcomercio.com/actualidad/plazo-comprobanteselectronicos-offline-sri-facturas.html">Ver Noticia.</a>
      </h4>       
@@ -75,6 +75,9 @@
     <li>Ahorro de tiempo y errores con automatizaciones de procesos.</li>
     <br>
   </ul>
+
+
+  <a class="btn btn-primary" href="<?=base_url()?>instalador/setup.exe">Descargue aquí!</a>
 
 </div>
 
