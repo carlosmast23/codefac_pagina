@@ -45,6 +45,7 @@
         <li><a href="#caracteristicas">Características</a></li>
         <li><a href="#planes">Planes</a></li>
         <li><a href="<?=base_url()?>general/registro">Registro</a></li>
+        <li><a href="<?=base_url()?>instalador/setup.exe">Descargar</a></li>
 
       </ul>
       
