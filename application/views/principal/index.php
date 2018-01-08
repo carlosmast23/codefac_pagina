@@ -29,6 +29,14 @@
       </div>
 
       <div class="item">
+        <img class="img-responsive" src="<?=base_url()?>img/banner6.png" />
+        <div class="carousel-caption">
+          <h3>LLeva el control de tus facturas online</h3>
+          <p><a href="<?=base_url()?>general/registro" class="btn btn-default">Regístrate</a></p>
+        </div>
+      </div>
+
+      <div class="item">
         <img class="img-responsive" src="<?=base_url()?>img/banner2.png" />
         <div class="carousel-caption">
           <h3>Facturación para pequeña y mediana empresa</h3>
@@ -43,13 +51,6 @@
           <p><a href="<?=base_url()?>general/registro" class="btn btn-default">Regístrate</a></p>
         </div>
       </div> 
-      <div class="item">
-        <img class="img-responsive" src="<?=base_url()?>img/banner5.png" />
-        <div class="carousel-caption">
-          <h3>LLeva el control de tus facturas online</h3>
-          <p><a href="<?=base_url()?>general/registro" class="btn btn-default">Regístrate</a></p>
-        </div>
-      </div>
 
     </div>
 
