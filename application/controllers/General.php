@@ -101,5 +101,8 @@ public function liteinfo(){
   $this->loadTemplates("principal/liteinfo");
 }
 
+public function versiones(){
+  $this->loadTemplates("principal/versiones");
+}
 
 }
