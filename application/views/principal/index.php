@@ -2,7 +2,22 @@
 <div class="container">
 
 
-  <div class="col-md-12">
+  <div class="col-md-6">
+    <h2 class="titulo_principal text-center">Codefac Lite</h2>
+    <p class="text-center">Es un sistema de facturación electrónica eficaz, intuitivo, facil de gestionar orientado a personas naturales, pymes y empresas en crecimiento.</p>  
+    <h3 class="titulo_principal">Beneficios</h3>
+    <ul class="blanco">
+      <li>Información eficiente y de calidad</li>
+      <li>Ahorro de costes de impresión, papel, envío postal y almacenamiento.</li>
+      <li>Eliminación de espacio físico para archivo. El archivo electrónico es más ágil y seguro.</li>
+      <li>Administración de estadistica, informe de ventas.</li>
+      <li>Ahorro de tiempo y errores con automatizaciones de procesos.</li>
+      <br>
+    </ul>
+    <a class="btn btn-primary btn-block" href="<?=base_url()?>instalador/setup.exe"> <span class="glyphicon glyphicon-save"></span> Descargue!</a>
+  </div>
+
+  <div class="col-md-6">
     <p>
      <h4 class="text-center">
        El 2018 es el plazo para emitir comprobantes electrónicos bajo el esquema ‘Off Line’ ...  <a target="_blank" href="http://www.elcomercio.com/actualidad/plazo-comprobanteselectronicos-offline-sri-facturas.html">Ver Noticia.</a>
@@ -66,21 +81,6 @@
   </div>
 </div>
 
-<div class="col-md-12">  
-  <h3 class="titulo_principal">Beneficios</h3>
-  <ul class="blanco">
-    <li>Información eficiente y de calidad</li>
-    <li>Ahorro de costes de impresión, papel, envío postal y almacenamiento.</li>
-    <li>Eliminación de espacio físico para archivo. El archivo electrónico es más ágil y seguro.</li>
-    <li>Administración de estadistica, informe de ventas.</li>
-    <li>Ahorro de tiempo y errores con automatizaciones de procesos.</li>
-    <br>
-  </ul>
-
-
-  <a class="btn btn-primary" href="<?=base_url()?>instalador/setup.exe">Descargue CODEFAC-LITE!</a>
-
-</div>
 
 
 
@@ -116,10 +116,6 @@
     <h4>Ahorro de costos</h4>
     <p>Ahorro de gastos de impresión, papel</p>
   </div>
-
-
-
-
 
 </div> 
 
