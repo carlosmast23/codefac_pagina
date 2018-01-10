@@ -1,24 +1,27 @@
- <div class="container main-container clearfix">
-     
-        <div class="col-md-12 blanco">
-            <h3 class="uppercase">FELICITACIONES</h3>
-            <h5>Con tu registro has obtenido los siguientes benficios.</h5>
-            <div class="h-30"></div>
-            <p>
-           <ul>
-               <li>Socio de nuestra cadena de clientes, proveedores y negocios locales. Este beneficio te permite el intercambio de servicios entre las organizaciones asociadas. Por ejemplo si alguien requiere un servicio de organización en eventos nosotros los redirigimos hacia tu negocio. </li>
-               <li>Recibe ofertas y descuentos en productos de nuestra cadena de asociados.</li>
-               <li>Publicación de eventos de tu negocio en nuestra página.</li>
-               <li>Una publicación semanal en nuestra página tu eliges el dia, la hora, el texto, las ideas que quieras mostrar al público (La imagen nos la puedes enviar por nuestra página)</li>
-               <li>Forma parte de nuestros sorteos en paquetes publicitarios</li>
-           </ul>
-           </p>
-           <p>
-               * Recuerda comparte esta pagina con tus amigos y conocidos para que tu publicidad pueda llegar a una mayor cantidad de personas.
-           </p>
+ <div class="container ">
 
-    
-           <a href="<?=base_url()?>">Volver al inicio</a>
+  <div class="col-md-12 blanco">
+    <h3 class="uppercase">FELICITACIONES</h3>
+    <h4>Tu clave de acceso al sistema Codefac Lite es:</h4>
+    <div class="h-30"></div>
+    <p>
+     <ul>
+       <li>
+         <b>Usuario:</b> tu correo electrónico registrado.
+       </li>
+       <li><b>Clave:</b> tu contraseña registrada.</li>
+     </ul>
+   </p>
+   <a href="<?=base_url()?>">Volver al inicio</a>
+<br><br>
+   <p>
+     * Mantente al dia en relacion a nuestras novedades.
+   </p>
+   <hr>
+   <p>Compra y venta de productos y servicios <a href="http://www.vm.codesoft-ec.com/">http://www.vm.codesoft-ec.com/</a> </p> 
+ </p>
+ <p>Codesoft <a href="http://www.vm.codesoft-ec.com/">http://www.codesoft-ec.com/</a> </p> 
 
-        </div>
-    </div>
+
+</div>
+</div>
