@@ -50,7 +50,7 @@
 <br>
 
  <div class="panel panel-primary">
-  <div class="panel-heading">Registro Proveedor</div>
+  <div class="panel-heading">Registro Cliente</div>
   <div class="panel-body">
    <form class="form-horizontal" action="<?=base_url()?>general/registrar_proveedor" method="POST" id="form_almacenar">
      <div class="col-md-6">
