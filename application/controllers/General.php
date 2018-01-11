@@ -102,7 +102,12 @@ public function liteinfo(){
 }
 
 public function versiones(){
-  $this->loadTemplates("principal/versiones");
+  $data["numd"]=$this->model->numerod_mdl();
+  $this->loadTemplates("principal/versiones",$data);
+}
+
+public function incrementardescarga(){
+  $this->model->incrementardescarga_mdl();
 }
 
 }

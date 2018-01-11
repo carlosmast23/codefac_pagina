@@ -28,19 +28,40 @@
 
 
 <div id="ayuda">
-	<h4 id="eopciones"><span class="glyphicon glyphicon-th"></span>
-		CINTA DE OPCIONES <img src="<?=base_url()?>img/ayuda/barraopciones.png" /> </h4> 
+
+<img src="<?=base_url()?>img/ayuda/verificacion1.png" /> 
+<img src="<?=base_url()?>img/ayuda/verificacion2.png" /> 
+	<h3 id="eopciones"><span class="glyphicon glyphicon-th"></span>
+		ACCESOS DIRECTOS <img src="<?=base_url()?>img/ayuda/accesosdirectos.png" /> 
+	</h3>
+
+	<ul class="nav nav-stacked" id="accordion10">
+		<li class="panel"> 
+			<a data-toggle="collapse" data-parent="#accordion000" href="#ac101"><span class="glyphicon glyphicon-flag"></span> <b>Opciones</b></a>
+			<ul id="ac101" class="collapse">
+				<li><img src="<?=base_url()?>img/ayuda/factura.png" width="40"/> <b>Factura:</b> opción que permite ingresar a facturación.</li>
+				<li><img src="<?=base_url()?>img/ayuda/cliente.png" width="40"/> <b>Cliente:</b> opción que permite ingresar a gestión de clientes.</li>
+				<li><img src="<?=base_url()?>img/ayuda/producto.png" width="40"/> <b>Producto:</b> opción que permite ingresas a gestión de productos.</li>
+				<li><img src="<?=base_url()?>img/ayuda/calculadora.png" width="40"/> <b>Calculadora:</b> opción que permite ingresar a calculadora del sistema.</li>
+				<li><img src="<?=base_url()?>img/ayuda/configuracion.png" width="40"/> <b>Configuración:</b> opción que permite configurar opciones del sistema.</li>
+
+			</ul>
+		</li>
+	</ul> 
+
+	<h3 id="eopciones"><span class="glyphicon glyphicon-th"></span>
+		CINTA DE OPCIONES <img src="<?=base_url()?>img/ayuda/barraopciones.png" /> </h3> 
 		<ul class="nav nav-stacked" id="accordion10">
 			<li class="panel"> 
 				<a data-toggle="collapse" data-parent="#accordion0" href="#ac10"><span class="glyphicon glyphicon-flag"></span> <b>Menú</b></a>
 				<ul id="ac10" class="collapse">
-					<li><img src="<?=base_url()?>img/ayuda/nuevo-icono.png" width="20"/> <b>Nuevo:</b> opción que permite ingresar un nuevo registro en el sitema.</li>
-					<li><img src="<?=base_url()?>img/ayuda/save-icon.png" width="20"/> <b>Grabar:</b> opción que permite grabar un nuevo registro en el sistema.</li>
-					<li><img src="<?=base_url()?>img/ayuda/delete-icon.png" width="20"/> <b>Eliminar:</b> opción que permite eliminar el registro seleccionado.</li>
-					<li><img src="<?=base_url()?>img/ayuda/find-icon.png" width="20"/> <b>Buscar:</b> opción que facilita la búsqueda de registros, activa casillas en las cuales se puede determinar el texto a buscar.</li>
-					<li><img src="<?=base_url()?>img/ayuda/refresh-icon.png" width="20"/> <b>Refrescar:</b> opción que permite actualizar los datos presentados en pantalla.</li>
-					<li><img src="<?=base_url()?>img/ayuda/print-icon.png" width="20"/> <b>Imprimir:</b> opción que visualiza información, reportes específicicos.</li>
-					<li><img src="<?=base_url()?>img/ayuda/help_icon.png" width="20"/> <b>Ayuda:</b> opción que visualiza ayuda del sistema.</li>
+					<li><img src="<?=base_url()?>img/ayuda/nuevo-icono.png" width="30"/> <b>Nuevo:</b> opción que permite ingresar un nuevo registro en el sitema.</li>
+					<li><img src="<?=base_url()?>img/ayuda/save-icon.png" width="30"/> <b>Grabar:</b> opción que permite grabar un nuevo registro en el sistema.</li>
+					<li><img src="<?=base_url()?>img/ayuda/delete-icon.png" width="30"/> <b>Eliminar:</b> opción que permite eliminar el registro seleccionado.</li>
+					<li><img src="<?=base_url()?>img/ayuda/find-icon.png" width="30"/> <b>Buscar:</b> opción que facilita la búsqueda de registros, activa casillas en las cuales se puede determinar el texto a buscar.</li>
+					<li><img src="<?=base_url()?>img/ayuda/refresh-icon.png" width="30"/> <b>Refrescar:</b> opción que permite actualizar los datos presentados en pantalla.</li>
+					<li><img src="<?=base_url()?>img/ayuda/print-icon.png" width="30"/> <b>Imprimir:</b> opción que visualiza información, reportes específicicos.</li>
+					<li><img src="<?=base_url()?>img/ayuda/help_icon.png" width="30"/> <b>Ayuda:</b> opción que visualiza ayuda del sistema.</li>
 				</ul>
 			</li>
 		</ul>
@@ -48,7 +69,7 @@
 
 
 
-		<h4><span class="glyphicon glyphicon-tasks"></span> BARRA DE MENU</h4>
+		<h3><span class="glyphicon glyphicon-tasks"></span> BARRA DE MENU</h3>
 
 		<h4 id="efactura"><span class="glyphicon glyphicon-list-alt"></span> FACTURA</h4>
 		<h5>Registrar nueva factura</h5>
@@ -221,7 +242,7 @@
 			</ul>
 
 
-			<h4><span class="glyphicon glyphicon-cog"></span> CONFIGURACIONES</h4> 
+			<h3><span class="glyphicon glyphicon-cog"></span> CONFIGURACIONES</h3> 
 			<h4 id="ecomprobantes"><span class="glyphicon glyphicon-file"></span> COMPROBANTES</h4>
 			<ul class="nav nav-stacked" id="accordion0">
 				<li class="panel"> 
@@ -255,8 +276,7 @@
 					</ul>
 				</li>
 			</ul>
-
-			<h4 id="eemisor"><span class="glyphicon glyphicon-share-alt"></span> EMISOR</h4>
+			<h4 id="eemisor"><span class="glyphicon glyphicon-share-alt"></span> EMPRESA</h4>
 			<ul class="nav nav-stacked" id="accordion01">
 				<li class="panel"> 
 					<a data-toggle="collapse" data-parent="#accordion01" href="#cg"><span class="glyphicon glyphicon-flag"></span> <b>Caracteristicas generales</b></a>
@@ -268,7 +288,7 @@
 						<li><b>Dirección matriz:</b> dirección de la matriz de la empresa o negocio (campo obligatorio).</li>
 						<li><b>Dirección establecimiento:</b> dirección donde se emite las facturas (campo opcional).</li>
 						<li><b>Código establecimiento:</b> campo obligatorio (3 digitos).</li>
-						<li><b>Contribuyente especial/Nro Resolución:</b> campo opcional (3-5 digitos).</li>
+						<li><b>Contribuyente especial/Nro Resolución:</b> campo opcional (3-5 digitos). Revisar RUC</li>
 						<li><b>Obligado a llevar contabilidad:</b> campo opcional (si o no).</li>
 						<li><b>Logo:</b> imagen opcional. </li>
 						<li><b>Tiempo máximo para autorización:</b> 30 días antes de la fecha actual.</li>

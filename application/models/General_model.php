@@ -225,6 +225,24 @@ public function login($username,$hash){
 }
 
 
+public function incrementardescarga_mdl(){
+  $arr= array('contador' =>  "+1");
+  $this->db->where("id","1");
+  $this->db->update("descargas",$arr);
+
+  $this->db->query("UPDATE `descargas` SET contador=contador+1 WHERE `id`='1' ");
+}
+
+public function numerod_mdl(){
+ $this->db->where("id", "1");
+ $query = $this->db->get("descargas");
+ if ($query->num_rows() > 0) 
+  return $query->row()->contador;
+else
+  die("No existe informacion");
+}
+
+
 
 
 }
