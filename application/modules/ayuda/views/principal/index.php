@@ -241,7 +241,7 @@
 						<li><b>Punto de emisión:</b> número de punto de emisión.</li>
 						<li><b>IVA defecto:</b> valor vigente del IVA.</li>
 						<li><b>Directorio recurso:</b> ruta o dirección donde se aloja los complementos del sistema.</li>
-						<li><b>Correo electrónico:</b> correo electrónico de referencia para facturación.</li>
+						<li><b>Correo electrónico:</b> correo electrónico de referencia para facturación. Usado también como referencia para el <b>cliente final</b>.</li>
 						<li><b>Contraseña:</b> clave de referencia para facturación.</li>
 					</ul>
 				</li>
