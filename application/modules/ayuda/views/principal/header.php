@@ -32,9 +32,9 @@
   <div class="collapse navbar-collapse" id="myNavbar">
     <ul class="nav navbar-nav">
       <li><a href="<?=base_url()?>">Inicio</a> </li>
-      <li><a href="#caracteristicas">Facturación</a></li>
-      <li><a href="#caracteristicas">Clientes</a></li>
-      <li><a href="#caracteristicas">Productos</a></li>
+      <li><a href="#efactura">Facturación</a></li>
+      <li><a href="#eclientes">Clientes</a></li>
+      <li><a href="#eproductos">Productos</a></li>
 
     </ul>
     
