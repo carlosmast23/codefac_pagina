@@ -12,8 +12,8 @@
       <li>Eliminación de espacio físico para archivo. El archivo electrónico es más ágil y seguro.</li>
       <li>Administración de estadistica, informe de ventas.</li>
       <li>Ahorro de tiempo y errores con automatizaciones de procesos.</li>
-      <br>
     </ul>
+
     <a class="btn btn-primary btn-block" href="<?=base_url()?>instalador/codefactlite1.0.rar"> <span class="glyphicon glyphicon-save"></span> Descargue CODEFAC-LITE!</a>
   </div>
 
@@ -81,7 +81,13 @@
   </div>
 </div>
 
-
+<div class="col-md-12" >
+ <h3 class="titulo_principal">Requisitos</h3>
+ <ul class="blanco">
+  <li>Firma electrónica proporcionada por organismos competentes autorizados por el <a href="http://www.sri.gob.ec/">SRI</a>. </li>
+  <li>Instalar plataforma Java (<a href="http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html">JRE</a>) versión 1.8 o superior. </li>
+</ul>
+</div>
 
 
 <div class="col-md-12" id="caracteristicas">
