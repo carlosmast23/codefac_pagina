@@ -46,6 +46,7 @@
         <li><a href="#planes">Planes</a></li>
         <li><a href="<?=base_url()?>general/registro">Registro</a></li>
         <li><a href="<?=base_url()?>general/versiones">Descargas</a></li>
+        <li><a href="<?=base_url()?>ayuda">Ayuda</a></li>
 
       </ul>
       
