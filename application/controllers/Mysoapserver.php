@@ -26,13 +26,17 @@ class Mysoapserver extends MY_Controller {
         $return_array3= array ("return" => "xsd:string");
         $this->nusoap_server->register('comprobar', $input_array3, $return_array3, "urn:SOAPServerWSDL", "urn:".$ns."/comprobar", "document", "literal", "Comprobar Usuario");
 
-          $input_array4 = array ('email' => "xsd:string");
+        $input_array4 = array ('email' => "xsd:string");
         $return_array4= array ("return" => "xsd:string");
         $this->nusoap_server->register('obtenerlicencia', $input_array4, $return_array4, "urn:SOAPServerWSDL", "urn:".$ns."/obtenerlicencia", "document", "literal", "Obtener Licencia");
+
+        $input_array5 = array ('email' => "xsd:string");
+        $return_array5= array ("return" => "xsd:string");
+        $this->nusoap_server->register('devolverlicencia', $input_array5, $return_array5, "urn:SOAPServerWSDL", "urn:".$ns."/devolverlicencia", "document", "literal", "Devolver Licencia");
     }
 
     function index(){
-        
+
         function addnumbers($a,$b){
             $c = $a + $b;
             return $c;
@@ -50,12 +54,17 @@ class Mysoapserver extends MY_Controller {
             return $ci->general_model->comprobar_mdl($u,$c);
         }
 
-         function obtenerlicencia($email){
+        function obtenerlicencia($email){
             $ci = &get_instance();
             $ci->load->model('general_model');
             return $ci->general_model->obtener_licencia_mdl($email);
         }
 
+        function devolverlicencia($email){
+            $ci = &get_instance();
+            $ci->load->model('general_model');
+            return $ci->general_model->devolverlicencia_mdl($email);
+        }
 
 
         $this->nusoap_server->service(file_get_contents("php://input"));

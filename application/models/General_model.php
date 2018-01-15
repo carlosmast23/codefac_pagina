@@ -199,6 +199,16 @@ public function actualizar_licencia_mdl($id=0,$p=""){
 
 }
 
+public function devolverlicencia_mdl($email){
+ $this->db->where('prv_email',$email);
+ $query = $this->db->get('proveedores');
+ if($query->num_rows() == 1)
+  return $query->row()->prv_tipolicencia;
+else
+  return "fail";
+
+}
+
 
 
 public function login($username,$hash){
