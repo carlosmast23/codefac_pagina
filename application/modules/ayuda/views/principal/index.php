@@ -323,14 +323,14 @@
 					<li><b>RUC:</b> número de RUC (campo obligatorio).</li>
 					<li><b>Razón social:</b> razón social, nombres y apellidos (campo obligatorio). </li>
 					<li><b>Nombre comercial:</b> nombre (campo opcional).</li>
-					<li><b>Actividad comercial:</b> actividad comercial.</li>
-					<li><b>Dirección matriz:</b> dirección de la matriz de la empresa o negocio (campo obligatorio).</li>
-					<li><b>Dirección establecimiento:</b> dirección donde se emite las facturas (campo opcional).</li>
-					<li><b>Código establecimiento:</b> campo obligatorio (3 digitos).</li>
+					<!--<li><b>Actividad comercial:</b> actividad comercial.</li>-->
+					<li><b>Dirección:</b> dirección de la matriz de la empresa o negocio (campo obligatorio).</li>
+					<!--<li><b>Dirección establecimiento:</b> dirección donde se emite las facturas (campo opcional).</li>-->
+					<!--<li><b>Código establecimiento:</b> campo obligatorio (3 digitos).</li>-->
 					<li><b>Contribuyente especial/Nro Resolución:</b> campo opcional (3-5 digitos). Revisar RUC</li>
 					<li><b>Obligado a llevar contabilidad:</b> campo opcional (si o no).</li>
-					<li><b>Logo:</b> imagen opcional. </li>
-					<li><b>Tiempo máximo para autorización:</b> 30 días antes de la fecha actual.</li>
+					<li><b>Logo:</b> imagen opcional. Disponible en Codefac-Lite Pro </li>
+					<!--<li><b>Tiempo máximo para autorización:</b> 30 días antes de la fecha actual.</li>-->
 				</ul>
 			</li>
 		</ul>
