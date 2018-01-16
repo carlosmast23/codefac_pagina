@@ -302,7 +302,7 @@
 					<li><b>IVA defecto:</b> valor vigente del IVA.</li>
 					<li><b>Directorio recurso:</b> ruta o dirección donde se aloja los complementos del sistema.</li>
 					<li><b>Correo electrónico:</b> correo electrónico de referencia para facturación. Usado también como referencia para el <b>cliente final</b>.</li>
-					<li><b>Contraseña:</b> clave de referencia para facturación.</li>
+					<li><b>Contraseña correo:</b> clave de referencia para facturación.</li>
 				</ul>
 			</li>
 			<li class="panel"> 
@@ -311,7 +311,7 @@
 					<li><img src="<?=base_url()?>img/ayuda/btncf.png"/> opción que permite cargar archivo de firma electrónica facilitada por el SRI.</li>
 					<li><b>Modo facturación:</b> opción que establece el modo del sistema PRUEBAS o PRODUCCION.</li>
 					<li><b>Nombre archivo firma:</b> archivo facilitado por el SRI.</li>
-					<li><b>Clave firma:</b> clave de acceso facilitada por el SRI.</li>
+					<li><b>Contraseña firma:</b> clave de acceso facilitada por el SRI.</li>
 				</ul>
 			</li>
 		</ul>
