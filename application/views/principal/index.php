@@ -4,13 +4,13 @@
 
   <div class="col-md-6">
     <h2 class="titulo_principal text-center">Codefac Lite</h2>
-    <p class="text-center">Es un sistema de facturación electrónica eficaz, intuitivo, facil de gestionar orientado a personas naturales, pymes y empresas en crecimiento.</p>  
+    <p class="text-center">Es un sistema de facturación electrónica eficaz, intuitivo, fácil de gestionar orientado a personas naturales, pymes y empresas en crecimiento.</p>  
     <h3 class="titulo_principal">Beneficios</h3>
     <ul class="blanco">
       <li>Información eficiente y de calidad</li>
       <li>Ahorro de costes de impresión, papel, envío postal y almacenamiento.</li>
       <li>Eliminación de espacio físico para archivo. El archivo electrónico es más ágil y seguro.</li>
-      <li>Administración de estadistica, informe de ventas.</li>
+      <li>Administración estadística, informe de ventas.</li>
       <li>Ahorro de tiempo y errores con automatizaciones de procesos.</li>
     </ul>
 
@@ -95,12 +95,12 @@
   <div class="col-md-4 text-center">
     <h1 class="glyphicon glyphicon-envelope"></h1>
     <h4>Emisión de facturas</h4>
-    <p>Envio de facturas electrónicas</p>
+    <p>Envío de facturas electrónicas</p>
   </div>
   <div class="col-md-4 text-center">
     <h1 class="glyphicon glyphicon-list-alt"></h1>
     <h4>Notas crédito y débito</h4>
-    <p>Envió de comprobantes</p>
+    <p>Envío de comprobantes</p>
   </div>
   <div class="col-md-4 text-center">
     <h1 class="glyphicon glyphicon-user"></h1>
@@ -124,6 +124,12 @@
   </div>
 
 </div> 
+
+<div class="col-md-12" id="masinfo">
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/a0dVCzIc2Hs/" frameborder="0"></iframe>
+  </div>
+</div>
 
 <div class="col-md-12" id="planes">
   <h3 class="text-center titulo_principal" >PLANES Y PRECIOS DE FACTURACIÓN ELECTRÓNICA</h3>
