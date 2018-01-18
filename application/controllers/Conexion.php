@@ -48,8 +48,7 @@ class Conexion extends MY_Controller {
           'username' => $user->prv_email
           );
         $this->session->set_userdata($data);
-        $this->loadTemplates('principal/vpro',$data);
-
+        redirect("licencia/index","refresh");
       } else {
         redirect(base_url() . 'conexion/login');
       }
