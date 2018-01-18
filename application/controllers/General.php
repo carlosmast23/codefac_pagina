@@ -110,4 +110,7 @@ public function incrementardescarga(){
   $this->model->incrementardescarga_mdl();
 }
 
+
+
+
 }

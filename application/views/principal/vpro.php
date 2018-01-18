@@ -24,13 +24,23 @@
 			<hr>	
 			<h4>Subir comprobante</h4>
 			<hr>
-			<form class="form-horizontal" action="<?=base_url()?>archivos/subirarchivo" method="post" enctype="multipart/form-data">
+
+			<form action="<?=base_url()?>licencia/actualizar" method="post" enctype="multipart/form-data">
+				<?=$captcha['image']?>
+				<input type="text" name="captcha" value="<?php echo set_value('captcha'); ?>"/>
+
+				<input type="hidden" value="<?=$captcha['word']?>" name="string_captcha" />
+
+
 				<div class="form-group">
 					<input type="file" name="mi_archivo">
 				</div>	 
+
+
 				<input type="hidden" name="ref_id"  id="ref_id" value="<?=$this->session->id_usuario?>" />	
 				<input class="btn btn-primary" type="submit" value="Enviar">
 			</form>
+
 
 			<hr>
 			<h3>Formas de Pago</h3>
@@ -44,5 +54,5 @@
 		</div>
 	</div>
 
-	
+
 </div>
