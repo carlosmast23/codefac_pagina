@@ -261,6 +261,11 @@
       <td><span class="precio">$ 159 </span> <span class="supidc">.99</span></td>
       <!--<td><span class="precio">$ 249 </span> <span class="supidc">.99</span> </td>-->
     </tr>
+    <tr>
+      <td>-</td>
+      <td><a class="btn btn-primary" href="<?=base_url()?>general/versiones"><span class="glyphicon glyphicon-save"></span> Descargar</a></td>
+      <td><a class="btn btn-success" href="<?=base_url()?>"><span class="glyphicon glyphicon-shopping-cart"></span> Comprar</a></td>
+    </tr>
   </table>
 
   <h3 class="text-center titulo_principal">PLANES Y PRECIOS DE SOPORTE Y MANTENIMIENTO</h3>

@@ -199,6 +199,16 @@ public function actualizar_licencia_mdl($id=0,$p=""){
 
 }
 
+
+public function actualizar_tipolicencia_mdl($email="",$tipo=""){
+  $arr=array('prv_tipolicencia' => $tipo);
+  $this->db->where("prv_email",$email);
+  $this->db->update("proveedores",$arr);
+
+  return "success";
+
+}
+
 public function devolverlicencia_mdl($email){
  $this->db->where('prv_email',$email);
  $query = $this->db->get('proveedores');
