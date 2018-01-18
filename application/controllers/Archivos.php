@@ -9,6 +9,16 @@ class Archivos extends MY_Controller {
         $this->load->model('archivos_model', 'model');
     }
 
+
+    public function index(){
+        die("archivos");
+    }
+
+    public function subirarchivo() {
+        echo $this->model->subirarchivo_mdl();
+    }
+
+
     public function vensubir() {
         $arc_ref_id = $this->uri->segment(4); // $this->input->post('arc_ref_id');
         $data['arc_ref_id'] = $arc_ref_id;

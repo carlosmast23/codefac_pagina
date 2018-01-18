@@ -33,6 +33,11 @@ class Mysoapserver extends MY_Controller {
         $input_array5 = array ('email' => "xsd:string");
         $return_array5= array ("return" => "xsd:string");
         $this->nusoap_server->register('devolverlicencia', $input_array5, $return_array5, "urn:SOAPServerWSDL", "urn:".$ns."/devolverlicencia", "document", "literal", "Devolver Licencia");
+
+
+        $input_array6 = array ('email' => "xsd:string", 'tipo' => "xsd:string");
+        $return_array6= array ("return" => "xsd:string");
+        $this->nusoap_server->register('actualizartipolicencia', $input_array6, $return_array6, "urn:SOAPServerWSDL", "urn:".$ns."/actualizartipolicencia", "document", "literal", "Actualizar Tipo Licencia");
     }
 
     function index(){
@@ -46,6 +51,12 @@ class Mysoapserver extends MY_Controller {
             $ci = &get_instance();
             $ci->load->model('general_model');
             return $ci->general_model->actualizar_licencia_mdl($email,$licencia);
+        }
+
+        function actualizartipolicencia($email,$tipo){
+            $ci = &get_instance();
+            $ci->load->model('general_model');
+            return $ci->general_model->actualizar_tipolicencia_mdl($email,$tipo);
         }
 
         function comprobar($u,$c){
