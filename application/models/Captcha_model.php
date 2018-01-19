@@ -43,22 +43,25 @@ class Captcha_model extends CI_Model {
 
 
     public function validate(){
-    // First, delete old captchas
-$expiration = time() - 7200; // Two hour limit
-$this->db->where('captcha_time < ', $expiration)
-->delete('captcha');
+        $valor = $this->input->get('captcha', TRUE);
+        if(strlen($valor)==6){
 
-// Then see if a captcha exists:
-$sql = 'SELECT COUNT(*) AS count FROM captcha WHERE word = ? AND ip_address = ? AND captcha_time > ?';
-$binds = array($_POST['captcha'], $this->input->ip_address(), $expiration);
-$query = $this->db->query($sql, $binds);
-$row = $query->row();
+        $expiration = time() - 7200; // Two hour limit
+        $this->db->where('captcha_time < ', $expiration)->delete('captcha');
 
-if ($row->count == 0)
-    return false;
-else
-    return true;
+        $sql = 'SELECT COUNT(*) AS count FROM captcha WHERE word = ? AND ip_address = ? AND captcha_time > ?';
+        $binds = array($valor, $this->input->ip_address(), $expiration);
+        $query = $this->db->query($sql, $binds);
+        $row = $query->row();
 
+        if ($row->count == 0)
+            return "false";
+        else
+            return "true";
+
+    }
+    else 
+        return "false";
 }
 
 

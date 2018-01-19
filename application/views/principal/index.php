@@ -195,7 +195,7 @@
       <!--<td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>-->
     </tr>
     <tr>
-      <td>Inventario</td>
+      <td>CRM</td>
       <td> <img src="<?=base_url()?>img/icon_okn.png" height="20"/> </td>
       <td> <img src="<?=base_url()?>img/icon_okn.png" height="20"/> </td>
       <!--<td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>-->
@@ -207,7 +207,7 @@
       <!--<td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>-->
     </tr> 
     <tr>
-      <td>Venta de crédito</td>
+      <td>Ventas a crédito</td>
       <td> <img src="<?=base_url()?>img/icon_okn.png" height="20"/> </td>
       <td> <img src="<?=base_url()?>img/icon_okn.png" height="20"/> </td>
       <!--<td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>-->

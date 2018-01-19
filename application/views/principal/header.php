@@ -56,7 +56,7 @@
         <!--
         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       -->
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a href="<?=base_url()?>conexion/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       
     </ul>
 
