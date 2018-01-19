@@ -55,7 +55,12 @@ class Licencia extends MY_Controller {
       return $cap;
   }
 
-  public function actualizar(){
+
+  public function validate_captcha(){
+    echo $this->model->validate();
+}
+
+public function actualizar(){
 
      //$this->form_validation->set_rules('captcha', 'captcha', 'callback_validate_captcha');
    if($this->model->validate()== false){
@@ -71,12 +76,18 @@ class Licencia extends MY_Controller {
       if($check == 1){
        $this->load->model("archivos_model");
        $this->archivos_model->subirarchivo_mdl();
+
+       $this->db->where("prv_id",$this->session->id_usuario);
+       $this->db->update("proveedores",array("prv_tipolicencia"=>'p'));
+
+       redirect("general/success");
    }
 
 } 
 
 }
 
+  /*
   //comprobamos si la sessión que hemos creado es igual que el captcha introducido
   //con una función callback
 public function validate_captcha(){
@@ -88,7 +99,7 @@ public function validate_captcha(){
   }
 
 }
-
+*/
 
 
 }
