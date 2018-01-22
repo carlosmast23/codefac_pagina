@@ -12,6 +12,8 @@ class General_model extends CI_Model {
 
   public function registrar_proveedor_mdl(){
     $this->load->library('bcrypt');
+    $this->load->model("email_model");
+    $this->load->model("GoogleURL_model","google");
 
     $ncel=format_celular($this->input->post("prv_celular"));
     $email=$this->input->post("prv_email");
@@ -35,11 +37,43 @@ class General_model extends CI_Model {
       "prv_fecharegistro"=>hoy('c'),
       );
      $this->db->insert("proveedores",$data);
+     
+     $id=$this->db->insert_id();
+     $enlace= $this->google->codificar_parametro("general/verificacion/",$id);
+
+     $this->email_model->enviar_mail($email,"Verificación Codefac","Valida tu cuenta en el siguiente enlace $enlace. Gracias por registrarte con nosotros. ");
    }
+
  }
 
 
- public function actualizar_proveedor_mdl(){
+ public function verificacion_mdl(){
+  $this->load->model("GoogleURL_model","google");
+  $enc_username=$this->uri->segment(3);
+  $dec_username=str_replace(array('-', '_', '~'), array('+', '/', '='), $enc_username);
+  $prv_id=$this->encrypt->decode($dec_username);
+
+  if($this->estado_prov($prv_id)=='i'){
+    $arr= array('prv_estado' => "a");
+    $this->db->where("prv_id",$prv_id);
+    $this->db->update("proveedores",$arr);
+  }else
+  die("Este enlace ya ha sido usado.");
+}
+
+
+
+public function estado_prov($id){
+  $this->db->where("prv_id", $id);
+  $query = $this->db->get("proveedores");
+  if ($query->num_rows() > 0)
+    return $query->row()->prv_estado;
+  else
+   return false;
+}
+
+
+public function actualizar_proveedor_mdl(){
   $prv_id=$this->input->post("prv_id");
 
   $ncel=format_celular($this->input->post("prv_telefono"));
