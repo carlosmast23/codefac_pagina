@@ -52,7 +52,6 @@ class General extends MY_Controller {
   }else
   redirect("general/erroract","refresh");
 
-
 }
 
 public function actualizar_prov(){
@@ -62,6 +61,11 @@ public function actualizar_prov(){
 
 public function success(){
   $this->loadTemplates("principal/success");
+}
+
+public function verificacion(){
+  $this->model->verificacion_mdl();
+  $this->loadTemplates("principal/verificacion");
 }
 
 public function errorprov(){

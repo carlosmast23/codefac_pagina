@@ -61,7 +61,6 @@ class Licencia extends MY_Controller {
 }
 
 public function actualizar(){
-
      //$this->form_validation->set_rules('captcha', 'captcha', 'callback_validate_captcha');
    if($this->model->validate()== false){
     $this->index();

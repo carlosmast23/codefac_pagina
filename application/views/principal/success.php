@@ -12,8 +12,11 @@
        <li><b>Clave:</b> tu contraseña registrada.</li>
      </ul>
    </p>
+   <hr>
+   <h2>Valida tu cuenta, revisa tu correo</h2>
+   <hr>
    <a href="<?=base_url()?>">Volver al inicio</a>
-<br><br>
+   <br><br>
    <p>
      * Mantente al dia en relacion a nuestras novedades.
    </p>

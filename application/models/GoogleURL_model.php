@@ -3,9 +3,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class GoogleURL_model extends CI_Model {
-
 	private $apiURL = 'https://www.googleapis.com/urlshortener/v1/url'; 
-
 
 	public function __construct(){
 		parent::__construct();
