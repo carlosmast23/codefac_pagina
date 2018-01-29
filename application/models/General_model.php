@@ -43,7 +43,7 @@ class General_model extends CI_Model {
 
      var_dump($data);
 
-     $enlace= $this->google->codificar_parametro("general/verificacion/",$id);
+     $enlace=1;//; $this->google->codificar_parametro("general/verificacion/",$id);
 
      $this->email_model->enviar_mail($email,"Verificación Codefac","Valida tu cuenta en el siguiente enlace $enlace. Gracias por registrarte con nosotros. ");
 
