@@ -35,7 +35,7 @@ class General_model extends CI_Model {
       "prv_representante"=>$this->input->post("prv_representante"),
       "act_id"=>$this->input->post("act_id"),
       "prv_fecharegistro"=>hoy('c'),
-      "prv_estado"='i'
+      "prv_estado"=>'i'
       );
      $this->db->insert("proveedores",$data);
      
