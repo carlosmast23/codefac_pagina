@@ -63,10 +63,24 @@ public function success(){
   $this->loadTemplates("principal/success");
 }
 
+
+public function preverificacion(){
+  $this->load->model("GoogleURL_model","google");
+  $enc_username=$this->uri->segment(3);
+  $dec_username=str_replace(array('-', '_', '~'), array('+', '/', '='), $enc_username);
+  $prv_id=$this->encrypt->decode($dec_username);
+
+  $data["prv_id"]=$prv_id;
+  $this->loadTemplates("principal/preverificacion",$data);
+}
+
+
 public function verificacion(){
   $this->model->verificacion_mdl();
   $this->loadTemplates("principal/verificacion");
 }
+
+
 
 public function errorprov(){
   $this->loadTemplates("principal/errorprov");
