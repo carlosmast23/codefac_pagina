@@ -44,7 +44,7 @@ class Captcha_model extends CI_Model {
 
     public function validate(){
         $valor = $this->input->get('captcha', TRUE);
-        if(strlen($valor)==6){
+        if(strlen($valor)==4){
 
         $expiration = time() - 7200; // Two hour limit
         $this->db->where('captcha_time < ', $expiration)->delete('captcha');

@@ -13,6 +13,9 @@ class Conexion extends MY_Controller {
 
 
   public function login() {
+    $this->load->model("licencia_model");
+
+
     $data['token'] = $this->token();
 
     $this->form_validation->set_rules('username', 'Email', 'trim|required|valid_email|min_length[2]|max_length[150]');
@@ -41,14 +44,27 @@ class Conexion extends MY_Controller {
           case 'f':$tipo="Free"; break;
           case 'p':$tipo="Premium"; break;
         }
+
+        $com_id=$this->licencia_model->tiene_compra_mdl($user_id);
+        $com_estado=datoDeTablaCampo("compras","com_id","com_estado",$com_id);
+
         $data = array(
           'is_logued_in' => TRUE,
           'id_usuario' => $user->prv_id,
           'tipo' => $tipo,
-          'username' => $user->prv_email
+          'username' => $user->prv_nombres." ".$user->prv_apellidos,
+          'ci_usuario'=>$user->prv_ruc,
+          'com_id'=>$com_id,
           );
         $this->session->set_userdata($data);
-        redirect("licencia/index","refresh");
+
+        if($com_id>0 && $com_estado=='p')
+          redirect("licencia/generar_compra","refresh");
+        else if ($com_id>0 && $com_estado=='f')
+          redirect("licencia/ver_compra","refresh");
+        else
+          redirect("licencia/index","refresh");
+
       } else {
         redirect(base_url() . 'conexion/login');
       }

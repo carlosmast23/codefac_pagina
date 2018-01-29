@@ -23,20 +23,8 @@
 				</li>
 			</ul>
 
-			<hr>
-			<h4>Datos de comprador</h4>
-			<table class="table">
-				<tr>
-					<td>Comprador:</td>
-					<td><?=$this->session->username?></td>
-				</tr>
-				<tr>
-					<td>CI/RUC:</td>
-					<td><?=$this->session->ci_usuario?></td>
-				</tr>
-			</table>
-
-			<!--<h5>Caracteristicas</h5>
+			<hr>	
+			<h5>Caracteristicas</h5>
 			<ul>
 				<li>Facturas ilimitadas</li>
 				<li>Número de máquinas: 1</li>
@@ -57,45 +45,38 @@
 				<li>Incorporación logo</li>
 				<li>Incorporación de colores empresariales</li>
 				<li>Diponibilidad de actualizaciones</li>
-			</ul>-->
+			</ul>
 			<hr>	
-			<h4>Subir comprobante</h4>
+			<h4>ORDEN DE COMPRA</h4>
 			<hr>
-			<form class="form-horizontal" action="<?=base_url()?>licencia/actualizar" method="post" enctype="multipart/form-data" id="form_almacenar">
+			<form class="form-horizontal" action="<?=base_url()?>licencia/generar_orden" method="post" id="form_almacenar">
 				
+
 				<div class="form-group">
-					<label class="col-md-3 control-label">Código de compra:</label>
-					<div class="col-md-2">
-						<input type="text" class="form-control" name="codigo" id="codigo" value=""/>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-md-3 control-label">Verificación:</label>
-					<div class="col-md-9">
-						<?=$captcha['image']?>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-md-3 control-label">Texto de verificación:</label>
-					<div class="col-md-3">
-						<input type="text" class="form-control" name="captcha" id="captcha" value="<?php echo set_value('captcha'); ?>"/>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-md-3 control-label">Adjunto:</label>
+					<label class="col-md-4 control-label">CI/RUC:</label>
 					<div class="col-md-5">
-						<input type="file" name="mi_archivo" id="mi_archivo" class="form-control" />
+						<label for=""><?=$this->session->ci_usuario?></label>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-md-4 control-label">Cliente:</label>
+					<div class="col-md-5">
+						<label for=""><?=$this->session->username?></label>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-md-4 control-label">Código:</label>
+					<div class="col-md-2">
+						<input type="text" class="form-control" name="codigo" id="codigo" value="<?=$codigo?>" readonly/>
 					</div>
 				</div>
 
 				<div class="form-group">
 					<div class="col-md-6 col-md-offset-3">
 						<input type="hidden" name="ref_id"  id="ref_id" value="<?=$this->session->id_usuario?>" />	
-						
-						<input type="hidden" name="prv_id"  id="prv_id" value="<?=$this->session->id_usuario?>" />	
-						<input type="hidden" name="com_id"  id="com_id" value="<?=$this->session->com_id?>" />
-
-						<input class="btn btn-success btn-lg" type="button" value="COMPRAR" id="almacenar">
+						<input class="btn btn-success btn-lg" type="button" value="GENERAR ORDEN DE COMPRA" id="almacenar">
 					</div>
 				</div>
 
@@ -142,22 +123,16 @@
 				required: true,
 				remote: $("#base_url").val() + "licencia/validate_captcha"
 			},
-			mi_archivo: "required",
-			codigo: {
-				required: true,
-				remote: $("#base_url").val() + "licencia/vcodigo_compra/"+$("#prv_id").val()
-			}
+			mi_archivo: "required"
+			
 		},
 		messages: {
 			captcha: {
 				required:"* Campo requerido. Ingrese código de verificación.",
-				remote: "* No coincide el texto."
+				remote: "* No coincide el texto"
 			},
-			mi_archivo:"El comprobante es requerido.",
-			codigo: {
-				required:"* Campo requerido. Ingrese código de compra.",
-				remote: "* El código ingresado no es válido."
-			}
+			mi_archivo:"El comprobante es requerido"
+
 		}
 	});
 	
