@@ -42,9 +42,9 @@ class General_model extends CI_Model {
      $id=$this->db->insert_id();
 
 
-     $enlace=base_url()."general/verificacion/".$id;
+     $enlace= $this->google->codificar_parametro("general/preverificacion/",$id);
 
-     $this->email_model->enviar_mail($email,"Verificación Codefac","Valida tu cuenta en el siguiente enlace $enlace . Gracias por registrarte con nosotros. ");
+     $this->email_model->enviar_mail($email,"Verificación Codefac","Valida tu cuenta en el siguiente enlace $enlace. Gracias por registrarte con nosotros. ");
 
    }
 
@@ -52,11 +52,6 @@ class General_model extends CI_Model {
 
 
  public function verificacion_mdl(){
-  /*$this->load->model("GoogleURL_model","google");
-  $enc_username=$this->uri->segment(3);
-  $dec_username=str_replace(array('-', '_', '~'), array('+', '/', '='), $enc_username);
-  $prv_id=$this->encrypt->decode($dec_username);
-*/
   $prv_id=$this->uri->segment(3);
 
   if($this->estado_prov($prv_id)=='i'){
