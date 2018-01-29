@@ -42,3 +42,4 @@ application/config/routes.php
 
 #excluido archivo upload donde se suben las imagenes
 uploads/
+captcha/
