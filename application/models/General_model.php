@@ -44,7 +44,7 @@ class General_model extends CI_Model {
 
      $enlace=base_url()."general/verificacion/".$id;
 
-     $this->email_model->enviar_mail($email,"Verificación Codefac","Valida tu cuenta en el siguiente enlace $enlace. Gracias por registrarte con nosotros. ");
+     $this->email_model->enviar_mail($email,"Verificación Codefac","Valida tu cuenta en el siguiente enlace $enlace . Gracias por registrarte con nosotros. ");
 
    }
 
@@ -58,7 +58,7 @@ class General_model extends CI_Model {
   $prv_id=$this->encrypt->decode($dec_username);
 */
   $prv_id=$this->uri->segment(3);
-  
+
   if($this->estado_prov($prv_id)=='i'){
     $arr= array('prv_estado' => "a");
     $this->db->where("prv_id",$prv_id);
