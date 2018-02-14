@@ -1,4 +1,4 @@
- <div class="container ">
+ <div class="container">
 
   <div class="col-md-12 blanco">
     <h3 class="uppercase">VERIFICACIÓN</h3> 
