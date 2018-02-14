@@ -254,7 +254,15 @@ else
 
 }
 
+public function numaquinas_mdl($email){
+ $this->db->where('prv_email',$email);
+ $query = $this->db->get('proveedores');
+ if($query->num_rows() == 1)
+  return $query->row()->prv_maquinas;
+else
+  return "fail";
 
+}
 
 public function login($username,$hash){
        //obtenemos los datos del usuario que quiere iniciar sesión
