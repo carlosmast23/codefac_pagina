@@ -264,6 +264,18 @@ else
 
 }
 
+
+public function verificarmodulo_mdl($email,$tipo){
+  $sql="SELECT * FROM `proveedores` WHERE `prv_email`='$email' AND '$tipo' IN (`prv_modulos`) ";
+  $query = $this->db->query($sql);
+  if($query->num_rows() == 1)
+    return "success";
+  else
+    return "fail";
+
+}
+
+
 public function login($username,$hash){
        //obtenemos los datos del usuario que quiere iniciar sesión
  $this->db->where('username',$username);
