@@ -39,9 +39,25 @@ class Mysoapserver extends MY_Controller {
         $return_array6= array ("return" => "xsd:string");
         $this->nusoap_server->register('actualizartipolicencia', $input_array6, $return_array6, "urn:SOAPServerWSDL", "urn:".$ns."/actualizartipolicencia", "document", "literal", "Actualizar Tipo Licencia");
 
-         $input_array7 = array ('email' => "xsd:string");
+        $input_array7 = array ('email' => "xsd:string");
         $return_array7= array ("return" => "xsd:string");
         $this->nusoap_server->register('numaquinas', $input_array7, $return_array7, "urn:SOAPServerWSDL", "urn:".$ns."/numaquinas", "document", "literal", "Devolver cantidad de maquinas");
+
+        $input_array8 = array ('email' => "xsd:string");
+        $return_array8= array ("return" => "xsd:string");
+        $this->nusoap_server->register('verificarmoduloi', $input_array8, $return_array8, "urn:SOAPServerWSDL", "urn:".$ns."/verificarmoduloi", "document", "literal", "Modulo inventario verificar");
+
+        $input_array9 = array ('email' => "xsd:string");
+        $return_array9= array ("return" => "xsd:string");
+        $this->nusoap_server->register('verificarmoduloa', $input_array9, $return_array9, "urn:SOAPServerWSDL", "urn:".$ns."/verificarmoduloa", "document", "literal", "Modulo academico verificar");
+
+        $input_array10 = array ('email' => "xsd:string");
+        $return_array10= array ("return" => "xsd:string");
+        $this->nusoap_server->register('verificarmodulof', $input_array10, $return_array10, "urn:SOAPServerWSDL", "urn:".$ns."/verificarmodulof", "document", "literal", "Modulo facturacion verificar");
+
+        $input_array11 = array ('email' => "xsd:string");
+        $return_array11= array ("return" => "xsd:string");
+        $this->nusoap_server->register('verificarmoduloc', $input_array11, $return_array11, "urn:SOAPServerWSDL", "urn:".$ns."/verificarmoduloc", "document", "literal", "Modulo CRM verificar");
     }
 
     function index(){
@@ -87,6 +103,26 @@ class Mysoapserver extends MY_Controller {
             return $ci->general_model->numaquinas_mdl($email);
         }
 
+        function verificarmoduloi($email){
+            $ci = &get_instance();
+            $ci->load->model('general_model');
+            return $ci->general_model->verificarmodulo_mdl($email,"i");
+        }
+        function verificarmoduloa($email){
+            $ci = &get_instance();
+            $ci->load->model('general_model');
+            return $ci->general_model->verificarmodulo_mdl($email,"a");
+        }   
+        function verificarmodulof($email){
+            $ci = &get_instance();
+            $ci->load->model('general_model');
+            return $ci->general_model->verificarmodulo_mdl($email,"f");
+        }     
+        function verificarmoduloc($email){
+            $ci = &get_instance();
+            $ci->load->model('general_model');
+            return $ci->general_model->verificarmodulo_mdl($email,"c");
+        }
 
         $this->nusoap_server->service(file_get_contents("php://input"));
     }

@@ -143,7 +143,7 @@
     <tr>
       <td>ANUAL</td>
       <td>1000 facturas</td>
-      <td>ilimitado</td>
+      <td>2500 facturas</td>
       <!--<td>ilimitado</td>-->
     </tr>
     <tr>
@@ -153,19 +153,18 @@
       <!--<td>ilimitado</td>-->
     </tr>
     <tr>
-      <td>Número de usuarios</td>
-      <td>1</td>
-      <td>ilimitado</td>
-      <!--<td>ilimitado</td>-->
-    </tr> 
-    <tr>
       <td>Ambiente</td>
       <td>escritorio</td>
       <td>escritorio</td>
       <!--<td>web</td>-->
     </tr>
     <tr>
-      <td>Notas de débito y crédito</td>
+      <td>Facturación electrónica</td>
+      <td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>
+      <td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>
+    </tr> 
+    <tr>
+      <td>Notas de crédito</td>
       <td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>
       <td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>
       <!--<td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>-->
@@ -185,115 +184,118 @@
     <tr>
       <td>Administración de proveedores – distribuidores</td>
       <td> <img src="<?=base_url()?>img/icon_okn.png" height="20"/> </td>
-      <td> <img src="<?=base_url()?>img/icon_okn.png" height="20"/> </td>
+      <td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>
       <!--<td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>-->
     </tr>
+    <!--
     <tr>
       <td>Administración de ordenes de trabajo</td>
       <td> <img src="<?=base_url()?>img/icon_okn.png" height="20"/> </td>
       <td> <img src="<?=base_url()?>img/icon_okn.png" height="20"/> </td>
-      <!--<td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>-->
     </tr>
+  -->
+    <!--
     <tr>
       <td>CRM</td>
       <td> <img src="<?=base_url()?>img/icon_okn.png" height="20"/> </td>
       <td> <img src="<?=base_url()?>img/icon_okn.png" height="20"/> </td>
-      <!--<td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>-->
-    </tr> 
-    <tr>
-      <td>Control de descuentos y promociones</td>
-      <td> <img src="<?=base_url()?>img/icon_okn.png" height="20"/> </td>
-      <td> <img src="<?=base_url()?>img/icon_okn.png" height="20"/> </td>
-      <!--<td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>-->
-    </tr> 
+    </tr>
+  -->   
+  <tr>
+    <td>Control de descuentos</td>
+    <td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>
+    <td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>
+    <!--<td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>-->
+  </tr> 
+    <!--
     <tr>
       <td>Ventas a crédito</td>
       <td> <img src="<?=base_url()?>img/icon_okn.png" height="20"/> </td>
       <td> <img src="<?=base_url()?>img/icon_okn.png" height="20"/> </td>
-      <!--<td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>-->
     </tr> 
-    <tr>
-      <td>Utilidades adicionales (notas, calendario, ventas diarias)</td>
-      <td> <img src="<?=base_url()?>img/icon_okn.png" height="20"/> </td>
-      <td> <img src="<?=base_url()?>img/icon_okn.png" height="20"/> </td>
-      <!--<td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>-->
-    </tr>  
-    <tr>
-      <td>Respaldos programados</td>
-      <td> <img src="<?=base_url()?>img/icon_okn.png" height="20"/> </td>
-      <td> <img src="<?=base_url()?>img/icon_okn.png" height="20"/> </td>
-      <!--<td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>-->
-    </tr>
-    <tr>
-      <td>Informes</td>
-      <td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>
-      <td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>
-      <!--<td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>-->
-    </tr>
-    <tr>
-      <td>Soporte técnico 1 año (email)</td>
-      <td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>
-      <td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>
-      <!--<td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>-->
-    </tr>
-    <tr>
-      <td>Incorporación logo</td>
-      <td> <img src="<?=base_url()?>img/icon_okn.png" height="20"/> </td>
-      <td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>
-      <!--<td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>-->
-    </tr>
-    <tr>
-      <td>Incorporación de colores empresariales</td>
-      <td> <img src="<?=base_url()?>img/icon_okn.png" height="20"/> </td>
-      <td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>
-      <!--<td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>-->
-    </tr>
-    <tr>
-      <td>Diponibilidad de actualizaciones</td>
-      <td> <img src="<?=base_url()?>img/icon_okn.png" height="20"/> </td>
-      <td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>
-      <!--<td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>-->
-    </tr>   
+  -->
 
-    <tr>
-      <td>PRECIO / ANUAL</td>
-      <td><span class="precio">$ 0 </span></td>
-      <td><span class="precio">$ 159 </span> <span class="supidc">.99</span></td>
-      <!--<td><span class="precio">$ 249 </span> <span class="supidc">.99</span> </td>-->
-    </tr>
-    <tr>
-      <td>-</td>
-      <td><a class="btn btn-primary" href="<?=base_url()?>general/versiones"><span class="glyphicon glyphicon-save"></span> Descargar</a></td>
-      <td><a class="btn btn-success" href="<?=base_url()?>"><span class="glyphicon glyphicon-shopping-cart"></span> Comprar</a></td>
-    </tr>
-  </table>
+  <tr>
+    <td>Informes</td>
+    <td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>
+    <td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>
+    <!--<td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>-->
+  </tr>
+  <tr>
+    <td>Soporte técnico 1 año (email)</td>
+    <td> <img src="<?=base_url()?>img/icon_okn.png" height="20"/> </td>
+    <td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>
+    <!--<td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>-->
+  </tr>
+  <tr>
+    <td>Incorporación logo</td>
+    <td> <img src="<?=base_url()?>img/icon_okn.png" height="20"/> </td>
+    <td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>
+    <!--<td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>-->
+  </tr>
+  <!--
+  <tr>
+    <td>Incorporación de colores empresariales</td>
+    <td> <img src="<?=base_url()?>img/icon_okn.png" height="20"/> </td>
+    <td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>
+  </tr>
+-->
+<tr>
+  <td>Disponibilidad de actualizaciones</td>
+  <td> <img src="<?=base_url()?>img/icon_okn.png" height="20"/> </td>
+  <td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>
+  <!--<td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>-->
+</tr>   
+<tr>
+  <td>Utilidades adicionales (notas, calendario, ventas diarias)</td>
+  <td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>
+  <td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>
+  <!--<td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>-->
+</tr>
+<tr>
+  <td>Publicidad</td>
+  <td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>
+  <td> <img src="<?=base_url()?>img/icon_okn.png" height="20"/> </td>
+</tr>    
+<tr>
+  <td>PRECIO / ANUAL</td>
+  <td><span class="precio">$ 0 </span></td>
+  <td><span class="precio">$ 159 </span> <span class="supidc">.99</span></td>
+  <!--<td><span class="precio">$ 249 </span> <span class="supidc">.99</span> </td>-->
+</tr>
+<tr>
+  <td>-</td>
+  <td><a class="btn btn-primary" href="<?=base_url()?>general/versiones"><span class="glyphicon glyphicon-save"></span> Descargar</a></td>
+  <td><a class="btn btn-success" href="<?=base_url()?>"><span class="glyphicon glyphicon-shopping-cart"></span> Comprar</a></td>
+</tr>
+</table>
 
-  <h3 class="text-center titulo_principal">PLANES Y PRECIOS DE SOPORTE Y MANTENIMIENTO</h3>
-  <table class="table table-striped tbl_fac">
-    <tr>
-      <th>Concepto</th>
-      <th>Precio</th>
-    </tr>
-    <tr>
-      <td>Asesoría en proceso de obtención de firma electrónica</td>
-      <td><span class="precio">$ 39 </span><span class="supidc">.99</span></td>
-    </tr>
-    <tr>
-      <td>Instalación y configuración de CODEFAC-LITE</td>
-      <td><span class="precio">$ 44 </span><span class="supidc">.99</span></td>
-    </tr>   
-    <tr>
-      <td>Pack de 1000 Facturas </td>
-      <td><span class="precio">$ 29 </span><span class="supidc">.99</span></td>
-    </tr> 
-    <tr>
-      <td>Pack de 2500 Facturas </td>
-      <td><span class="precio">$ 49 </span><span class="supidc">.99</span></td>
-    </tr>
+<h3 class="text-center titulo_principal">PLANES Y PRECIOS DE SOPORTE Y MANTENIMIENTO</h3>
+<table class="table table-striped tbl_fac">
+  <tr>
+    <th>Concepto</th>
+    <th>Precio</th>
+  </tr>
+  <tr>
+    <td>Asesoría en proceso de obtención de firma electrónica</td>
+    <td><span class="precio">$ 39 </span><span class="supidc">.99</span></td>
+  </tr>
+  <tr>
+    <td>Instalación y configuración de CODEFAC-LITE</td>
+    <td><span class="precio">$ 44 </span><span class="supidc">.99</span></td>
+  </tr>   
+  <tr>
+    <td>Pack de 1000 Facturas </td>
+    <td><span class="precio">$ 29 </span><span class="supidc">.99</span></td>
+  </tr> 
+  <tr>
+    <td>Pack de 2500 Facturas </td>
+    <td><span class="precio">$ 49 </span><span class="supidc">.99</span></td>
+  </tr>
 
-  </table>
-  <p class="blanco">*Precios no incluyen IVA</p>
-  <p class="blanco">*CODEFAC-PRO  Requiere hosting y dominio (costo adicional)</p>
+</table>
+<p class="blanco">*Precios no incluyen IVA</p>
+<p class="blanco">*CODEFAC-PRO  Requiere hosting y dominio (costo adicional)</p>
 </div>  
 
 </div>        
