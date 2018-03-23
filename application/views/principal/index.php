@@ -130,8 +130,10 @@
     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/a0dVCzIc2Hs/" frameborder="0"></iframe>
   </div>
 </div>
+<hr>
 
 <div class="col-md-12" id="planes">
+  <hr>
   <h3 class="text-center titulo_principal" >PLANES Y PRECIOS DE FACTURACIÓN ELECTRÓNICA</h3>
   <table class="table table-striped tbl_fac">
     <tr>
@@ -139,12 +141,6 @@
       <th>CODEFAC-LITE</th>
       <th>CODEFAC-LITE PRO</th>
       <!--<th>CODEFAC-PRO</th>-->
-    </tr>
-    <tr>
-      <td>ANUAL</td>
-      <td>1000 facturas</td>
-      <td>2500 facturas</td>
-      <!--<td>ilimitado</td>-->
     </tr>
     <tr>
       <td>Número de máquinas</td>
@@ -266,10 +262,88 @@
 <tr>
   <td>-</td>
   <td><a class="btn btn-primary" href="<?=base_url()?>general/versiones"><span class="glyphicon glyphicon-save"></span> Descargar</a></td>
-  <td><a class="btn btn-success" href="<?=base_url()?>"><span class="glyphicon glyphicon-shopping-cart"></span> Comprar</a></td>
+  <td><a class="btn btn-success" href="<?=base_url()?>general/registro"><span class="glyphicon glyphicon-shopping-cart"></span> Comprar</a></td>
 </tr>
 </table>
+<hr>
+<h3 class="text-center titulo_principal">MODULOS ADICIONALES</h3>
 
+<hr>
+<h4 class="text-center titulo_principal">MÓDULO FACTURACIÓN FÍSICA</span></h4>
+<h4 class="text-center titulo_principal"><span class="precio">$ 79 </span><span class="supidc">.99</span></h4>
+<table class="table table-striped tbl_fac">
+ <tr>
+   <td>Categorización de productos</td>
+ </tr>
+ <tr>
+  <td>Panel de administración</td>
+</tr> 
+<tr>
+  <td>Diseñador (Personalización de factura)</td>
+</tr>
+
+<tr>
+  <td class="text-center"><a class="btn btn-success" href="<?=base_url()?>general/registro"><span class="glyphicon glyphicon-shopping-cart"></span> Comprar</a></td>
+</tr>
+
+</table>
+<h4 class="text-center titulo_principal">MÓDULO INVENTARIO</span></h4>
+<h4 class="text-center titulo_principal"><span class="precio">$ 59 </span><span class="supidc">.99</span></h4>
+<table class="table table-striped tbl_fac">
+ <tr>
+   <td>Categorización de productos</td>
+ </tr>
+ <tr>
+  <td>Kardex</td>
+</tr>
+<tr>
+  <td>Ingresos, Egresos</td>
+</tr>
+<tr>
+  <td>Gestión de bodega</td>
+</tr>
+<tr>
+  <td>Gestión de combo de productos</td>
+</tr>
+<tr>
+  <td>Registro de compras de inventario</td>
+</tr>
+<tr>
+  <td class="text-center"><a class="btn btn-success" href="<?=base_url()?>general/registro"><span class="glyphicon glyphicon-shopping-cart"></span> Comprar</a></td>
+</tr>
+
+</table>
+
+
+<h4 class="text-center titulo_principal">MÓDULO ACADÉMICO</span></h4>
+<h4 class="text-center titulo_principal"><span class="precio">$ 79 </span><span class="supidc">.99</span></h4>
+<table class="table table-striped tbl_fac">
+ <tr>
+   <td>Facturación académica</td>
+ </tr>
+ <tr>
+   <td>Administración de estudiantes</td>
+ </tr>
+ <tr>
+   <tr>
+     <td>Gestión de matriculas de estudiantes</td>
+   </tr>
+   <tr>
+     <td>Gestión de periodos académicos, aulas, cursos</td>
+   </tr> 
+   <tr>
+    <td>Control de deudas de estudiante</td>
+  </tr>
+  <tr>
+    <td>Lista de estudiantes</td>
+  </tr>
+  <tr>
+    <td class="text-center"><a class="btn btn-success" href="<?=base_url()?>general/registro"><span class="glyphicon glyphicon-shopping-cart"></span> Comprar</a></td>
+  </tr>
+
+</table>
+
+<hr>
 <h3 class="text-center titulo_principal">PLANES Y PRECIOS DE SOPORTE Y MANTENIMIENTO</h3>
 <table class="table table-striped tbl_fac">
   <tr>
@@ -283,19 +357,31 @@
   <tr>
     <td>Instalación y configuración de CODEFAC-LITE</td>
     <td><span class="precio">$ 44 </span><span class="supidc">.99</span></td>
-  </tr>   
-  <tr>
-    <td>Pack de 1000 Facturas </td>
-    <td><span class="precio">$ 29 </span><span class="supidc">.99</span></td>
-  </tr> 
-  <tr>
-    <td>Pack de 2500 Facturas </td>
-    <td><span class="precio">$ 49 </span><span class="supidc">.99</span></td>
-  </tr>
+    </tr>   
+    <tr>
+      <td>Respaldos programados</td>
+      <td><span class="precio">$ 59 </span><span class="supidc">.99</span></td>
+    </tr> 
+    <tr>
+      <td>Capacitación extra(hora)</td>
+      <td><span class="precio">$ 39 </span><span class="supidc">.99</span></td>
+    </tr>   
+    <tr>
+      <td>Puntos de venta</td>
+      <td>Solcitar cotización</td>
+    </tr> 
+    <tr>
+      <td>Instalación por sucursal</td>
+      <td>Solcitar cotización</td>
+    </tr>
+    <tr>
+      <td>Instalación por máquina adicional (cliente)</td>
+      <td>Solcitar cotización</td>
+    </tr>
 
-</table>
-<p class="blanco">*Precios no incluyen IVA</p>
-<p class="blanco">*CODEFAC-PRO  Requiere hosting y dominio (costo adicional)</p>
+  </table>
+  <p class="blanco">*Precios no incluyen IVA</p>
+  <p class="blanco">*CODEFAC-PRO  Requiere hosting y dominio (costo adicional)</p>
 </div>  
 
 </div>        
