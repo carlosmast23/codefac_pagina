@@ -55,7 +55,7 @@ class General_model extends CI_Model {
   $prv_id=$this->uri->segment(3);
 
   if($this->estado_prov($prv_id)=='i'){
-    $arr= array('prv_estado' => "a");
+    $arr= array('prv_estado' => "a",'prv_modulos'=>"f");
     $this->db->where("prv_id",$prv_id);
     $this->db->update("proveedores",$arr);
   }else
