@@ -316,7 +316,7 @@
 
 
 <h4 class="text-center titulo_principal">MÓDULO ACADÉMICO</span></h4>
-<h4 class="text-center titulo_principal"><span class="precio">$ 79 </span><span class="supidc">.99</span></h4>
+<h4 class="text-center titulo_principal"><span class="precio">$ 99 </span><span class="supidc">.99</span></h4>
 <table class="table table-striped tbl_fac">
  <tr>
    <td>Facturación académica</td>
