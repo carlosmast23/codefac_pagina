@@ -335,6 +335,9 @@
     <td>Control de deudas de estudiante</td>
   </tr>
   <tr>
+    <td>Notificación de deudas por correo electrónico</td>
+  </tr>
+  <tr>
     <td>Lista de estudiantes</td>
   </tr>
   <tr>
@@ -357,31 +360,31 @@
   <tr>
     <td>Instalación y configuración de CODEFAC-LITE</td>
     <td><span class="precio">$ 44 </span><span class="supidc">.99</span></td>
-    </tr>   
-    <tr>
-      <td>Respaldos programados</td>
-      <td><span class="precio">$ 59 </span><span class="supidc">.99</span></td>
-    </tr> 
-    <tr>
-      <td>Capacitación extra(hora)</td>
-      <td><span class="precio">$ 39 </span><span class="supidc">.99</span></td>
-    </tr>   
-    <tr>
-      <td>Puntos de venta</td>
-      <td>Solcitar cotización</td>
-    </tr> 
-    <tr>
-      <td>Instalación por sucursal</td>
-      <td>Solcitar cotización</td>
-    </tr>
-    <tr>
-      <td>Instalación por máquina adicional (cliente)</td>
-      <td>Solcitar cotización</td>
-    </tr>
+  </tr>   
+  <tr>
+    <td>Respaldos programados</td>
+    <td><span class="precio">$ 59 </span><span class="supidc">.99</span></td>
+  </tr> 
+  <tr>
+    <td>Capacitación extra(hora)</td>
+    <td><span class="precio">$ 39 </span><span class="supidc">.99</span></td>
+  </tr>   
+  <tr>
+    <td>Puntos de venta</td>
+    <td>Solcitar cotización</td>
+  </tr> 
+  <tr>
+    <td>Instalación por sucursal</td>
+    <td>Solcitar cotización</td>
+  </tr>
+  <tr>
+    <td>Instalación por máquina adicional (cliente)</td>
+    <td>Solcitar cotización</td>
+  </tr>
 
-  </table>
-  <p class="blanco">*Precios no incluyen IVA</p>
-  <p class="blanco">*CODEFAC-PRO  Requiere hosting y dominio (costo adicional)</p>
+</table>
+<p class="blanco">*Precios no incluyen IVA</p>
+<p class="blanco">*CODEFAC-PRO  Requiere hosting y dominio (costo adicional)</p>
 </div>  
 
 </div>        
