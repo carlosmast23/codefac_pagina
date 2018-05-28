@@ -89,7 +89,6 @@ public function erroract(){
   $this->loadTemplates("principal/erroract");
 }
 
-
 //enlaces externos
 public function conocenos(){
   $this->loadTemplates("principal/conocenos");

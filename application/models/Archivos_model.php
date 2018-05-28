@@ -11,7 +11,7 @@ class Archivos_model extends CI_Model {
 
     public function subirarchivo_mdl() {
         $this->load->library('upload');   
-            
+
         $ref_id=$this->input->post("ref_id");
         $carpeta = "./uploads/";
         $config['upload_path'] = $carpeta;
@@ -36,6 +36,56 @@ class Archivos_model extends CI_Model {
             rename($full_path, $file_path . "$id");
             return $id;
         }
+    }
+
+    public function subirarchivo_version_mdl() {
+        $this->load->library('upload');   
+
+        if (!empty($_FILES['mi_archivo1']['name']))  {
+            $carpeta = "./uploads/versiones/";
+            $config['upload_path'] = $carpeta;
+            $config['allowed_types'] = '*';
+            $config['remove_spaces'] = FALSE;
+            $config['overwrite'] = TRUE;
+            $this->upload->initialize($config);
+            if (!$this->upload->do_upload('mi_archivo1')) {
+                log_message("error","Error:".$this->upload->display_errors() );
+            } else {
+                $arr = $this->upload->data();
+                $file_name = $arr["file_name"];
+            }  
+        }   
+        if (!empty($_FILES['mi_archivo2']['name']))  {
+            $carpeta = "./uploads/versiones/";
+            $config['upload_path'] = $carpeta;
+            $config['allowed_types'] = '*';
+            $config['remove_spaces'] = FALSE;
+            $config['overwrite'] = TRUE;
+            $this->upload->initialize($config);
+            if (!$this->upload->do_upload('mi_archivo2')) {
+                log_message("error","Error:".$this->upload->display_errors() );
+            } else {
+                $arr = $this->upload->data();
+                $file_name = $arr["file_name"];
+            }  
+        }     
+        if (!empty($_FILES['mi_archivo3']['name']))  {
+            $carpeta = "./uploads/versiones/";
+            $config['upload_path'] = $carpeta;
+            $config['allowed_types'] = '*';
+            $config['remove_spaces'] = FALSE;
+            $config['overwrite'] = TRUE;
+            $this->upload->initialize($config);
+            if (!$this->upload->do_upload('mi_archivo3')) {
+                log_message("error","Error:".$this->upload->display_errors() );
+            } else {
+                $arr = $this->upload->data();
+                $file_name = $arr["file_name"];
+            }  
+        }
+
+
+
     }
 
 
