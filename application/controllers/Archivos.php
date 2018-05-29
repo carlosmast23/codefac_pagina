@@ -25,6 +25,22 @@ class Archivos extends MY_Controller {
     redirect("archivos/subirc","refresh");
 }
 
+public function verc(){
+    $this->loadTemplates("archivos/verc");
+}
+
+public function descargar() {
+    switch ($this->uri->segment(3)) {
+        case 1:$name="codefac.jar";$data="Codefac";
+        break;  
+        case 2:$name="updater.jar";$data="Update";
+        break; 
+        case 3:$name="ultimaVersion.codefac";$data="Config";
+        break;
+    }
+    $this->model->descargar_mdl($name,$data);
+}
+
 public function subirarchivo() {
     echo $this->model->subirarchivo_mdl();
 }
