@@ -89,5 +89,18 @@ class Archivos_model extends CI_Model {
     }
 
 
+    public function descargar_mdl($name="",$data="Here is some text!"){
+        $this->load->helper('download');
+        $datos = file_get_contents("./uploads/versiones/$name");
+        //force_download("uploads/versiones/".$name, $data);
+
+         //$datos = file_get_contents("$carpeta/$id"); // Leer el contenido del archivo
+        if ($datos == FALSE)
+            force_download("lastima.txt", "Archivo eliminado, no existe :( la unica pista que tenemos es que el id era $id ");
+        else
+            force_download(trim($name), $datos);
+    }
+
+
 
 }
