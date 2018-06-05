@@ -35,7 +35,7 @@ class General_model extends CI_Model {
       "prv_representante"=>$this->input->post("prv_representante"),
       "act_id"=>$this->input->post("act_id"),
       "prv_fecharegistro"=>hoy('c'),
-      "prv_estado"=>'i'
+      "prv_estado"=>'p'
       );
      $this->db->insert("proveedores",$data);
      
@@ -54,7 +54,7 @@ class General_model extends CI_Model {
  public function verificacion_mdl(){
   $prv_id=$this->uri->segment(3);
 
-  if($this->estado_prov($prv_id)=='i'){
+  if($this->estado_prov($prv_id)=='p'){
     $arr= array('prv_estado' => "a",'prv_modulos'=>"f");
     $this->db->where("prv_id",$prv_id);
     $this->db->update("proveedores",$arr);
