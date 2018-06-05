@@ -319,5 +319,21 @@ else
 
 
 
+public function estadousuario_mdl($id){
+ $this->db->where('prv_email',$id);
+ $query = $this->db->get('proveedores');
+ if($query->num_rows() == 1){
+   $prv_estado= $query->row()->prv_estado;
+   if($prv_estado!="")
+    return $prv_estado;
+  else
+    return "null";
+}
+else
+  return "null";
+
+}
+
+
 
 }
