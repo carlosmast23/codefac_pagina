@@ -58,6 +58,10 @@ class Mysoapserver extends MY_Controller {
         $input_array11 = array ('email' => "xsd:string");
         $return_array11= array ("return" => "xsd:string");
         $this->nusoap_server->register('verificarmoduloc', $input_array11, $return_array11, "urn:SOAPServerWSDL", "urn:".$ns."/verificarmoduloc", "document", "literal", "Modulo CRM verificar");
+
+        $input_array12 = array ('email' => "xsd:string");
+        $return_array12= array ("return" => "xsd:string");
+        $this->nusoap_server->register('estadousuario', $input_array12, $return_array12, "urn:SOAPServerWSDL", "urn:".$ns."/estadousuario", "document", "literal", "Verificar estado");
     }
 
     function index(){
@@ -122,6 +126,12 @@ class Mysoapserver extends MY_Controller {
             $ci = &get_instance();
             $ci->load->model('general_model');
             return $ci->general_model->verificarmodulo_mdl($email,"c");
+        }
+
+         function estadousuario($email){
+            $ci = &get_instance();
+            $ci->load->model('general_model');
+            return $ci->general_model->estadousuario_mdl($email);
         }
 
         $this->nusoap_server->service(file_get_contents("php://input"));
