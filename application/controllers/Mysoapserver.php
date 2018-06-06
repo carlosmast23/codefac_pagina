@@ -43,7 +43,7 @@ class Mysoapserver extends MY_Controller {
         $return_array7= array ("return" => "xsd:string");
         $this->nusoap_server->register('numaquinas', $input_array7, $return_array7, "urn:SOAPServerWSDL", "urn:".$ns."/numaquinas", "document", "literal", "Devolver cantidad de maquinas");
 
-        $input_array8 = array ('email' => "xsd:string");
+        $input_array8 = array ('email' => "xsd:string",'tipo' => "xsd:string");
         $return_array8= array ("return" => "xsd:string");
         $this->nusoap_server->register('verificarmodulo', $input_array8, $return_array8, "urn:SOAPServerWSDL", "urn:".$ns."/verificarmodulo", "document", "literal", "Modulo verificacion");
 
