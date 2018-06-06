@@ -107,26 +107,13 @@ class Mysoapserver extends MY_Controller {
             return $ci->general_model->numaquinas_mdl($email);
         }
 
-        function verificarmoduloi($email){
+        function verificarmodulo($email,$tipo){
             $ci = &get_instance();
             $ci->load->model('general_model');
-            return $ci->general_model->verificarmodulo_mdl($email,"i");
+            return $ci->general_model->verificarmodulo_mdl($email,$tipo);
+            //i a f c b w s t
         }
-        function verificarmoduloa($email){
-            $ci = &get_instance();
-            $ci->load->model('general_model');
-            return $ci->general_model->verificarmodulo_mdl($email,"a");
-        }   
-        function verificarmodulof($email){
-            $ci = &get_instance();
-            $ci->load->model('general_model');
-            return $ci->general_model->verificarmodulo_mdl($email,"f");
-        }     
-        function verificarmoduloc($email){
-            $ci = &get_instance();
-            $ci->load->model('general_model');
-            return $ci->general_model->verificarmodulo_mdl($email,"c");
-        }
+
 
          function estadousuario($email){
             $ci = &get_instance();
