@@ -45,19 +45,8 @@ class Mysoapserver extends MY_Controller {
 
         $input_array8 = array ('email' => "xsd:string");
         $return_array8= array ("return" => "xsd:string");
-        $this->nusoap_server->register('verificarmoduloi', $input_array8, $return_array8, "urn:SOAPServerWSDL", "urn:".$ns."/verificarmoduloi", "document", "literal", "Modulo inventario verificar");
+        $this->nusoap_server->register('verificarmodulo', $input_array8, $return_array8, "urn:SOAPServerWSDL", "urn:".$ns."/verificarmodulo", "document", "literal", "Modulo verificacion");
 
-        $input_array9 = array ('email' => "xsd:string");
-        $return_array9= array ("return" => "xsd:string");
-        $this->nusoap_server->register('verificarmoduloa', $input_array9, $return_array9, "urn:SOAPServerWSDL", "urn:".$ns."/verificarmoduloa", "document", "literal", "Modulo academico verificar");
-
-        $input_array10 = array ('email' => "xsd:string");
-        $return_array10= array ("return" => "xsd:string");
-        $this->nusoap_server->register('verificarmodulof', $input_array10, $return_array10, "urn:SOAPServerWSDL", "urn:".$ns."/verificarmodulof", "document", "literal", "Modulo facturacion verificar");
-
-        $input_array11 = array ('email' => "xsd:string");
-        $return_array11= array ("return" => "xsd:string");
-        $this->nusoap_server->register('verificarmoduloc', $input_array11, $return_array11, "urn:SOAPServerWSDL", "urn:".$ns."/verificarmoduloc", "document", "literal", "Modulo CRM verificar");
 
         $input_array12 = array ('email' => "xsd:string");
         $return_array12= array ("return" => "xsd:string");
