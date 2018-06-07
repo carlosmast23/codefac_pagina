@@ -51,6 +51,11 @@ class Mysoapserver extends MY_Controller {
         $input_array12 = array ('email' => "xsd:string");
         $return_array12= array ("return" => "xsd:string");
         $this->nusoap_server->register('estadousuario', $input_array12, $return_array12, "urn:SOAPServerWSDL", "urn:".$ns."/estadousuario", "document", "literal", "Verificar estado");
+
+
+        $input_array13 = array ('usuario' => "xsd:string",'clave' => "xsd:string");
+        $return_array13= array ("return" => "xsd:string");
+        $this->nusoap_server->register('verificarsoporte', $input_array13, $return_array13, "urn:SOAPServerWSDL", "urn:".$ns."/verificarsoporte", "document", "literal", "Verificar estado");
     }
 
     function index(){
@@ -62,52 +67,56 @@ class Mysoapserver extends MY_Controller {
 
         function actualizarlicencia($email,$licencia){
             $ci = &get_instance();
-            $ci->load->model('general_model');
-            return $ci->general_model->actualizar_licencia_mdl($email,$licencia);
+            $ci->load->model('admin/soporte_model');
+            return $ci->soporte_model->actualizar_licencia_mdl($email,$licencia);
         }
 
         function actualizartipolicencia($email,$tipo){
             $ci = &get_instance();
-            $ci->load->model('general_model');
-            return $ci->general_model->actualizar_tipolicencia_mdl($email,$tipo);
+            $ci->load->model('admin/soporte_model');
+            return $ci->soporte_model->actualizar_tipolicencia_mdl($email,$tipo);
         }
 
         function comprobar($u,$c){
             $ci = &get_instance();
-            $ci->load->model('general_model');
-            return $ci->general_model->comprobar_mdl($u,$c);
+            $ci->load->model('admin/soporte_model');
+            return $ci->soporte_model->comprobar_mdl($u,$c);
         }
 
         function obtenerlicencia($email){
             $ci = &get_instance();
-            $ci->load->model('general_model');
-            return $ci->general_model->obtener_licencia_mdl($email);
+            $ci->load->model('admin/soporte_model');
+            return $ci->soporte_model->obtener_licencia_mdl($email);
         }
 
         function devolverlicencia($email){
             $ci = &get_instance();
-            $ci->load->model('general_model');
-            return $ci->general_model->devolverlicencia_mdl($email);
+            $ci->load->model('admin/soporte_model');
+            return $ci->soporte_model->devolverlicencia_mdl($email);
         }  
 
         function numaquinas($email){
             $ci = &get_instance();
-            $ci->load->model('general_model');
-            return $ci->general_model->numaquinas_mdl($email);
+            $ci->load->model('admin/soporte_model');
+            return $ci->soporte_model->numaquinas_mdl($email);
         }
 
         function verificarmodulo($email,$tipo){
             $ci = &get_instance();
-            $ci->load->model('general_model');
-            return $ci->general_model->verificarmodulo_mdl($email,$tipo);
+            $ci->load->model('admin/soporte_model');
+            return $ci->soporte_model->verificarmodulo_mdl($email,$tipo);
             //i a f c b w s t
         }
 
-
-         function estadousuario($email){
+        function estadousuario($email){
             $ci = &get_instance();
-            $ci->load->model('general_model');
-            return $ci->general_model->estadousuario_mdl($email);
+            $ci->load->model('admin/soporte_model');
+            return $ci->soporte_model->estadousuario_mdl($email);
+        }   
+        function verificarsoporte($usuario,$clave){
+            $ci = &get_instance();
+            $ci->load->model('admin/soporte_model');
+            return $ci->soporte_model->verificarsoporte_mdl($usuario,$clave);
         }
 
         $this->nusoap_server->service(file_get_contents("php://input"));

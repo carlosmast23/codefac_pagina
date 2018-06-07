@@ -1,0 +1,170 @@
+<?php
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Soporte_model extends CI_Model {
+
+
+  public function __construct() {
+    parent::__construct();
+  }
+
+  public function index_mdl(){
+    $html="";
+
+    $sql = "SELECT * FROM `soporte` WHERE 1";
+
+
+    $query = $this->db->query($sql);
+
+    if ($query->num_rows() > 0) {
+      $html = "";
+      foreach ($query->result() as $fila) {
+        $html.= $this->parser->parse('admin/soporte/index_tpl', $fila, true);
+      }
+    } else {
+      $html.="<tr><td colspan='4'>No hay data</td></tr>";
+    }
+    $arreglo["html"] = $html;
+    return $arreglo;
+  }
+
+  public function almacenar_mdl(){
+    $data=array(
+      "sop_usuario"=>$this->input->post("sop_usuario"),
+      "sop_clave"=>$this->input->post("sop_clave"),
+      "sop_fechavisita"=>hoy('c'),
+      );
+    $this->db->insert("soporte",$data);
+  }
+
+  public function actualizar_mdl(){
+    $sop_id=$this->input->post('sop_id');
+    $data=array(
+      "sop_usuario"=>$this->input->post("sop_usuario"),
+      "sop_clave"=>$this->input->post("sop_clave"),
+      );
+    $this->db->where("id",$sop_id);
+    $this->db->update("soporte",$data);
+  }
+
+
+//funciones webservice
+
+  public function comprobar_mdl($u,$c){
+   $this->load->library('bcrypt');
+
+   $this->db->where('prv_email',$u);
+   $query = $this->db->get('proveedores');
+   if($query->num_rows() == 1){
+     $user = $query->row();
+     $pass = $user->prv_clave;
+     if($this->bcrypt->check_password($c, $pass)){
+       return "success";
+     }else{
+      return "fail";
+    }
+  }
+  else
+    return "fail";
+}
+
+
+public function obtener_licencia_mdl($id){
+ $this->db->where('prv_email',$id);
+ $query = $this->db->get('proveedores');
+ if($query->num_rows() == 1){
+   $prv_licencia= $query->row()->prv_licencia;
+   if($prv_licencia!="")
+    return $prv_licencia;
+  else
+    return "fail";
+}
+else
+  return "fail";
+
+}
+
+public function actualizar_licencia_mdl($id=0,$p=""){
+  $arr=array('prv_licencia' => $p);
+  $this->db->where("prv_email",$id);
+  $this->db->update("proveedores",$arr);
+
+  return "success";
+
+}
+
+
+public function actualizar_tipolicencia_mdl($email="",$tipo=""){
+  $arr=array('prv_tipolicencia' => $tipo);
+  $this->db->where("prv_email",$email);
+  $this->db->update("proveedores",$arr);
+
+  return "success";
+
+}
+
+public function devolverlicencia_mdl($email){
+ $this->db->where('prv_email',$email);
+ $query = $this->db->get('proveedores');
+ if($query->num_rows() == 1)
+  return $query->row()->prv_tipolicencia;
+else
+  return "fail";
+
+}
+
+public function numaquinas_mdl($email){
+ $this->db->where('prv_email',$email);
+ $query = $this->db->get('proveedores');
+ if($query->num_rows() == 1)
+  return $query->row()->prv_maquinas;
+else
+  return "fail";
+
+}
+
+
+public function verificarmodulo_mdl($email,$tipo){
+  $sql="SELECT * FROM `proveedores` WHERE `prv_email`='$email' AND  `prv_modulos` LIKE '%$tipo%' ";
+
+  $query = $this->db->query($sql);
+  if($query->num_rows() == 1)
+    return "success";
+  else
+    return "fail";
+
+}
+
+
+public function estadousuario_mdl($id){
+ $this->db->where('prv_email',$id);
+ $query = $this->db->get('proveedores');
+ if($query->num_rows() == 1){
+   $prv_estado= $query->row()->prv_estado;
+   if($prv_estado!="")
+    return $prv_estado;
+  else
+    return "null";
+}
+else
+  return "null";
+
+}
+
+
+
+public function verificarsoporte_mdl($usuario,$clave){
+  $sql="SELECT * FROM `soporte` WHERE `sop_usuario` = '$usuario' AND  `sop_clave` = '$clave' ";
+
+  $query = $this->db->query($sql);
+  if($query->num_rows() == 1)
+    return "success";
+  else
+    return "fail";
+
+}
+
+
+
+}
