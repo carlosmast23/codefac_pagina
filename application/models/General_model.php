@@ -266,7 +266,8 @@ else
 
 
 public function verificarmodulo_mdl($email,$tipo){
-  $sql="SELECT * FROM `proveedores` WHERE `prv_email`='$email' AND '$tipo' IN (`prv_modulos`) ";
+  $sql="SELECT * FROM `proveedores` WHERE `prv_email`='$email' AND  `prv_modulos` LIKE '%$tipo%' ";
+
   $query = $this->db->query($sql);
   if($query->num_rows() == 1)
     return "success";
