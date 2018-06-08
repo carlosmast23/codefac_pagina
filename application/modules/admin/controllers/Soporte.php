@@ -25,6 +25,20 @@ class Soporte extends MY_Controller {
     redirect("admin/soporte","refresh");
   }
 
+  
+  public function modificar() {
+    $arr=$this->model->datos_mdl();
+    $this->loadTemplates("soporte/modificar",$arr);
+  }
 
+  public function actualizar() {
+    $this->model->actualizar_mdl();
+    redirect("admin/soporte","refresh");
+  }
+
+  public function eliminar() {
+    $this->model->eliminar_mdl();
+    redirect("admin/soporte","refresh");
+  }
 
 }

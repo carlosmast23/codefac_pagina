@@ -30,24 +30,56 @@ class Soporte_model extends CI_Model {
   }
 
   public function almacenar_mdl(){
-    $data=array(
-      "sop_usuario"=>$this->input->post("sop_usuario"),
-      "sop_clave"=>$this->input->post("sop_clave"),
-      "sop_fechavisita"=>hoy('c'),
-      );
-    $this->db->insert("soporte",$data);
+    $this->load->library('bcrypt');
+    $password=$this->input->post("sop_clave");
+
+    $hash = $this->bcrypt->hash_password($password);
+
+    if ($this->bcrypt->check_password($password, $hash)) {
+      $data=array(
+        "sop_usuario"=>$this->input->post("sop_usuario"),
+        "sop_clave"=>$hash,
+        "sop_fechavisita"=>hoy('c'),
+        );
+      $this->db->insert("soporte",$data);
+    }
+  }
+
+  public function datos_mdl() {
+    $id=$this->uri->segment(4);
+    $this->db->where("id", $id);
+    $query = $this->db->get("soporte");
+    if ($query->num_rows() > 0) {
+      return $query->row_array();
+    }
+    else
+      die("No existe informacion");
   }
 
   public function actualizar_mdl(){
     $sop_id=$this->input->post('sop_id');
-    $data=array(
-      "sop_usuario"=>$this->input->post("sop_usuario"),
-      "sop_clave"=>$this->input->post("sop_clave"),
-      );
-    $this->db->where("id",$sop_id);
-    $this->db->update("soporte",$data);
+
+    $this->load->library('bcrypt');
+    $password=$this->input->post("sop_clave");
+
+    $hash = $this->bcrypt->hash_password($password);
+
+    if ($this->bcrypt->check_password($password, $hash)) {
+      $data=array(
+        "sop_usuario"=>$this->input->post("sop_usuario"),
+        "sop_clave"=>$hash,
+        );
+      $this->db->where("id",$sop_id);
+      $this->db->update("soporte",$data);
+    }
   }
 
+  public function eliminar_mdl(){
+    $sop_id=$this->uri->segment(4);
+    $data=array('sop_estado' => 'i');
+    $this->db->where("id",$sop_id);
+    $this->db->update("soporte",$data);  
+  }
 
 //funciones webservice
 
@@ -155,13 +187,21 @@ else
 
 
 public function verificarsoporte_mdl($usuario,$clave){
-  $sql="SELECT * FROM `soporte` WHERE `sop_usuario` = '$usuario' AND  `sop_clave` = '$clave' ";
+  $this->load->library('bcrypt');
 
-  $query = $this->db->query($sql);
-  if($query->num_rows() == 1)
-    return "success";
-  else
+  $this->db->where('sop_usuario',$usuario);
+  $query = $this->db->get('soporte');
+  if($query->num_rows() == 1){
+   $user = $query->row();
+   $pass = $user->sop_clave;
+   if($this->bcrypt->check_password($clave, $pass)){
+     return "success";
+   }else{
     return "fail";
+  }
+}
+else
+  return "fail";
 
 }
 

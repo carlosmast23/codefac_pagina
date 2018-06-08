@@ -4,6 +4,7 @@
 		<th>Usuario</th>
 		<th>Ultimo acceso</th>
 		<th>Estado</th>
+		<th>Opciones</th>
 	</tr>
 	<?=$html?>
 </table>
