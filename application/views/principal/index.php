@@ -15,6 +15,11 @@
     </ul>
 
     <a class="btn btn-primary btn-block" href="<?=base_url()?>instalador/codefactlite1.2.4.exe"> <span class="glyphicon glyphicon-save"></span> Descargue CODEFAC-LITE!</a>
+    <a class="btn btn-default btn-xs btn-block " href="<?=base_url()?>instalador/InstalaciónConfiguraciónCodefac.pdf"> 
+      <span class="glyphicon glyphicon-file"></span> 
+      Manual Instalación
+    </a>
+
   </div>
 
   <div class="col-md-6">
@@ -343,8 +348,18 @@
   <tr>
     <td class="text-center"><a class="btn btn-success" href="<?=base_url()?>general/registro"><span class="glyphicon glyphicon-shopping-cart"></span> Comprar</a></td>
   </tr>
-
+  <tr>
+    <td>
+      <div class="col-md-12" id="academicoInfo">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="http://www.powtoon.com/embed/fxXHYfoNAib/" frameborder="0"></iframe>
+        </div>
+      </div>
+      <hr>
+    </td>  
+  </tr>
 </table>
+
 
 <hr>
 <h3 class="text-center titulo_principal">PLANES Y PRECIOS DE SOPORTE Y MANTENIMIENTO</h3>
@@ -385,6 +400,7 @@
 </table>
 <p class="blanco">*Precios no incluyen IVA</p>
 <p class="blanco">*CODEFAC-PRO  Requiere hosting y dominio (costo adicional)</p>
+<br>
 </div>  
 
 </div>        
