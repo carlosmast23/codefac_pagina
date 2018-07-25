@@ -4,8 +4,8 @@
 		Las versiones estables se publican despues de haber sido auditadas y probadas. Versiones anteriores no pueden contener ciertas funcionalidades o actualizaciones que conllevan las ultimas versiones del sistema.
 	</div>
 	<div class="list-group">
-		<a href="<?=base_url()?>instalador/codefactlite1.2.4.exe" class="list-group-item active" rel="contd">
-			<h4 class="list-group-item-heading"><span class="glyphicon glyphicon-save"></span> Codefac Lite 1.2.4 </h4>
+		<a href="<?=base_url()?>instalador/codefactlite1.2.5.exe" class="list-group-item active" rel="contd">
+			<h4 class="list-group-item-heading"><span class="glyphicon glyphicon-save"></span> Codefac Lite 1.2.5 </h4>
 			<p class="list-group-item-text">Versión estable. Descargas: <span class="badge" id="nv"><?=$numd?></span> </p>
 		</a>
 	</div>
@@ -25,6 +25,12 @@
 		<a href="<?=base_url()?>instalador/codefactlite1.2.4.exe" class="list-group-item">
 			<h4 class="list-group-item-heading"><span class="glyphicon glyphicon-save"></span> Codefac Lite 1.2.4</h4>
 			<p class="list-group-item-text">Compatible con Windows  - 2018-03-07</p>
+		</a>
+	</div>
+	<div class="list-group">
+		<a href="<?=base_url()?>instalador/codefactlite1.2.5.exe" class="list-group-item">
+			<h4 class="list-group-item-heading"><span class="glyphicon glyphicon-save"></span> Codefac Lite 1.2.5</h4>
+			<p class="list-group-item-text">Compatible con Windows  - 2018-25-07</p>
 		</a>
 	</div>
 
