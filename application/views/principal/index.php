@@ -14,7 +14,7 @@
       <li>Ahorro de tiempo y errores con automatizaciones de procesos.</li>
     </ul>
 
-    <a class="btn btn-primary btn-block" href="<?=base_url()?>instalador/codefactlite1.2.4.exe"> <span class="glyphicon glyphicon-save"></span> Descargue CODEFAC-LITE!</a>
+    <a class="btn btn-primary btn-block" href="<?=base_url()?>instalador/codefactlite1.2.5.exe"> <span class="glyphicon glyphicon-save"></span> Descargue CODEFAC-LITE!</a>
     <a class="btn btn-default btn-xs btn-block " href="<?=base_url()?>instalador/InstalaciónConfiguraciónCodefac.pdf"> 
       <span class="glyphicon glyphicon-file"></span> 
       Manual Instalación
@@ -44,7 +44,7 @@
         <img class="img-responsive" src="<?=base_url()?>img/banner1.png" />
         <div class="carousel-caption">
           <h3>Facturación electrónica gratuita</h3>
-          <p><a href="<?=base_url()?>instalador/codefactlite1.2.4.exe" class="btn btn-default">Descargue aquí!</a></p>
+          <p><a href="<?=base_url()?>instalador/codefactlite1.2.5.exe" class="btn btn-default">Descargue aquí!</a></p>
         </div>
       </div>
 
