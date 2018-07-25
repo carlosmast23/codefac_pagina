@@ -45,4 +45,4 @@ uploads/
 captcha/
 
 #excluir con excepcion de la carpeta 
-!uploads/versiones
+!uploads/versiones/
