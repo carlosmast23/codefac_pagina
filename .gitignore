@@ -42,8 +42,8 @@ application/config/routes.php
 
 captcha/
 
-#excluido archivo upload donde se suben las imagenes
-uploads*
+#excluido archivo upload donde se suben las imagenes importante poner * porque si no pongo * no puedo hacer inclusiones
+uploads/*
 
 #excluir con excepcion de la carpeta 
 !uploads/versiones
