@@ -352,7 +352,7 @@
     <td>
       <div class="col-md-12" id="academicoInfo">
         <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="http://www.powtoon.com/embed/fxXHYfoNAib/" frameborder="0"></iframe>
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k7vG9voeX7M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
       <hr>
