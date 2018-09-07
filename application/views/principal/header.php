@@ -51,8 +51,8 @@
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Contactanos: 022 339 487</a></li>
-        <li><a target="_blank" href="https://api.whatsapp.com/send?phone=593994725020&text=Más información CODEFAC"><img src="<?=base_url()?>img/w.png" alt="Contactanos via whatsapp" height="25" title="Contactanos via whatsapp" /></a></li>
+        <li><a href="#">Contactanos: 022 339 487/022 470 468 - 0990444927</a></li>
+        <li><a target="_blank" href="https://api.whatsapp.com/send?phone=593990444927&text=Más información CODEFAC"><img src="<?=base_url()?>img/w.png" alt="Contactanos via whatsapp" height="25" title="Contactanos via whatsapp" /></a></li>
         <li><a target="_blank" href="https://m.me/codesoft.ec"><img src="<?=base_url()?>img/m.png" alt="Contactanos via messenger"  title="Contactanos via messenger" height="25"/></a></li>
         <!--
           <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
