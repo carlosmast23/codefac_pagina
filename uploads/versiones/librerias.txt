@@ -62,6 +62,7 @@ jcommon-1.0.23.jar
 jdom-1.1.jar
 jfreechart-1.0.19.jar
 JTattoo-1.6.11.jar
+librerias.txt
 lucene-analyzers-common-4.5.1.jar
 lucene-core-4.5.1.jar
 lucene-queries-4.5.1.jar
