@@ -15,9 +15,9 @@
     </ul>
 
     <a class="btn btn-primary btn-block" href="<?=base_url()?>instalador/codefac_setup1.2.6.exe"> <span class="glyphicon glyphicon-save"></span> Descargue CODEFAC-LITE!</a>
-    <a class="btn btn-default btn-xs btn-block " href="<?=base_url()?>instalador/InstalaciónConfiguraciónCodefac.pdf"> 
+    <a class="btn btn-default btn-xs btn-block " href="https://docs.google.com/document/d/1AJGbwPOj4rw0uiSMUv0FJQRMlNoYNRbl2TcoE_24ivk/edit#" target="_blank"> 
       <span class="glyphicon glyphicon-file"></span> 
-      Manual Instalación
+      Manual de Usuario
     </a>
 
   </div>
