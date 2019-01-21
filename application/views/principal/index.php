@@ -15,7 +15,7 @@
     </ul>
 
     <a class="btn btn-primary btn-block" href="<?=base_url()?>instalador/codefac_setup1.2.6.exe"> <span class="glyphicon glyphicon-save"></span> Descargue CODEFAC-LITE!</a>
-    <a class="btn btn-default btn-xs btn-block " href="https://docs.google.com/document/d/1AJGbwPOj4rw0uiSMUv0FJQRMlNoYNRbl2TcoE_24ivk/edit#" target="_blank"> 
+    <a class="btn btn-default btn-block " href="https://docs.google.com/document/d/1AJGbwPOj4rw0uiSMUv0FJQRMlNoYNRbl2TcoE_24ivk/edit#" target="_blank"> 
       <span class="glyphicon glyphicon-file"></span> 
       Manual de Usuario
     </a>
@@ -139,7 +139,7 @@
 
 <div class="col-md-12" id="planes">
   <hr>
-  <h3 class="text-center titulo_principal" >PLANES Y PRECIOS DE FACTURACIÓN ELECTRÓNICA</h3>
+  <h3 class="text-center titulo_principal" >PLANES FACTURACIÓN ELECTRÓNICA</h3>
   <table class="table table-striped tbl_fac">
     <tr>
       <th>FUNCIONALIDADES</th>
@@ -258,14 +258,14 @@
   <td> <img src="<?=base_url()?>img/icon_ok.png" height="20"/> </td>
   <td> <img src="<?=base_url()?>img/icon_okn.png" height="20"/> </td>
 </tr>    
-<tr>
+<!--<tr>
   <td>PRECIO / ANUAL</td>
   <td><span class="precio">$ 0 </span></td>
   <td><span class="precio">$ 159 </span> <span class="supidc">.99</span></td>
-  <!--<td><span class="precio">$ 249 </span> <span class="supidc">.99</span> </td>-->
-</tr>
+  <td><span class="precio">$ 249 </span> <span class="supidc">.99</span> </td>
+</tr>-->
 <tr>
-  <td>-</td>
+  <td></td>
   <td><a class="btn btn-primary" href="<?=base_url()?>general/versiones"><span class="glyphicon glyphicon-save"></span> Descargar</a></td>
   <td><a class="btn btn-success" href="<?=base_url()?>general/registro"><span class="glyphicon glyphicon-shopping-cart"></span> Comprar</a></td>
 </tr>
@@ -275,7 +275,7 @@
 
 <hr>
 <h4 class="text-center titulo_principal">MÓDULO FACTURACIÓN FÍSICA</span></h4>
-<h4 class="text-center titulo_principal"><span class="precio">$ 79 </span><span class="supidc">.99</span></h4>
+<!--<h4 class="text-center titulo_principal"><span class="precio">$ 79 </span><span class="supidc">.99</span></h4>-->
 <table class="table table-striped tbl_fac">
  <tr>
    <td>Categorización de productos</td>
@@ -293,7 +293,7 @@
 
 </table>
 <h4 class="text-center titulo_principal">MÓDULO INVENTARIO</span></h4>
-<h4 class="text-center titulo_principal"><span class="precio">$ 59 </span><span class="supidc">.99</span></h4>
+<!--<h4 class="text-center titulo_principal"><span class="precio">$ 59 </span><span class="supidc">.99</span></h4>-->
 <table class="table table-striped tbl_fac">
  <tr>
    <td>Categorización de productos</td>
@@ -321,7 +321,7 @@
 
 
 <h4 class="text-center titulo_principal">MÓDULO ACADÉMICO</span></h4>
-<h4 class="text-center titulo_principal"><span class="precio">$ 99 </span><span class="supidc">.99</span></h4>
+<!--<h4 class="text-center titulo_principal"><span class="precio">$ 99 </span><span class="supidc">.99</span></h4>-->
 <table class="table table-striped tbl_fac">
  <tr>
    <td>Facturación académica</td>
@@ -369,10 +369,6 @@
     <th>Precio</th>
   </tr>
   <tr>
-    <td>Asesoría en proceso de obtención de firma electrónica</td>
-    <td><span class="precio">$ 39 </span><span class="supidc">.99</span></td>
-  </tr>
-  <tr>
     <td>Instalación y configuración de CODEFAC-LITE</td>
     <td><span class="precio">$ 44 </span><span class="supidc">.99</span></td>
   </tr>   
@@ -386,20 +382,20 @@
   </tr>   
   <tr>
     <td>Puntos de venta</td>
-    <td>Solcitar cotización</td>
+    <td>Solicitar cotización</td>
   </tr> 
   <tr>
     <td>Instalación por sucursal</td>
-    <td>Solcitar cotización</td>
+    <td>Solicitar cotización</td>
   </tr>
   <tr>
     <td>Instalación por máquina adicional (cliente)</td>
-    <td>Solcitar cotización</td>
+    <td>Solicitar cotización</td>
   </tr>
 
 </table>
 <p class="blanco">*Precios no incluyen IVA</p>
-<p class="blanco">*CODEFAC-PRO  Requiere hosting y dominio (costo adicional)</p>
+<!--<p class="blanco">*CODEFAC-PRO  Requiere hosting y dominio (costo adicional)</p>-->
 <br>
 </div>  
 
