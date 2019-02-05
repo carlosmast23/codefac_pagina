@@ -101,6 +101,29 @@ class Soporte_model extends CI_Model {
     return "fail";
 }
 
+/**
+ * [obtener_dias_fecha_maxima_pago Me permite obtener en dias la diferencia en dias de la fecha limite de pago para informar al cliente]
+ * @author Carlos Sánchez 
+ * @param  String $usuario Correo del cliente
+ * @return int         Numero de dias entre la fecha actual y la fecha de pago , si no existe fecha retorna -1
+ */
+public function obtener_dias_fecha_maxima_pago($usuario)
+{
+  $this->db->where('prv_email',$id);
+  $query = $this->db->get('proveedores');
+
+  if($query->num_rows() == 1)
+  {
+    $prv_resultado= $query->row()->prv_fecha_maxima_pago;
+     if($prv_resultado!="")
+     {
+        return $prv_resultado;
+     }
+  }
+  retunr -1;
+
+}
+
 
 public function obtener_licencia_mdl($id){
  $this->db->where('prv_email',$id);
