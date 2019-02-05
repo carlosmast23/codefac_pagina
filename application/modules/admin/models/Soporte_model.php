@@ -109,7 +109,7 @@ class Soporte_model extends CI_Model {
  */
 public function obtener_dias_fecha_maxima_pago($usuario)
 {
-  $this->db->where('prv_email',$id);
+  $this->db->where('prv_email',$usuario);
   $query = $this->db->get('proveedores');
 
   if($query->num_rows() == 1)
@@ -120,7 +120,7 @@ public function obtener_dias_fecha_maxima_pago($usuario)
         return $prv_resultado;
      }
   }
-  retunr -1;
+  return "null";
 
 }
 
