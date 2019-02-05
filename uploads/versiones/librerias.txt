@@ -41,7 +41,7 @@ curvesapi-1.04.jar
 derby-10.14.1.0.jar
 derbyclient-10.14.1.0.jar
 ecj-4.4.2.jar
-eclipselink-2.5.2.jar
+eclipselink-2.6.6.jar
 facturacion-1.0-SNAPSHOT.jar
 facturacionElectronica-1.0-SNAPSHOT.jar
 gestionAcademica-1.0-SNAPSHOT.jar
@@ -54,7 +54,8 @@ jackson-databind-2.1.4.jar
 jakarta-regexp-1.4.jar
 jasperreports-6.4.3.jar
 javax.inject-1.jar
-javax.persistence-2.1.0.jar
+javax.json-1.0.4.jar
+javax.persistence-2.1.1.jar
 jaxb-impl-2.1.jar
 jbcrypt-0.4.jar
 jcalendar-1.3.2.jar
@@ -89,6 +90,7 @@ stax-api-1.0-2.jar
 swingx-all-1.6.4.jar
 transporte-1.0-SNAPSHOT.jar
 utilidades-1.0-SNAPSHOT.jar
+validation-api-1.1.0.Final.jar
 ws-client-iess-1.0-SNAPSHOT.jar
 ws-codefac-1.0-SNAPSHOT.jar
 ws-virtualmall-1.0-SNAPSHOT.jar
