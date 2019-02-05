@@ -58,7 +58,7 @@ class Mysoapserver extends MY_Controller {
         $this->nusoap_server->register('verificarsoporte', $input_array13, $return_array13, "urn:SOAPServerWSDL", "urn:".$ns."/verificarsoporte", "document", "literal", "Verificar estado");
 
         $input_array14 = array ('usuario' => "xsd:string");
-        $return_array14= array ("return" => "xsd:int");
+        $return_array14= array ("return" => "xsd:string");
         $this->nusoap_server->register('obtenerDiasFechaPago', $input_array14, $return_array14, "urn:SOAPServerWSDL", "urn:".$ns."/obtenerDiasFechaPago", "document", "literal", "Obtener dias hasta la fecha de pago , si no existe devuelve -1");
     }
 
@@ -91,7 +91,7 @@ class Mysoapserver extends MY_Controller {
         {
             $ci = &get_instance();
             $ci->load->model('admin/soporte_model');
-            return $ci->soporte_model->obtener_dias_fecha_maxima_pago($email,$tipo);            
+            return $ci->soporte_model->obtener_dias_fecha_maxima_pago($email);            
         }
 
         function comprobar($u,$c){
