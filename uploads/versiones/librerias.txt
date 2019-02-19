@@ -68,7 +68,7 @@ lucene-core-4.5.1.jar
 lucene-queries-4.5.1.jar
 lucene-queryparser-4.5.1.jar
 lucene-sandbox-4.5.1.jar
-mail-1.4.jar
+mail-1.4.7.jar
 MITyCLibAPI-1.1.7.jar
 MITyCLibOCSP-1.1.7.jar
 MITyCLibTrust-1.1.7.jar
