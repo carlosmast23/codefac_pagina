@@ -49,6 +49,7 @@ eclipselink-2.6.6.jar
 facturacion-1.0-SNAPSHOT.jar
 facturacionElectronica-1.0-SNAPSHOT.jar
 gestionAcademica-1.0-SNAPSHOT.jar
+gson-2.8.5.jar
 impuestos-1.0-SNAPSHOT.jar
 inventario-1.0-SNAPSHOT.jar
 itext-2.1.7.js6.jar
