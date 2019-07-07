@@ -35,7 +35,8 @@ class General_model extends CI_Model {
       "prv_representante"=>$this->input->post("prv_representante"),
       "act_id"=>$this->input->post("act_id"),
       "prv_fecharegistro"=>hoy('c'),
-      "prv_estado"=>'p'
+      "prv_estado"=>'p',
+      "prv_modulos"=>'f'//Por defecto seteamos la letra f que corresponde al modulo por defecto def acturar
       );
      $this->db->insert("proveedores",$data);
      
