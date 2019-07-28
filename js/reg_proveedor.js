@@ -19,12 +19,12 @@ $(document).ready(function() {
 			prv_direccion: "required",
 			prv_celular: {
 				required: true,
-				remote: $("#base_url").val() + "validaciones/prov/" + prv_id + "/t/"+deque
+				remote: $("#base_url").val() + "index.php/validaciones/prov/" + prv_id + "/t/"+deque
 			},
 			prv_email: {
 				required: true,
 				email: true,
-				remote: $("#base_url").val() + "validaciones/prov/" + prv_id + "/e/"+deque
+				remote: $("#base_url").val() + "index.php/validaciones/prov/" + prv_id + "/e/"+deque
 			},
 			prv_clave: "required",
 			prv_clave2:{
