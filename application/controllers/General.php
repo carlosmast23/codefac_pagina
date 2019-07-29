@@ -33,7 +33,7 @@ class General extends MY_Controller {
 
   public function registrar_proveedor(){
     $this->model->registrar_proveedor_mdl();
-    redirect("general/success","refresh");
+    redirect("index.php/general/success","refresh");
   }
 
   public function modificar_proveedor(){
@@ -56,7 +56,7 @@ class General extends MY_Controller {
 
 public function actualizar_prov(){
   $this->model->actualizar_proveedor_mdl();
-  redirect("general/success","refresh");
+  redirect("index.php/general/success","refresh");
 }
 
 public function success(){
