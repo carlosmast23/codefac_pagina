@@ -45,8 +45,8 @@ core-3.2.1.jar
 coreCodefacLite-1.0-SNAPSHOT.jar
 crm-1.0-SNAPSHOT.jar
 curvesapi-1.04.jar
-derby-10.14.1.0.jar
-derbyclient-10.14.1.0.jar
+derby-10.14.2.0.jar
+derbyclient-10.14.2.0.jar
 ecj-4.4.2.jar
 eclipselink-2.6.6.jar
 facturacion-1.0-SNAPSHOT.jar
