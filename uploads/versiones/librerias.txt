@@ -100,6 +100,7 @@ lucene-queryparser-4.5.1.jar
 lucene-sandbox-4.5.1.jar
 mail-1.4.7.jar
 MITyCLibAPI-1.1.7.jar
+MITyCLibCert-1.1.7.jar
 MITyCLibOCSP-1.1.7.jar
 MITyCLibTrust-1.1.7.jar
 MITyCLibTSA-1.1.7.jar
@@ -109,6 +110,7 @@ osgi-resource-locator-1.0.1.jar
 poi-3.17.jar
 poi-ooxml-3.17.jar
 poi-ooxml-schemas-3.17.jar
+prestamos-1.0-SNAPSHOT.jar
 primefaces-7.0.jar
 recursos-1.0-SNAPSHOT.jar
 recursosWeb-1.0-SNAPSHOT.jar
