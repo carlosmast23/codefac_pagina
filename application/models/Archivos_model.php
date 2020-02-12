@@ -102,5 +102,35 @@ class Archivos_model extends CI_Model {
     }
 
 
+    public function ver_anuncios(){
+        $html="";
+        $query= $this->db->query("SELECT * FROM `archivos` WHERE `arc_publico`='s' AND `ref_id`='0' ");
+        $i=0;
+        $arr=array();
+        if ($query->num_rows() > 0) {
+            foreach ($query->result() as $fila) {      
+                if(file_exists("./publicidad/".$fila->arc_nombre))
+                    $arr[]= $fila->arc_nombre;
+
+            }
+        }
+
+        shuffle($arr);
+        foreach ($arr as $data => $value) {
+            if($i==1)
+                $dato['activo']="active";
+            else
+                $dato['activo']="";
+
+            $dato['arc_id'] = $value;
+            $html.= $this->parser->parse('archivos/anuncios_tpl', $dato, TRUE);
+            $i++;
+
+        }
+
+        return $html;
+
+
+    }
 
 }

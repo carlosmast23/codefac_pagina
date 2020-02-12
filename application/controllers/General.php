@@ -127,6 +127,11 @@ public function incrementardescarga(){
   $this->model->incrementardescarga_mdl();
 }
 
+public function publicidad2(){
+  $this->load->model("archivos_model");
+  $data['anuncios']=$this->archivos_model->ver_anuncios();
+  $this->load->view("principal/publicidad",$data);
+}
 
 
 
