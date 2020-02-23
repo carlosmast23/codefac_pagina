@@ -178,13 +178,40 @@ class General extends MY_Controller
 
   public function adminVista()
   {
-    $filtro="";
+    $filtro = "";
     if (isset($_POST['filtro'])) {
-        $filtro=$_POST['filtro'];
+      $filtro = $_POST['filtro'];
     }
 
     $this->load->model('Admin_model');
     $result = $this->Admin_model->todos($filtro);
-    $this->loadTemplates("admin/index.php",array('consulta' =>$result));
+    $this->loadTemplates("admin/index.php", array('consulta' => $result));
+  }
+
+  public function editarLicenciaVista($id = NULL)
+  {
+    $this->load->model('Admin_model');
+    $result = $this->Admin_model->consultarPorId($id);
+
+    $this->loadTemplates("admin/editar_licencia", array('consulta' => $result));
+  }
+
+  public function editarLicencia()
+  {
+    $this->load->model("Admin_model");
+    $this->Admin_model->editar(
+      $this->input->post("id"),
+      $this->input->post("nombres"),
+      $this->input->post("apellidos"),
+      $this->input->post("razonSocial"),
+      $this->input->post("email"),
+      $this->input->post("valor"),
+      $this->input->post("fechaPago"),
+      $this->input->post("tipoLicencia"),
+      $this->input->post("modulos"),
+      $this->input->post("licencia"),
+      $this->input->post("clave")
+    );
+    redirect('general/adminVista');
   }
 }
