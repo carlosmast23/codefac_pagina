@@ -25,7 +25,7 @@
   <div class="col-md-6">
     <p>
      <h4 class="text-center">
-       El 2018 es el plazo para emitir comprobantes electrónicos bajo el esquema ‘Off Line’ ...  <a target="_blank" href="http://www.elcomercio.com/actualidad/plazo-comprobanteselectronicos-offline-sri-facturas.html">Ver Noticia.</a>
+     La emisión de factura electrónica se regula para la venta de gas ...  <a target="_blank" href="https://lahora.com.ec/cotopaxi/noticia/1102306587/la-emision-de-factura-electronica-se-regula-para-la-venta-de-gas">Ver Noticia.</a>
      </h4>       
    </p>
 
@@ -43,7 +43,7 @@
       <div class="item active">
         <img class="img-responsive" src="<?=base_url()?>img/banner1.png" />
         <div class="carousel-caption">
-          <h3>Facturación electrónica gratuita</h3>
+          <h3>Software Facturación electrónica</h3>
           <p><a href="<?=base_url()?>instalador/codefactlite1.2.5.exe" class="btn btn-default">Descargue aquí!</a></p>
         </div>
       </div>
@@ -132,7 +132,7 @@
 
 <div class="col-md-12" id="masinfo">
   <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/a0dVCzIc2Hs/" frameborder="0"></iframe>
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BP78Ef-ODSM" frameborder="0"></iframe>
   </div>
 </div>
 <hr>
