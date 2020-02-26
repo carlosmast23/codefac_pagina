@@ -252,7 +252,7 @@ class General extends MY_Controller
       $this->input->post("licencia"),
       $this->input->post("clave")
     );
-    redirect('general/adminVista');
+    redirect('index.php/general/adminVista');
   }
 
   public function verificarSession()
