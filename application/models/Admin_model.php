@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin_model extends CI_Model {
 
-    public function construirQuery($filtro,$id)
+    public function construirQuery($filtro,$id,$filtroLicenciaPago,$filtroFechaPago)
     {
         $query='select 
         p.prv_id AS id,
@@ -37,6 +37,17 @@ class Admin_model extends CI_Model {
             $query=$query.' and p.prv_id='.$id.' ';
         }
 
+        if(!is_null($filtroLicenciaPago))
+        {
+            $query=$query.' and p.prv_tipolicencia="'.$filtroLicenciaPago.'" ';
+        }
+        
+        if(!is_null($filtroFechaPago))
+        {
+            $query=$query.' and p.prv_fecha_maxima_pago is not null ';
+        }
+        
+
         $query=$query.'
     ORDER BY
         p.prv_fecharegistro desc;';
@@ -45,9 +56,9 @@ class Admin_model extends CI_Model {
 
     }
 
-    public function todos($filtro)
+    public function todos($filtro,$filtroLicenciaPago,$filtroFechaPago)
     {
-        $query=$this->construirQuery($filtro,NULL);
+        $query=$this->construirQuery($filtro,NULL,$filtroLicenciaPago,$filtroFechaPago);
 
 
         $result = $this->db->query($query);
@@ -59,7 +70,7 @@ class Admin_model extends CI_Model {
 
     public function consultarPorId($id)
     {
-        $queryStr=$this->construirQuery('',$id);
+        $queryStr=$this->construirQuery('',$id,NULL,NULL);
         $query=$this->db->query($queryStr);
         return $query->row_array();
     }
