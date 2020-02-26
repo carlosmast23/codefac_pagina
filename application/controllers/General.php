@@ -161,15 +161,18 @@ class General extends MY_Controller
 
   public function loginVerificar()
   {
-    $usuarioDefecto = "root";
-    $claveDefecto = "1234";
-
-    echo $_POST['usuario'];
-    echo $_POST['clave'];
+    $usuarioDefecto = "ROSITA";
+    $claveDefecto = "2301";
 
     if (isset($_POST['clave'])) {
       //$this->load->model('UsuarioModel');
       if ($_POST['usuario'] == $usuarioDefecto && $_POST['clave'] == $claveDefecto) {
+
+        /**
+         * Crear la variable de session que me permite tener acceso a la pantalla
+         */
+        $this->load->library('session');
+        $this->session->set_userdata('admin_activo', 'si');
         redirect('index.php/general/adminVista');
       }
     }
@@ -178,18 +181,50 @@ class General extends MY_Controller
 
   public function adminVista()
   {
+    /**
+     * Verificar que tiene permisos para acceder a esta pantalla
+     */
+    $this->verificarSession();
+    
+
     $filtro = "";
     if (isset($_POST['filtro'])) {
       $filtro = $_POST['filtro'];
     }
 
+    $filtroLicenciaPago=NULL;
+    if(isset($_POST['licenciaPago']))
+    {
+      if($_POST['licenciaPago']=='on')
+      {
+        $filtroLicenciaPago='p';      
+      }
+      
+    }
+
+    $filtroFechaPago=NULL;
+    if(isset($_POST['fechaPago']))
+    {
+      if($_POST['fechaPago']=='on')
+      {
+        $filtroFechaPago=$_POST['fechaPago'];
+      }            
+    }
+
     $this->load->model('Admin_model');
-    $result = $this->Admin_model->todos($filtro);
-    $this->loadTemplates("admin/index.php", array('consulta' => $result));
+    $result = $this->Admin_model->todos($filtro,$filtroLicenciaPago,$filtroFechaPago);
+    
+    $this->loadTemplates("admin/index.php", array('consulta' => $result,'filtro'=> $filtro,'licenciaPago'=>$filtroLicenciaPago,'$filtroFechaPago'=>$filtroFechaPago));
   }
 
   public function editarLicenciaVista($id = NULL)
   {
+
+    /**
+     * Verificar que tiene permisos para acceder a esta pantalla
+     */
+    $this->verificarSession();
+
     $this->load->model('Admin_model');
     $result = $this->Admin_model->consultarPorId($id);
 
@@ -198,6 +233,11 @@ class General extends MY_Controller
 
   public function editarLicencia()
   {
+    /**
+     * Verificar que tiene permisos para acceder a esta pantalla
+     */
+    $this->verificarSession();
+
     $this->load->model("Admin_model");
     $this->Admin_model->editar(
       $this->input->post("id"),
@@ -213,5 +253,23 @@ class General extends MY_Controller
       $this->input->post("clave")
     );
     redirect('general/adminVista');
+  }
+
+  public function verificarSession()
+  {
+    $this->load->library('session');
+    if(empty($this->session->userdata('admin_activo')))
+    {
+      //$this->loginVista();
+      redirect('index.php/general/loginVista');
+      return;
+    }
+  }
+
+  public function terminarSession()
+  {
+    $this->session->sess_destroy();
+    redirect('index.php/general/loginVista');
+
   }
 }
