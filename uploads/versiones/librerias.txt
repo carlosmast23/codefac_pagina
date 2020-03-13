@@ -98,7 +98,6 @@ jersey-server-2.28.jar
 jfreechart-1.0.19.jar
 JTattoo-1.6.11.jar
 junit-3.8.jar
-librerias.txt
 lucene-analyzers-common-4.5.1.jar
 lucene-core-4.5.1.jar
 lucene-queries-4.5.1.jar
