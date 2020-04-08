@@ -116,6 +116,7 @@ osgi-resource-locator-1.0.1.jar
 poi-3.17.jar
 poi-ooxml-3.17.jar
 poi-ooxml-schemas-3.17.jar
+pos-1.0-SNAPSHOT.jar
 prestamos-1.0-SNAPSHOT.jar
 primefaces-7.0.jar
 recursos-1.0-SNAPSHOT.jar
