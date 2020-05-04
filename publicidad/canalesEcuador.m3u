@@ -1,0 +1,15 @@
+#EXTM3U
+#EXTINF:-1 tvg-logo="https://lh3.googleusercontent.com/-omQS0__XP3Y/XpaPAIUgKUI/AAAAAAAAx44/0NeiqUb_LHk4-Sffm0h1XASJZA9B3DRLwCK8BGAsYHg/s0/2020-04-14.png", Rewind TV
+https://593b04c4c5670.streamlock.net:443/8024/8024/playlist.m3u8?PlaylistM3UCL
+#EXTINF:-1 tvg-logo="", Canela TV
+http://inliveserver.com:1935/8074/8074/playlist.m3u8?PlaylistM3UCL
+#EXTINF:-1 tvg-logo="", Ecotel TV
+https://5b38ce71f1f00.streamlock.net:443/8344/8344/playlist.m3u8?PlaylistM3UCL
+#EXTINF:-1 tvg-logo="", RTU TV
+https://59c3c7bda15f4.streamlock.net:444/rtutv/smil:rtutv.smil/playlist.m3u8?PlaylistM3UCL
+#EXTINF:-1 tvg-logo="", TVN
+https://59c3c7bda15f4.streamlock.net:444/tvn/smil:tvn.smil/playlist.m3u8?PlaylistM3UCL
+#EXTINF:-1 tvg-logo="", Ecuavisa
+https://youtvplay.com/static/wowza/test/hls/20001/360p/playlist.m3u8?360&PlaylistM3UCL
+#EXTINF:-1 tvg-logo="", TC
+https://5d4837686f698.streamlock.net/tctelevision/tctelevision/playlist.m3u8?PlaylistM3UCL
