@@ -24,6 +24,7 @@ bcprov-jdk15on-1.52.jar
 cartera-1.0-SNAPSHOT.jar
 castor-core-1.3.3.jar
 castor-xml-1.3.3.jar
+codefac.jar
 codefac.war
 commonj.sdo-2.1.1.jar
 commons-beanutils-1.9.3.jar
