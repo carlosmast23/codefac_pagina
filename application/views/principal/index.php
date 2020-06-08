@@ -14,7 +14,7 @@
       <li>Ahorro de tiempo y errores con automatizaciones de procesos.</li>
     </ul>
 
-    <a class="btn btn-primary btn-block" href="<?= base_url() ?>instalador/codefac_setup1.2.6.exe"> <span class="glyphicon glyphicon-save"></span> Descargue CODEFAC-LITE!</a>
+    <a class="btn btn-primary btn-block" href="<?= base_url() ?>instalador/codefac_setup.exe"> <span class="glyphicon glyphicon-save"></span> Descargue CODEFAC-LITE!</a>
     <a class="btn btn-default btn-block " href="https://docs.google.com/document/d/1AJGbwPOj4rw0uiSMUv0FJQRMlNoYNRbl2TcoE_24ivk/edit#" target="_blank">
       <span class="glyphicon glyphicon-file"></span>
       Manual de Usuario
@@ -97,7 +97,7 @@
   <div class="col-md-12">
     <h3 class="titulo_principal">Ver Demostración</h3>
     <ul class="blanco">
-      <li>Descargue <a href="<?= base_url() ?>instalador/codefac_setup1.2.6.exe">Codefac</a> e inicie el sistema en<b> modo Prueba </b> para iniciar una demostración. </li>
+      <li>Descargue <a href="<?= base_url() ?>instalador/codefac_setup.exe">Codefac</a> e inicie el sistema en<b> modo Prueba </b> para iniciar una demostración. </li>
       <li>Acceda directamente al módulo web de nuestro sistema desde el siguiente <a href="http://70.37.57.216/">Link</a>. </li>
       <li>También puede solicitar una demostración con nuestros asesores para una mejor explicación del sistema.</li>
     </ul>
