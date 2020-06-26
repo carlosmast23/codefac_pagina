@@ -98,7 +98,7 @@
     <h3 class="titulo_principal">Ver Demostración</h3>
     <ul class="blanco">
       <li>Descargue <a href="<?= base_url() ?>instalador/codefac_setup.exe">Codefac</a> e inicie el sistema en<b> modo Prueba </b> para iniciar una demostración. </li>
-      <li>Acceda directamente al módulo web de nuestro sistema desde el siguiente <a href="http://70.37.57.216/">Link</a>. </li>
+      <li>Acceda directamente al módulo web de nuestro sistema desde el siguiente <a href="http://codesoft-ec.com:8080/">Link</a>. </li>
       <li>También puede solicitar una demostración con nuestros asesores para una mejor explicación del sistema.</li>
     </ul>
   </div>
