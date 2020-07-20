@@ -47,6 +47,7 @@ uploads/*
 
 #excluir con excepcion de la carpeta 
 !uploads/versiones
+!uploads/version_desarrollo
 
 #excluir subir el instalador con el jdk por que pesa mas de 100 mb en el git me genera problemas
 instalador/codefac_setup.exe
