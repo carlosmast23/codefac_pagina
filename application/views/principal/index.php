@@ -14,8 +14,8 @@
       <li>Ahorro de tiempo y errores con automatizaciones de procesos.</li>
     </ul>
 
-    <a class="btn btn-primary btn-block" href="<?= base_url() ?>instalador/codefac_setup.exe"> <span class="glyphicon glyphicon-save"></span> Descargue CODEFAC-LITE!</a>
-    <a class="btn btn-default btn-block " href="https://docs.google.com/document/d/1AJGbwPOj4rw0uiSMUv0FJQRMlNoYNRbl2TcoE_24ivk/edit#" target="_blank">
+    <a class="btn btn-primary btn-block" href="<?=base_url()?>index.php/general/versiones""> <span class="glyphicon glyphicon-save"></span> Descargue CODEFAC</a>
+    <a class="btn btn-default btn-block " href=""https://docs.google.com/document/d/1AJGbwPOj4rw0uiSMUv0FJQRMlNoYNRbl2TcoE_24ivk/edit#"" target="_blank">
       <span class="glyphicon glyphicon-file"></span>
       Manual de Usuario
     </a>
@@ -25,7 +25,7 @@
   <div class="col-md-6">
     <p>
       <h4 class="text-center">
-        La emisión de factura electrónica se regula para la venta de gas ... <a target="_blank" href="https://lahora.com.ec/cotopaxi/noticia/1102306587/la-emision-de-factura-electronica-se-regula-para-la-venta-de-gas">Ver Noticia.</a>
+        
       </h4>
     </p>
 
