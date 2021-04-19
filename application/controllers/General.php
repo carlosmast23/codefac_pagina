@@ -25,6 +25,11 @@ class General extends MY_Controller
     $this->loadTemplates("principal/registrar_cliente");
   }
 
+  public function registro_taller()
+  {
+    $this->loadTemplates("principal/registro_taller_facturacion");
+  }
+
   public function registro()
   {
     $this->load->model("admin/actividades_model");
