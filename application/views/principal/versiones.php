@@ -4,14 +4,14 @@
 	Seleccione la versión del instalador para descargar.
 	</div>
 	<div class="list-group">
-		<a href="<?=base_url()?>instalador/codefac_setup.exe" class="list-group-item active" rel="contd">
-			<h4 class="list-group-item-heading"><span class="glyphicon glyphicon-save"></span> Codefac 1.2.8.7.1 </h4>
+		<a href="<?=base_url()?>instalador/codefac_setup_64bits.exe" class="list-group-item active" rel="contd">
+			<h4 class="list-group-item-heading"><span class="glyphicon glyphicon-save"></span> Codefac 1.2.8.7.5 </h4>
 			<p class="list-group-item-text">Versión estable. Sistema Operativo <span class="badge" id="nv">Windows 64 bits</span> </p>
 		</a>
 	</div>
 	<div class="list-group">
-		<a href="<?=base_url()?>instalador/codefactlite1.0.rar" class="list-group-item">
-			<h4 class="list-group-item-heading"><span class="glyphicon glyphicon-save"></span> Codefac 1.2.8.7.1</h4>
+		<a href="<?=base_url()?>instalador/codefac_setup_32bits.exe" class="list-group-item">
+			<h4 class="list-group-item-heading"><span class="glyphicon glyphicon-save"></span> Codefac 1.2.8.7.5</h4>
 			<p class="list-group-item-text">Versión estable. Sistema Operativo <span class="badge" id="nv">Windows 32 bits</span> </p>
 		</a>
 	</div>
