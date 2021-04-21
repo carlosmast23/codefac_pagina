@@ -46,6 +46,7 @@
         <li><a href="#planes">Planes</a></li>
         <li><a href="<?=base_url()?>index.php/general/registro">Registro</a></li>
         <li><a href="<?=base_url()?>index.php/general/versiones">Descargas</a></li>
+        <li><a href="<?=base_url()?>index.php/general/registro_taller_facturacion">Taller</a></li>
         <li><a  target="_blank"  href="https://docs.google.com/document/d/1AJGbwPOj4rw0uiSMUv0FJQRMlNoYNRbl2TcoE_24ivk/edit#">Ayuda</a></li>
 
       </ul>

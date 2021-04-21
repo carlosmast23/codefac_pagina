@@ -25,9 +25,15 @@ class General extends MY_Controller
     $this->loadTemplates("principal/registrar_cliente");
   }
 
-  public function registro_taller()
+  public function registro_taller_facturacion()
   {
     $this->loadTemplates("principal/registro_taller_facturacion");
+  }
+
+  public function registro_taller_facturacion_grabar()
+  {
+      $this->model->inscripcion_taller_facturacion_mdl();
+      redirect("index.php/general/successTallerFacturacion", "refresh");
   }
 
   public function registro()
@@ -42,6 +48,7 @@ class General extends MY_Controller
     $this->model->registrar_cliente_mdl();
   }
 
+  
   public function registrar_proveedor()
   {
     $this->model->registrar_proveedor_mdl();
@@ -75,6 +82,11 @@ class General extends MY_Controller
   public function success()
   {
     $this->loadTemplates("principal/success");
+  }
+
+  public function successTallerFacturacion()
+  {
+    $this->loadTemplates("principal/success_inscripcion_taller_facturacion");
   }
 
 

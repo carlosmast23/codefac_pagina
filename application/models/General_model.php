@@ -9,6 +9,39 @@ class General_model extends CI_Model {
     parent::__construct();
   }
 
+  /**
+   * @Author: Carlos Sánchez
+   */
+  public function inscripcion_taller_facturacion_mdl()
+  {
+    //Datos iniciales que va a llegar al correo de nuestra empresa
+    $email="info@codesoft-ec.com";
+
+    //Cargar los modulos necesarios
+    $this->load->model("email_model");
+
+    //Obtener las variables de la vista
+    $nombresParticipante=$this->input->post("taller_nombres");
+    $numeroCelular=$this->input->post("taller_celular");
+    $correoElectronico=$this->input->post("taller_correo");
+
+    //Armar mensajes para enviar al correo
+
+    //Armar el titulo del correo
+    $tituloCorreo="Inscripción Taller Facturación ".$nombresParticipante;
+
+    //Armar el mensaje del correo    
+    $mensajeCorreo="Nombres: ".$nombresParticipante.PHP_EOL;
+    $mensajeCorreo=$mensajeCorreo."Celular: ".$numeroCelular.PHP_EOL;
+    $mensajeCorreo=$mensajeCorreo."Correo: ".$correoElectronico.PHP_EOL;
+
+
+    $this->email_model->enviar_mail(
+      $email,
+      $tituloCorreo,
+      $mensajeCorreo);
+    
+  }
 
   public function registrar_proveedor_mdl(){
     $this->load->library('bcrypt');
