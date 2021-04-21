@@ -38,6 +38,7 @@ commons-cli-1.0.jar
 commons-codec-1.9.jar
 commons-collections-3.2.2.jar
 commons-collections4-4.1.jar
+commons-configuration-1.10.jar
 commons-digester-2.1.jar
 commons-io-2.5.jar
 commons-lang-2.6.jar
