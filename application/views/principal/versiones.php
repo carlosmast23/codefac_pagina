@@ -37,6 +37,12 @@
 			<p class="list-group-item-text">Servidor Web.</p>
 		</a>
 	</div>
+	<div class="list-group">
+		<a href="<?=base_url()?>instalador/acceso_internet.zip" class="list-group-item">
+			<h4 class="list-group-item-heading"><span class="glyphicon glyphicon-save"></span>Herramientas Wen</h4>
+			<p class="list-group-item-text">Script Web.</p>
+		</a>
+	</div>
 </div>	
 
 <script>
