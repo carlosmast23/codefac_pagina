@@ -181,9 +181,16 @@ class General extends MY_Controller
     $usuarioDefecto = "ROSITA";
     $claveDefecto = "2301";
 
+    $usuarioDefecto2 = "giovis";
+    $claveDefecto2 = "0212";
+
     if (isset($_POST['clave'])) {
       //$this->load->model('UsuarioModel');
-      if ($_POST['usuario'] == $usuarioDefecto && $_POST['clave'] == $claveDefecto) {
+      if ( 
+        ($_POST['usuario'] == $usuarioDefecto && $_POST['clave'] == $claveDefecto) || 
+        ($_POST['usuario'] == $usuarioDefecto2 && $_POST['clave'] == $claveDefecto2)
+        ) 
+      {
 
         /**
          * Crear la variable de session que me permite tener acceso a la pantalla

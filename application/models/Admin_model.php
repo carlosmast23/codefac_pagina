@@ -20,6 +20,10 @@ class Admin_model extends CI_Model {
         p.prv_modulos As modulos,
         p.prv_clave As clave,
         p.prv_licencia As licencia,
+        p.prv_fecha_original_pago As fechaOriginalPago,
+        p.prv_valor_adicional As valorAdicional,
+        p.prv_numero_equipo As numeroEquipos,
+        p.prv_observaciones As observaciones,
         cast(p.prv_fecharegistro as date) as fechaRegistro
     FROM 
         proveedores p';
@@ -75,7 +79,7 @@ class Admin_model extends CI_Model {
         return $query->row_array();
     }
 
-    public function editar($id,$nombres,$apellidos,$razonSocial,$email,$valor,$fechaPago,$tipoLicencia,$modulos,$licencia,$clave)
+    public function editar($id,$nombres,$apellidos,$razonSocial,$email,$valor,$fechaPago,$tipoLicencia,$modulos,$licencia,$clave,$fechaOriginalPago,$valorAdicional,$numeroEquipos,$observaciones)
     {       
         if(empty($fechaPago))
         {
@@ -93,6 +97,10 @@ class Admin_model extends CI_Model {
             'prv_modulos'=>$modulos,
             'prv_licencia'=>$licencia,
             'prv_clave'=>$clave,
+            'prv_fecha_original_pago'=>$fechaOriginalPago,
+            'prv_valor_adicional'=>$valorAdicional,
+            'prv_numero_equipo'=>$numeroEquipos,
+            'prv_observaciones'=>$observaciones,
         );
         $this->db->where('prv_id', $id);
         return $this->db->update('proveedores', $data);
