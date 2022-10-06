@@ -181,7 +181,7 @@ class General extends MY_Controller
     $usuarioDefecto = "ROSITA";
     $claveDefecto = "2301";
 
-    $usuarioDefecto2 = "giovis";
+    $usuarioDefecto2 = "GIOVIS";
     $claveDefecto2 = "0212";
 
     if (isset($_POST['clave'])) {
@@ -261,7 +261,7 @@ class General extends MY_Controller
      * Verificar que tiene permisos para acceder a esta pantalla
      */
     $this->verificarSession();
-
+    //$fechaOriginalPago,$valorAdicional,$numeroEquipos,$observaciones
     $this->load->model("Admin_model");
     $this->Admin_model->editar(
       $this->input->post("id"),
@@ -274,7 +274,11 @@ class General extends MY_Controller
       $this->input->post("tipoLicencia"),
       $this->input->post("modulos"),
       $this->input->post("licencia"),
-      $this->input->post("clave")
+      $this->input->post("clave"),
+      $this->input->post("fechaOriginalPago"),
+      $this->input->post("valorAdicional"),
+      $this->input->post("numeroEquipos"),
+      $this->input->post("observaciones")
     );
     redirect('index.php/general/adminVista');
   }

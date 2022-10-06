@@ -96,6 +96,11 @@
 
   <div class="col-md-12">
     <h3 class="titulo_principal">Ver Demostración</h3>
+    <div class="col-md-12" id="masinfo">
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/3P0C7OJOzHM" frameborder="0"></iframe>
+    </div>
+  </div>
     <ul class="blanco">
       <li>Descargue <a href="<?= base_url() ?>instalador/codefac_setup.exe">Codefac</a> e inicie el sistema en<b> modo Prueba </b> para iniciar una demostración. </li>
       <li>Acceda directamente al módulo web de nuestro sistema desde el siguiente <a href="http://codesoft-ec.com:8080/">Link</a>. </li>
@@ -139,11 +144,7 @@
 
   </div>
 
-  <div class="col-md-12" id="masinfo">
-    <div class="embed-responsive embed-responsive-16by9">
-      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BP78Ef-ODSM" frameborder="0"></iframe>
-    </div>
-  </div>
+
   <hr>
 
   <div class="col-md-12" id="planes">

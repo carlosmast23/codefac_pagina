@@ -81,6 +81,7 @@ class Admin_model extends CI_Model {
 
     public function editar($id,$nombres,$apellidos,$razonSocial,$email,$valor,$fechaPago,$tipoLicencia,$modulos,$licencia,$clave,$fechaOriginalPago,$valorAdicional,$numeroEquipos,$observaciones)
     {       
+        //$fechaOriginalPago,$valorAdicional,$numeroEquipos,$observaciones
         if(empty($fechaPago))
         {
             $fechaPago=NULL;
