@@ -64,6 +64,7 @@ gson-2.8.5.jar
 hk2-api-2.5.0.jar
 hk2-locator-2.5.0.jar
 hk2-utils-2.5.0.jar
+imgscalr-lib-4.2.jar
 impuestos-1.0-SNAPSHOT.jar
 inventario-1.0-SNAPSHOT.jar
 itext-2.1.7.js6.jar
