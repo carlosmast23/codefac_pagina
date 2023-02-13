@@ -112,6 +112,7 @@ jaxb-impl-2.3.0.jar
 jaxb-jxc-2.3.3.jar
 jaxb-xjc-2.3.3.jar
 jaxws-eclipselink-plugin-2.3.3.jar
+jaxws-ri-2.3.3.pom
 jaxws-rt-2.3.3.jar
 jaxws-tools-2.3.3.jar
 jbcrypt-0.4.jar
@@ -147,9 +148,11 @@ prestamos-1.0-SNAPSHOT.jar
 primefaces-7.0.jar
 recursos-1.0-SNAPSHOT.jar
 recursosWeb-1.0-SNAPSHOT.jar
+release-documentation-2.3.3-docbook.zip
 restaurante-1.0-SNAPSHOT.jar
 rmiio-2.1.2.jar
 saaj-impl-1.5.2.jar
+samples-2.3.3.zip
 sdo-eclipselink-plugin-2.3.3.jar
 seaglasslookandfeel-0.2.1.jar
 servicios-1.0-SNAPSHOT.jar
