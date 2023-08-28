@@ -8,6 +8,7 @@
             </div>
             <div class="col-12 col-sm-4 col-md-2 ">
                 <button class="btn btn-lg btn-primary btn-block" type="submit">Filtrar</button>
+                <a class="btn btn-primary btn-block" href="<?=base_url()?>index.php/general/registro""> <span class="glyphicon glyphicon-save"></span>Registro</a>
             </div>
         </div>
 
