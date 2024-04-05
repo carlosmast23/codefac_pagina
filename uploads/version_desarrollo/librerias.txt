@@ -126,7 +126,6 @@ jersey-media-jaxb-2.28.jar
 jersey-media-json-jackson-2.28.jar
 jersey-server-2.28.jar
 jfreechart-1.0.19.jar
-librerias.txt
 mail-1.4.7.jar
 management-api-3.2.2.jar
 mimepull-1.9.13.jar
