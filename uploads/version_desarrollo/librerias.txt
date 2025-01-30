@@ -129,6 +129,7 @@ jfreechart-1.0.19.jar
 mail-1.4.7.jar
 management-api-3.2.2.jar
 mimepull-1.9.13.jar
+mysql-connector-java-8.0.27.jar
 org.eclipse.persistence.asm-9.6.0.jar
 org.eclipse.persistence.core-3.0.4.jar
 org.eclipse.persistence.jpa-3.0.4.jar
@@ -145,6 +146,7 @@ policy-2.7.10.jar
 pos-1.0-SNAPSHOT.jar
 prestamos-1.0-SNAPSHOT.jar
 primefaces-7.0.jar
+protobuf-java-3.11.4.jar
 recursos-1.0-SNAPSHOT.jar
 recursosWeb-1.0-SNAPSHOT.jar
 restaurante-1.0-SNAPSHOT.jar
